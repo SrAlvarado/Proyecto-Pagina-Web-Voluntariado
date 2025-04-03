@@ -2,11 +2,25 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+.button:active {
+  letter-spacing: 0px;
+  transform: skew(-10deg) translateY(8px);
+  box-shadow: 0 0 0 var(--😀😀😀);
+}
 body {
   background-image: url("./../Imagenes/fondo1.jpg");
   background-attachment: fixed;
 }
-
+.navbar-item{
+  font-size: 1.3rem;
+}
+.navbar-menu {
+  justify-content: center;
+  gap: 2rem;
+  
+}
 .hero-background {
   background-image: url("./../Imagenes/fondo_hero.jpg");
   background-size: cover;
@@ -19,7 +33,7 @@ body {
   border-radius: 8px;
 }
 .hero-content::before {
-  content: ""; /* Necesario para que el pseudo-elemento se muestre */
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -92,7 +106,55 @@ body {
   font-size: 14px;
   font-weight: bold;
 }
+/* From Uiverse.io by d4niz */ 
+.contactButton {
+  background: #7079f0;
+  color: white;
+  font-family: inherit;
+  padding: 0.45em;
+  padding-left: 1em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3em;
+}
 
+.iconButton {
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7a8cf3;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.contactButton:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em #5566c2;
+}
+
+.contactButton:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em #5566c2;
+}
+#idSvg{
+  height: 24;
+  width: 24;
+}
 /* registro */
 
 .container {
@@ -116,24 +178,24 @@ body {
   padding: 2rem 0;
   margin-top: 5%;
   margin-bottom: 5%;
-  overflow: hidden; /* Para ocultar el contenido que se desliza */
+  /*overflow: hidden;  Para ocultar el contenido que se desliza */
 }
 
 .acerca-de-texto {
   opacity: 0;
-  transform: translateX(-100%);
-  animation: slideInLeft 1s ease forwards;
+  /*transform: translateX(-100%);*/
+  /*animation: slideInLeft 1s ease forwards;*/
 }
 
 .icon-box {
   text-align: center;
   margin: 1rem;
   opacity: 0;
-  transform: translateY(50px);
-  animation: slideInUp 0.8s ease forwards;
+  /*transform: translateY(50px);*/
+  /*animation: slideInUp 0.8s ease forwards;*/
 }
 
-/* Animaciones escalonadas para los iconos */
+/* Animaciones escalonadas para los iconos 
 .icon-box:nth-child(1) {
   animation: slideInUp 0.8s ease 0.2s forwards;
 }
@@ -148,7 +210,7 @@ body {
 }
 .icon-box:nth-child(5) {
   animation: slideInUp 0.8s ease 1s forwards;
-}
+}*/
 
 /* Keyframes para las animaciones */
 @keyframes slideInLeft {
@@ -225,7 +287,6 @@ body {
 .fondo-card-noticias:hover {
   padding-right: 30px;
   border: 2px solid transparent;
-  box-shadow: 0 0 15px rgba(219, 20, 176, 0.4);
   transition: box-shadow 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
   transition: padding-right 0.3s ease;
@@ -234,7 +295,6 @@ body {
 .fondo-card-eventos:hover {
   padding-right: 30px;
   border: 2px solid transparent;
-  box-shadow: 0 0 15px rgba(219, 136, 20, 0.4);
   transition: box-shadow 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
   transition: all 0.3s ease;
@@ -243,7 +303,6 @@ body {
 .fondo-card-voluntariados:hover {
   padding-right: 30px;
   border: 2px solid transparent;
-  box-shadow: 0 0 15px rgba(0, 174, 255, 0.4);
   transition: box-shadow 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
   transition: padding-right 0.3s ease;

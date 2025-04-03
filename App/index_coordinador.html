@@ -6,26 +6,40 @@
     <link rel="stylesheet" href="./../App/index.css" />
     <link rel="stylesheet" href="./../bulma/css/bulma.css" />
     <link rel="icon" type="image/png" href="./../Imagenes/logo.png" />
-    <script src="https://kit.fontawesome.com/dc47467364.js" crossorigin="anonymous"></script>
-    <script src="./index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/dc47467364.js"
+      crossorigin="anonymous"
+    ></script>
     <title>4V Voluntariado</title>
   </head>
   <body>
-    <nav class="navbar has-background-info-20-invert is-centered" aria-label="main navigation">
+    <nav
+      class="navbar has-background-info-20-invert"
+      aria-label="main navigation">
       <div class="navbar-brand">
-        <img class="navbar-item logo-4vv" src="./../Imagenes/logo.png" alt="Logo 4V"/>
-        <a role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <img
+          class="navbar-item logo-4vv"
+          src="./../Imagenes/logo.png"
+          alt="Logo 4V"/>
+        <a
+          role="button"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
-      <div class="navbar-menu is-centered">
-        <div class="navbar-menu is-centered">
-          <a class="navbar-item has-text-info-90-invert ">Inicio</a>
-          <a class="navbar-item has-text-info-90-invert" href="./eventos.html">Eventos</a>
-          <a class="navbar-item has-text-info-90-invert" href="#login">Sign In<i class="fa-solid fa-right-to-bracket"></i></a>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <a class="navbar-item has-text-info-90-invert">Inicio</a>
+          <a class="navbar-item has-text-info-90-invert" href="./evento_coordinador.html">Eventos</a>
+          <a class="navbar-item has-text-info-90-invert" href="./filtradoDeVoluntariado.html">Voluntariados</a>
+          <a class="navbar-item has-text-info-90-invert" href="./panelHistorialAlumnado.html">Historial de Alumnos</a>
+          <a class="navbar-item has-text-info-90-invert" href="./usuario.html">Perfil</a>
         </div>
       </div>
     </nav>
@@ -38,7 +52,7 @@
             <h2 class="subtitle is-3 has-text-white">
               ¿Quieres ayudar a la ciudadanía?
             </h2>
-            <a id="boton-volun" class="button has-background-info-00-invert is-medium" href="#signin">
+            <a  id="boton-volun" class="button has-background-info-00-invert is-medium" href="#signin">
                 ¡QUIERO SER VOLUNTARIO!
             </a>
           </div>
@@ -46,19 +60,36 @@
       </div>
     </section>
 
+    
+
+    
     <div id="login" class="modal">
       <div class="modal-content">
         <a href="#" class="close-btn">✖</a>
-        <h2 class="title is-3 has-text-centered has-text-info-65-invert">Iniciar Sesión</h2>
+        <h2 class="title is-3 has-text-centered has-text-info-65-invert">
+          Iniciar Sesión
+        </h2>
         <form action="./../App/filtradoDeVoluntariado.html" method="get">
           <div class="field">
             <div class="control">
-              <input class="input" type="email" name="email" placeholder="E-mail" required>
+              <input
+                class="input"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                required
+              />
             </div>
           </div>
           <div class="field">
             <div class="control">
-              <input class="input" type="password" name="password" placeholder="Password" required>
+              <input
+                class="input"
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
             </div>
           </div>
           <div class="field has-text-right">
@@ -66,14 +97,8 @@
           </div>
           <div class="field">
             <div class="control">
-              <button class="contactButton">
-                Sign in
-                <div class="iconButton">
-                  <svg id="idSvg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
-                  </svg>
-                </div>
+              <button type="submit" class="button is-primary is-fullwidth">
+                Sign In
               </button>
             </div>
           </div>
@@ -81,7 +106,7 @@
         <div class="has-text-centered mt-4">
           <p>¿No tienes una cuenta? - Regístrate</p>
             <a class="button" href="#signin">Registro Voluntario</a>
-            <a class="button" href="#signinEmpresa">Nueva Organización</a>
+            <a class="button" href="#signinEmpresa">Nueva Empresa</a>
         </div>
         <div class="has-text-centered mt-4">
           <a href="#" class="is-size-7">Learn user licence agreement</a>
@@ -98,10 +123,19 @@
         </h2>
         <form>
           <div class="field">
-            <input class="input" type="text" placeholder="Nombre Completo" required>
+            <input
+              class="input"
+              type="text"
+              placeholder="Nombre Completo"
+              required
+            />
           </div>
           <div class="field">
-            <input class="input" type="date" required >
+            <input
+              class="input"
+              type="date"
+              required
+            />
           </div>
           <div class="field">
             <input class="input" type="text" placeholder="Dirección" required />
@@ -113,10 +147,20 @@
             <input class="input" type="tel" placeholder="Teléfono" required />
           </div>
           <div class="field">
-            <input class="input" type="email" placeholder="Correo Electrónico" required>
+            <input
+              class="input"
+              type="email"
+              placeholder="Correo Electrónico"
+              required
+            />
           </div>
           <div class="field">
-            <input class="input" type="password" placeholder="Contraseña" required>
+            <input
+              class="input"
+              type="password"
+              placeholder="Contraseña"
+              required
+            />
           </div>
           <div class="field">
             <input class="input" type="text" placeholder="Curso" required />
@@ -169,32 +213,54 @@
       <div class="modal-content">
         <a href="#" class="close-btn">✖</a>
         <h2 class="title is-3 has-text-centered has-text-info-65-invert">
-          Nueva Organización
+          Nueva Empresa
         </h2>
         <form>
           <div class="field">
-            <input class="input" type="text" placeholder="Nombre de la Empresa" required>
+            <input
+              class="input"
+              type="text"
+              placeholder="Nombre de la Empresa"
+              required
+            />
           </div>
           <div class="field">
-            <input class="input" type="text" placeholder="NIF EMPRESA" required/>
-          </div>
-          <div class="field">
-            <input class="input" type="text" placeholder="Persona de Contacto" required/>
+            <input
+              class="input"
+              type="text"
+              placeholder="Persona de Contacto"
+              required
+            />
           </div>
           <div class="field">
             <input class="input" type="text" placeholder="Localidad" required />
           </div>
           <div class="field">
-            <input class="input" type="text" placeholder="Actividad Económica" required>
+            <input
+              class="input"
+              type="text"
+              placeholder="Actividad Económica"
+              required
+            />
           </div>
           <div class="field">
             <input class="input" type="tel" placeholder="Teléfono" required />
           </div>
           <div class="field">
-            <input class="input" type="email"placeholder="Correo Electrónico" required>
+            <input
+              class="input"
+              type="email"
+              placeholder="Correo Electrónico"
+              required
+            />
           </div>
           <div class="field">
-            <input class="input" type="password" placeholder="Contraseña" required>
+            <input
+              class="input"
+              type="password"
+              placeholder="Contraseña"
+              required
+            />
           </div>
           <div class="field-registro">
             <div class="control">
@@ -202,7 +268,11 @@
                 <legend>Áreas de interés</legend>
 
                 <label class="custom-checkbox">
-                  <input type="checkbox" name="areasInteres" value="educacion">
+                  <input
+                    type="checkbox"
+                    name="areasInteres"
+                    value="educacion"
+                  />
                   <span class="checkmark"></span> Educación
                 </label>
 
@@ -212,13 +282,12 @@
                 </label>
 
                 <label class="custom-checkbox">
-                  <input type="checkbox" name="areasInteres" value="medioambiente">
+                  <input
+                    type="checkbox"
+                    name="areasInteres"
+                    value="medioambiente"
+                  />
                   <span class="checkmark"></span> Medio Ambiente
-                </label>
-
-                <label class="custom-checkbox">
-                  <input type="checkbox" name="areasInteres" value="tecnico"/>
-                  <span class="checkmark"></span> Técnico
                 </label>
               </fieldset>
             </div>
@@ -243,7 +312,8 @@
         <div class="columns is-vcentered">
           <div class="column is-half">
             <h2
-              class="title has-text-centered acerca-de-texto has-text-info-90-invert">
+              class="title has-text-centered acerca-de-texto has-text-info-90-invert"
+            >
               Acerca de Nosotros
             </h2>
             <br>
@@ -256,7 +326,8 @@
               Nosotros nos encargamos de gestionar y coordinar las actividades
               de voluntariado, y para que llevemos nuestro trabajo a cabo,
               necesitamos que tanto voluntarios como organizaciones se animen a
-              colaborar con nosotros.</p>
+              colaborar con nosotros.
+            </p>
           </div>
           <div class="column is-half">
             <div class="icons">
@@ -333,15 +404,25 @@
               <div class="card-image">
                 <a href="./eventos.html">
                   <figure class="image is-16by9">
-                    <img src="./../Imagenes/foto_voluntarios.jpg" alt="Taller formación Expertclick">
+                    <img
+                      src="./../Imagenes/foto_voluntarios.jpg"
+                      alt="Taller formación Expertclick"
+                    />
                   </figure>
                 </a>
               </div>
               <div class="card-content">
                 <div class="media">
                   <div class="media-content">
-                    <p class="title is-4 has-text-info-90-invert has-text-centered">Taller formación Expertclick</p>
-                    <p class="subtitle is-6 has-text-justified">Taller de formación en nuevas tecnologías para personas mayores de parte de la Fundación Cibervoluntario.</p>
+                    <p
+                      class="title is-4 has-text-info-90-invert has-text-centered"
+                    >
+                      Taller formación Expertclick
+                    </p>
+                    <p class="subtitle is-6 has-text-justified">
+                      Taller de formación en nuevas tecnologías para personas
+                      mayores de parte de la Fundación Cibervoluntario.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -354,35 +435,57 @@
               <div class="card-image">
                 <a href="./eventos.html">
                   <figure class="image is-16by9">
-                    <img src="./../Imagenes/foto_voluntarios.jpg" alt="Taller formación Expertclick">
+                    <img
+                      src="./../Imagenes/foto_voluntarios.jpg"
+                      alt="Taller formación Expertclick"
+                    />
                   </figure>
                 </a>
               </div>
               <div class="card-content">
                 <div class="media">
                   <div class="media-content">
-                    <p class="title is-4 has-text-info-90-invert has-text-centered">Taller formación Expertclick</p>
-                    <p class="subtitle is-6 has-text-justified">Taller de formación en nuevas tecnologías para personas mayores de parte de la Fundación Cibervoluntario.</p>
+                    <p
+                      class="title is-4 has-text-info-90-invert has-text-centered"
+                    >
+                      Taller formación Expertclick
+                    </p>
+                    <p class="subtitle is-6 has-text-justified">
+                      Taller de formación en nuevas tecnologías para personas
+                      mayores de parte de la Fundación Cibervoluntario.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="column is-one-third fondo-card-voluntariados">
-            <h2 class="title has-text-centered has-text-info-100-invert">VOLUNTARIADOS</h2>
+            <h2 class="title has-text-centered has-text-info-100-invert">
+              VOLUNTARIADOS
+            </h2>
             <div class="card">
               <div class="card-image">
                 <a href="./eventos.html">
                   <figure class="image is-16by9">
-                    <img src="./../Imagenes/foto_voluntarios.jpg" alt="Taller formación Expertclick">
+                    <img
+                      src="./../Imagenes/foto_voluntarios.jpg"
+                      alt="Taller formación Expertclick"
+                    />
                   </figure>
                 </a>
               </div>
               <div class="card-content">
                 <div class="media">
                   <div class="media-content">
-                    <p class="title is-4 has-text-info-90-invert has-text-centered">Taller formación Expertclick</p>
-                    <p class="subtitle is-6 has-text-justified">Taller de formación en nuevas tecnologías para personas mayores de parte de la Fundación Cibervoluntario.</p>
+                    <p
+                      class="title is-4 has-text-info-90-invert has-text-centered"
+                    >
+                      Taller formación Expertclick
+                    </p>
+                    <p class="subtitle is-6 has-text-justified">
+                      Taller de formación en nuevas tecnologías para personas
+                      mayores de parte de la Fundación Cibervoluntario.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -396,29 +499,77 @@
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-4">
-            <h3 class="title is-4 has-text-centered has-text-info-90-invert">Sobre Nosotros</h3>
-            <p class="has-text-centered has-text-info-90-invert">Somos el departamento de voluntariado de Cuatrovientos y buscamos gente dispuesta a colaborar por aquellos que lo necesitan.</p>
-            <p class="has-text-centered has-text-info-90-invert">¡Conéctate con nosotros!</p>
+            <h3 class="title is-4 has-text-centered has-text-info-90-invert">
+              Sobre Nosotros
+            </h3>
+            <p class="has-text-centered has-text-info-90-invert">
+              Somos el departamento de voluntariado de Cuatrovientos y buscamos
+              gente dispuesta a colaborar por aquellos que lo necesitan.
+            </p>
+            <p class="has-text-centered has-text-info-90-invert">
+              ¡Conéctate con nosotros!
+            </p>
           </div>
           <div class="column is-4">
-            <h3 class="title is-4 has-text-centered has-text-info-90-invert">Redes Sociales</h3>
+            <h3 class="title is-4 has-text-centered has-text-info-90-invert">
+              Redes Sociales
+            </h3>
             <div class="social-icons is-flex is-justify-content-center">
-              <a href="https://twitter.com/_cuatrovientos?lang=es" class="social-icon" aria-label="Twitter" target="_blank">
-                <img src="./../Imagenes/twitter_azul.png" alt="Twitter" class="social-icon-img">
+              <a
+                href="https://twitter.com/_cuatrovientos?lang=es"
+                class="social-icon"
+                aria-label="Twitter"
+                target="_blank"
+              >
+                <img
+                  src="./../Imagenes/twitter_azul.png"
+                  alt="Twitter"
+                  class="social-icon-img"
+                />
               </a>
-              <a href="https://www.instagram.com/cipcuatrovientos/?hl=es" class="social-icon" aria-label="Instagram" target="_blank" >
-                <img src="./../Imagenes/Instagram.png" alt="Instagram" class="social-icon-img">
+              <a
+                href="https://www.instagram.com/cipcuatrovientos/?hl=es"
+                class="social-icon"
+                aria-label="Instagram"
+                target="_blank"
+              >
+                <img
+                  src="./../Imagenes/Instagram.png"
+                  alt="Instagram"
+                  class="social-icon-img"
+                />
               </a>
-              <a href="https://www.facebook.com/cipcuatrovientos/?locale=es_ES" class="social-icon" aria-label="Facebook" target="_blank" >
-                <img src="./../Imagenes/facebook_azul.png" alt="Facebook" class="social-icon-img">
+              <a
+                href="https://www.facebook.com/cipcuatrovientos/?locale=es_ES"
+                class="social-icon"
+                aria-label="Facebook"
+                target="_blank"
+              >
+                <img
+                  src="./../Imagenes/facebook_azul.png"
+                  alt="Facebook"
+                  class="social-icon-img"
+                />
               </a>
-              <a href="https://www.youtube.com/@alviento/videos" class="social-icon" aria-label="YouTube" target="_blank">
-                <img src="./../Imagenes/youtube_azul.png" alt="YouTube" class="social-icon-img">
+              <a
+                href="https://www.youtube.com/@alviento/videos"
+                class="social-icon"
+                aria-label="YouTube"
+                target="_blank"
+              >
+                <img
+                  src="./../Imagenes/youtube_azul.png"
+                  alt="YouTube"
+                  class="social-icon-img"
+                />
               </a>
             </div>
           </div>
           <div class="column is-4">
-            <h3 class="title is-4 has-text-centered has-text-info-90-invert">Contacto</h3>
+            <h3 class="title is-4 has-text-centered has-text-info-90-invert">
+              Contacto
+            </h3>
+
             <p class="has-text-centered has-text-info-90-invert">
               <span class="icon is-small is-left">
                 <i class="fa-solid fa-phone"></i>
@@ -430,18 +581,24 @@
               <span class="icon is-small is-left">
                 <i class="fa-solid fa-envelope"></i>
               </span>
-              <a href="mailto:secretaria@cuatrovientos.org">secretaria@cuatrovientos.org</a>
+              <a href="mailto:secretaria@cuatrovientos.org"
+                >secretaria@cuatrovientos.org
+              </a>
             </p>
             <p class="has-text-centered has-text-info-90-invert">
               <span class="icon is-small is-left">
                 <i class="fa-solid fa-envelope"></i>
               </span>
-              <a href="mailto:info@cuatrovientos.org">info@cuatrovientos.org</a>
+              <a href="mailto:info@cuatrovientos.org"
+                >info@cuatrovientos.org
+              </a>
             </p>
           </div>
         </div>
         <div class="has-text-centered mt-4">
-          <p class="has-text-info-90-invert">© 2023 Cuatrovientos. Todos los derechos reservados.</p>
+          <p class="has-text-info-90-invert">
+            © 2023 Cuatrovientos. Todos los derechos reservados.
+          </p>
         </div>
       </div>
     </footer>
