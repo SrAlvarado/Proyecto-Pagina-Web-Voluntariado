@@ -10,7 +10,7 @@ html {
   box-shadow: 0 0 0 var(--😀😀😀);
 }
 body {
-  background-image: url("./../Imagenes/fondo1.jpg");
+  background-image: url("./../../../Voluntariado_LM/img/fondo1.jpg");
   background-attachment: fixed;
 }
 .navbar-item{
@@ -22,7 +22,7 @@ body {
   
 }
 .hero-background {
-  background-image: url("./../Imagenes/fondo_hero.jpg");
+  background-image: url("./../../../Voluntariado_LM/img/fondo_hero.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
