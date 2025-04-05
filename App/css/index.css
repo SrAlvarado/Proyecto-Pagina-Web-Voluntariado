@@ -1,16 +1,13 @@
 html {
   scroll-behavior: smooth;
 }
-
-
-
-.button:active {
-  letter-spacing: 0px;
-  transform: skew(-10deg) translateY(8px);
-  box-shadow: 0 0 0 var(--😀😀😀);
+body.modal-open,
+html.modal-open {
+  overflow: hidden;
 }
+
 body {
-  background-image: url("./../../../Voluntariado_LM/img/fondo1.jpg");
+  background-image: url("./../../App/img/fondo1.jpg");
   background-attachment: fixed;
 }
 .navbar-item{
@@ -22,7 +19,7 @@ body {
   
 }
 .hero-background {
-  background-image: url("./../../../Voluntariado_LM/img/fondo_hero.jpg");
+  background-image: url("./../../App/img/fondo_hero.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -43,7 +40,59 @@ body {
   z-index: 1;
 }
 #boton-volun {
-  z-index: 100;
+  z-index: 1;
+}
+#level_Recordarusr {
+  margin-bottom: 0.25rem;
+}
+/* From Uiverse.io by d4niz */
+.contactButton {
+  background: #7079f0;
+  color: white;
+  font-family: inherit;
+  padding: 0.45em;
+  padding-left: 1em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3em;
+}
+
+.iconButton {
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7a8cf3;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.contactButton:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em #5566c2;
+}
+
+.contactButton:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em #5566c2;
+}
+.button:active {
+  letter-spacing: 0px;
+  transform: skew(-10deg) translateY(8px);
 }
 /*  registro */
 .select.is-multiple select {
@@ -195,23 +244,6 @@ body {
   /*animation: slideInUp 0.8s ease forwards;*/
 }
 
-/* Animaciones escalonadas para los iconos 
-.icon-box:nth-child(1) {
-  animation: slideInUp 0.8s ease 0.2s forwards;
-}
-.icon-box:nth-child(2) {
-  animation: slideInUp 0.8s ease 0.4s forwards;
-}
-.icon-box:nth-child(3) {
-  animation: slideInUp 0.8s ease 0.6s forwards;
-}
-.icon-box:nth-child(4) {
-  animation: slideInUp 0.8s ease 0.8s forwards;
-}
-.icon-box:nth-child(5) {
-  animation: slideInUp 0.8s ease 1s forwards;
-}*/
-
 /* Keyframes para las animaciones */
 @keyframes slideInLeft {
   from {
@@ -248,14 +280,32 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  animation: fadeIn 0.3s ease-in-out;
 }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.modal:target::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* negro con opacidad */
+  z-index: 0;
+}
+
 
 .modal-content {
   background: white;
   padding: 2rem;
   border-radius: 8px;
   position: relative;
+  z-index: 1;
 }
+
 
 .close-btn {
   position: absolute;

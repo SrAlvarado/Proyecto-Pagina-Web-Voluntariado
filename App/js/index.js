@@ -50,3 +50,60 @@ document.addEventListener("DOMContentLoaded", function () {
 
   ajustarInterfazPorRol(tipoUsuario);
 });
+//********** MODAL **********/
+// Abre el modal al hacer clic en un enlace con href="#modal"
+document.addEventListener("DOMContentLoaded", () => {
+    const modals = document.querySelectorAll(".modal");
+    
+    // Cierra el modal al hacer clic fuera del contenido
+    modals.forEach(modal => {
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          location.hash = ""; // cierra el modal
+        }
+      });
+    });
+    
+    // Función para añadir o quitar la clase modal-open según el hash
+    function checkModal() {
+      if (location.hash && document.querySelector(location.hash)) {
+        document.body.classList.add("modal-open");
+        document.documentElement.classList.add("modal-open");
+      } else {
+        document.body.classList.remove("modal-open");
+        document.documentElement.classList.remove("modal-open");
+      }
+    }
+    
+    // Verifica el estado cuando cambia el hash y al cargar la página
+    window.addEventListener("hashchange", checkModal);
+    checkModal();
+  });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modals = document.querySelectorAll(".modal");
+  
+  // Cierra el modal al hacer clic fuera del contenido
+  modals.forEach(modal => {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        location.hash = ""; // cierra el modal
+      }
+    });
+  });
+  
+  // Función para añadir o quitar la clase modal-open según el hash
+  function checkModal() {
+    if (location.hash && document.querySelector(location.hash)) {
+      document.body.classList.add("modal-open");
+      document.documentElement.classList.add("modal-open");
+    } else {
+      document.body.classList.remove("modal-open");
+      document.documentElement.classList.remove("modal-open");
+    }
+  }
+  
+  // Verifica el estado cuando cambia el hash y al cargar la página
+  window.addEventListener("hashchange", checkModal);
+  checkModal();
+});
