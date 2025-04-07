@@ -10,14 +10,24 @@ body {
   background-image: url("./../../App/img/fondo1.jpg");
   background-attachment: fixed;
 }
-.navbar-item{
+.navbar {
+  background-image: url("./../../App/img/fondo_hero.jpg");
+  background-size: cover;
+  background-position: center top;
+  height: 80px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombras más intensas */
+  background-color: rgba(252, 252, 252, 0.4); /* Fondo semitransparente en tonos grises */
+}
+
+.navbar-item {
   font-size: 1.3rem;
 }
+
 .navbar-menu {
   justify-content: center;
   gap: 2rem;
-  
 }
+
 .hero-background {
   background-image: url("./../../App/img/fondo_hero.jpg");
   background-size: cover;
@@ -29,6 +39,7 @@ body {
   padding: 2rem;
   border-radius: 8px;
 }
+
 .hero-content::before {
   content: "";
   position: absolute;
@@ -507,21 +518,51 @@ footer a {
   margin-top: 20px;
   margin-bottom: 50px;
 }
+
+/* CSS CARRUSEL */
 .carousel {
-  display: flex;
   overflow: hidden;
   width: 100%;
 }
+
 .carousel__content {
   display: flex;
-  animation: scroll 10s linear infinite;
+  animation: scroll 30s linear infinite;
+  width: max-content;
 }
+
 .carousel__item {
-  flex: 0 0 100%;
-  max-width: 100%;
+  flex: 0 0 auto;
+  padding: 0 20px;
+}
+
+.carousel__item img {
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
+}
+
+.carousel__separator {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #bbb;
+  padding: 0 10px;
 }
 
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+iframe{
+  width: 200 px;
+  height: 120 px;
+  border: 0;
 }
