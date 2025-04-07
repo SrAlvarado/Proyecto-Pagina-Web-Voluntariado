@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel Infinito</title>
+  <style>
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+    }
+    .carousel__content {
+      display: flex;
+      animation: scroll 10s linear infinite;
+    }
+    .carousel__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+ 
+</body>
+</html>

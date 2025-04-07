@@ -507,3 +507,21 @@ footer a {
   margin-top: 20px;
   margin-bottom: 50px;
 }
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel__content {
+  display: flex;
+  animation: scroll 10s linear infinite;
+}
+.carousel__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
