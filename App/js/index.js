@@ -107,3 +107,4 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("hashchange", checkModal);
   checkModal();
 });
+
