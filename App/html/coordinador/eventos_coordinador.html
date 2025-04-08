@@ -2,20 +2,21 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos</title>
     <link rel="stylesheet" href="./../../css/coordinador.css">
     <link rel="stylesheet" href="./../../../bulma/css/bulma.css">
     <link rel="icon" type="image/png" href="./../../img/logo.png">
     <script src="https://kit.fontawesome.com/dc47467364.js" crossorigin="anonymous"></script>
-    <script src="./../../js/index.js"></script>
 </head>
-
 <body>
     <nav class="navbar has-background-info-20-invert" aria-label="main navigation">
         <div class="navbar-brand">
-          <img class="navbar-item logo-4vv" src="./../../img/logo.png" alt="Logo 4V" />
+                <img id="logo"
+                  class="navbar-item logo-4vv"
+                  src="./../../img/logo.png"
+                  alt="Logo 4V">
           <a role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -23,22 +24,21 @@
             <span aria-hidden="true"></span>
           </a>
         </div>
+        
         <div class="navbar-end">
-          <div class="navbar-item">
-            <a class="navbar-item has-text-info-90-invert" href="./index_coordinador.html">Inicio</a>
-            <a class="navbar-item has-text-info-90-invert" href="./eventos_coordinador.html">Eventos</a>
-            <a class="navbar-item has-text-info-90-invert" href="./../voluntariados/voluntariados_coordinador.html">Voluntariados</a>
-            <a class="navbar-item has-text-info-90-invert" href="./panelHistorialAlumnado.html">Historial de Alumnos</a>
-            <a class="navbar-item has-text-info-90-invert" href="./../usuario.html">Perfil</a>
-          </div>
+            <div class="navbar-item">
+              <a class="navbar-item has-text-info-90-invert" href="./../index.html">Inicio</a>
+              <a class="navbar-item has-text-info-90-invert" href="./../eventos.html">Eventos </a>
+              <a class="navbar-item has-text-info-90-invert" href="#login">Sign In <i class="fa-solid fa-right-to-bracket"></i></a>
+            </div>
         </div>
-      </nav>
-    <!-- Formulario de Inicio sesión / Registro -->
+    </nav> 
+          <!-- Formulario de Inicio sesión / Registro -->
     <div id="login" class="modal">
         <div class="modal-content">
             <a href="#" class="close-btn">✖</a>
             <h2 class="title is-3 has-text-centered has-text-info-65-invert">Iniciar Sesión</h2>
-            <form action="./../../filtradoDeVoluntariado.html" method="get">
+            <form action="filtradoDeVoluntariado.html" method="get">
                 <div class="field">
                     <div class="control">
                         <input class="input" type="email" name="email" placeholder="E-mail" required>
@@ -68,13 +68,13 @@
             <a href="#" class="is-size-7">Learn user licence agreement</a>
         </div>
     </div>
-
+    
     <!-- Modal de Registro Voluntario -->
     <div id="signin" class="modal mt-6">
         <div class="modal-content">
             <a href="#" class="close-btn">✖</a>
             <h2 class="title is-3 has-text-centered has-text-info-65-invert">Registro Voluntario</h2>
-
+            
             <form>
                 <div class="field">
                     <input class="input" type="text" placeholder="Nombre Completo" required>
@@ -100,30 +100,30 @@
                 <div class="field">
                     <input class="input" type="text" placeholder="Curso" required>
                 </div>
-
+                
                 <div class="field-registro">
                     <div class="control">
                         <fieldset class="custom-checkbox-group">
                             <legend>Áreas de interés</legend>
-
+                            
                             <label class="custom-checkbox">
                                 <input type="checkbox" name="areasInteres" value="educacion">
                                 <span class="checkmark"></span> Educación
                             </label>
-
+                
                             <label class="custom-checkbox">
                                 <input type="checkbox" name="areasInteres" value="salud">
                                 <span class="checkmark"></span> Salud
                             </label>
-
+                
                             <label class="custom-checkbox">
                                 <input type="checkbox" name="areasInteres" value="medioambiente">
                                 <span class="checkmark"></span> Medio Ambiente
                             </label>
                         </fieldset>
                     </div>
-                </div>
-
+                </div>   
+                
                 <div class="field">
                     <label class="checkbox">
                         <input type="checkbox" required> Acepto los <a href="#">términos y condiciones</a>.
@@ -138,70 +138,70 @@
             </div>
         </div>
     </div>
-
-    <!-- Modal de Registro Empresa -->
-    <div id="signinEmpresa" class="modal">
-        <div class="modal-content">
-            <a href="#" class="close-btn">✖</a>
-            <h2 class="title is-3 has-text-centered has-text-info-65-invert">Nueva Empresa</h2>
-            <form>
-                <div class="field">
-                    <input class="input" type="text" placeholder="Nombre de la Empresa" required>
-                </div>
-                <div class="field">
-                    <input class="input" type="text" placeholder="Persona de Contacto" required>
-                </div>
-                <div class="field">
-                    <input class="input" type="text" placeholder="Localidad" required>
-                </div>
-                <div class="field">
-                    <input class="input" type="text" placeholder="Actividad Económica" required>
-                </div>
-                <div class="field">
-                    <input class="input" type="tel" placeholder="Teléfono" required>
-                </div>
-                <div class="field">
-                    <input class="input" type="email" placeholder="Correo Electrónico" required>
-                </div>
-                <div class="field">
-                    <input class="input" type="password" placeholder="Contraseña" required>
-                </div>
-                <div class="field-registro">
-                    <div class="control">
-                        <fieldset class="custom-checkbox-group">
-                            <legend>Áreas de interés</legend>
-
-                            <label class="custom-checkbox">
-                                <input type="checkbox" name="areasInteres" value="educacion">
-                                <span class="checkmark"></span> Educación
-                            </label>
-
-                            <label class="custom-checkbox">
-                                <input type="checkbox" name="areasInteres" value="salud">
-                                <span class="checkmark"></span> Salud
-                            </label>
-
-                            <label class="custom-checkbox">
-                                <input type="checkbox" name="areasInteres" value="medioambiente">
-                                <span class="checkmark"></span> Medio Ambiente
-                            </label>
-                        </fieldset>
+        
+        <!-- Modal de Registro Empresa -->
+        <div id="signinEmpresa" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close-btn">✖</a>
+                <h2 class="title is-3 has-text-centered has-text-info-65-invert">Nueva Empresa</h2>
+                <form>
+                    <div class="field">
+                        <input class="input" type="text" placeholder="Nombre de la Empresa" required>
                     </div>
+                    <div class="field">
+                        <input class="input" type="text" placeholder="Persona de Contacto" required>
+                    </div>
+                    <div class="field">
+                        <input class="input" type="text" placeholder="Localidad" required>
+                    </div>
+                    <div class="field">
+                        <input class="input" type="text" placeholder="Actividad Económica" required>
+                    </div>
+                    <div class="field">
+                        <input class="input" type="tel" placeholder="Teléfono" required>
+                    </div>
+                    <div class="field">
+                        <input class="input" type="email" placeholder="Correo Electrónico" required>
+                    </div>
+                    <div class="field">
+                        <input class="input" type="password" placeholder="Contraseña" required>
+                    </div>
+                    <div class="field-registro">
+                      <div class="control">
+                          <fieldset class="custom-checkbox-group">
+                              <legend>Áreas de interés</legend>
+                              
+                              <label class="custom-checkbox">
+                                  <input type="checkbox" name="areasInteres" value="educacion">
+                                  <span class="checkmark"></span> Educación
+                              </label>
+                  
+                              <label class="custom-checkbox">
+                                  <input type="checkbox" name="areasInteres" value="salud">
+                                  <span class="checkmark"></span> Salud
+                              </label>
+                  
+                              <label class="custom-checkbox">
+                                  <input type="checkbox" name="areasInteres" value="medioambiente">
+                                  <span class="checkmark"></span> Medio Ambiente
+                              </label>
+                          </fieldset>
+                      </div>
+                  </div>    
+                    <div class="field">
+                        <label class="checkbox">
+                            <input type="checkbox" required> Acepto los <a href="#">términos y condiciones</a>.
+                        </label>
+                    </div>
+                    <div class="field">
+                        <button class="button is-primary is-fullwidth">Registrarse</button>
+                    </div>
+                </form>
+                <div class="has-text-centered mt-4">
+                    <p>¿Ya tienes una cuenta? <a href="#login" >Iniciar Sesión</a></p>
                 </div>
-                <div class="field">
-                    <label class="checkbox">
-                        <input type="checkbox" required> Acepto los <a href="#">términos y condiciones</a>.
-                    </label>
-                </div>
-                <div class="field">
-                    <button class="button is-primary is-fullwidth">Registrarse</button>
-                </div>
-            </form>
-            <div class="has-text-centered mt-4">
-                <p>¿Ya tienes una cuenta? <a href="#login">Iniciar Sesión</a></p>
             </div>
         </div>
-    </div>
 
     <section class="section">
         <div class="container">
@@ -222,7 +222,7 @@
                                     </select>
                                 </div>
                                 <span class="icon is-left">
-                                    <i class="fas fa-list"></i>
+                                    <i class="fas fa-list"></i> 
                                 </span>
                             </div>
                         </div>
@@ -257,7 +257,7 @@
                     <div class="column is-fullwidth">
                         <div class="columns is-vcentered">
                             <div class="column is-fullwidth mt-4">
-                                <div class="field is-grouped is-grouped-right">
+                                <div class="field is-grouped is-grouped-right mt-3">
                                     <div class="control">
                                         <button class="button is-info is-light">
                                             <span class="icon">
@@ -290,16 +290,19 @@
                             <div class="column is-5">
                                 <div class="columns is-vcentered">
                                     <div class="column is-fullwidth">
-                                        <strong class="nombre-proyecto">Taller de Competencias Básicas Digitales en
-                                            ANFAS Sangüesa</strong><br>
+                                        <strong class="nombre-proyecto">Taller de Competencias Básicas Digitales en ANFAS Sangüesa</strong><br>
                                         <h2><span class="tag is-info is-light">Noticia</span></h2>
+                                        <div class="has-text-left mt-5"><i
+                                            class="fa-solid fa-pen-to-square has-text-warning"></i><i
+                                            class="fa-solid fa-trash has-text-danger"></i>
+                                            <a href="./../coordinador/CrearEvento_coordinador.html"><i class="fa-solid fa-plus has-text-success"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="column is-fullwidth">
                                 <div class="column is-flex is-justify-content-center ">
-                                    <img class="imagenes-eventos" src="./../../img/imagen-reunion.png"
-                                        alt="Imagen ANFAS Sangüesa">
+                                    <img class="imagenes-eventos" src="./../../img/imagen-reunion.png" alt="Imagen ANFAS Sangüesa">  
                                 </div>
                             </div>
 
@@ -307,13 +310,11 @@
                         <div>
                             <details class="has-text-justified">
                                 <summary>Detalles</summary>
-                                Nuestro profesor, Javier Pascual, ha realizado un taller de competencias básicas
-                                digitales en la Asociación ANFAS de Sangüesa, una entidad que apoya a personas con
-                                discapacidad intelectual y del desarrollo.
+                                Nuestro profesor, Javier Pascual, ha realizado un taller de competencias básicas digitales en la Asociación ANFAS de Sangüesa, una entidad que apoya a personas con discapacidad intelectual y del desarrollo.
                                 Durante la sesión, los participantes aprendieron a manejar herramientas
                             </details>
                         </div>
-
+                        
                     </div>
                 </div>
                 <div class="column is-half">
@@ -322,34 +323,30 @@
                             <div class="column is-5">
                                 <div class="columns is-vcentered">
                                     <div class="column is-fullwidth">
-                                        <strong class="nombre-proyecto">Fiesta del Voluntariado 11 de
-                                            Octubre</strong><br>
+                                        <strong class="nombre-proyecto">Fiesta del Voluntariado 11 de Octubre</strong><br>
                                         <h2><span class="tag is-warning is-light">Voluntariado</span></h2>
+                                        <div class="has-text-left mt-5"><i
+                                            class="fa-solid fa-pen-to-square has-text-warning"></i><i
+                                            class="fa-solid fa-trash has-text-danger"></i>
+                                            <a href="./../coordinador/CrearEvento_coordinador.html"><i class="fa-solid fa-plus has-text-success"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="column is-fullwidth">
                                 <div class="column is-flex is-justify-content-center">
-                                    <img class="imagenes-eventos" src="./../../img/imagen-fiesta-voluntariado.png"
-                                        alt="Imagen fiesta voluntariado">
+                                    <img class="imagenes-eventos" src="./../../img/imagen-fiesta-voluntariado.png" alt="Imagen fiesta voluntariado">  
                                 </div>
                             </div>
                         </div>
                         <div>
                             <details class="has-text-justified">
                                 <summary>Detalles</summary>
-                                La Fiesta del Voluntariado de Navarra es una iniciativa organizada en el marco del III
-                                Plan de Voluntariado de Navarra. Su objetivo es poner en valor a las personas
-                                voluntarias, las entidades sociales, las empresas y cualquier otro actor clave
-                                involucrado en el ecosistema del voluntariado en la comunidad.
-                                Este evento pretende dar a conocer el trabajo y la importancia del voluntario en
-                                navarra, promover el intercambio de experiencias, la creación de redes y el fortalecer
-                                de la colaboración entre organizaciones. <br><br>
+                                La Fiesta del Voluntariado de Navarra es una iniciativa organizada en el marco del III Plan de Voluntariado de Navarra. Su objetivo es poner en valor a las personas voluntarias, las entidades sociales, las empresas y cualquier otro actor clave involucrado en el ecosistema del voluntariado en la comunidad. 
+                                Este evento pretende dar a conocer el trabajo y la importancia del voluntario en navarra, promover el intercambio de experiencias, la creación de redes y el fortalecer de la colaboración entre organizaciones. <br><br>
 
-                                La primera edición de esta fiesta, que tendrá lugar en Baluarte, pretende ser un espacio
-                                para evidenciar el impacto positivo del voluntariado en la sociedad navarra, fomentar la
-                                participación ciudadana y visibilizar el compromiso solidario.
-
+                                La primera edición de esta fiesta, que tendrá lugar en Baluarte, pretende ser un espacio para evidenciar el impacto positivo del voluntariado en la sociedad navarra, fomentar la participación ciudadana y visibilizar el compromiso solidario.
+                                
                             </details>
                         </div>
                     </div>
@@ -377,19 +374,23 @@
                     <div class="social-icons is-flex is-justify-content-center">
                         <a href="https://twitter.com/_cuatrovientos?lang=es" class="social-icon" aria-label="Twitter"
                             target="_blank">
-                            <img src="./../../img/twitter_azul.png" alt="Twitter" class="social-icon-img">
+                            <img src="./../../img/twitter_azul.png" alt="Twitter"
+                                class="social-icon-img">
                         </a>
                         <a href="https://www.instagram.com/cipcuatrovientos/?hl=es" class="social-icon"
                             aria-label="Instagram" target="_blank">
-                            <img src="./../../img/Instagram.png" alt="Instagram" class="social-icon-img">
+                            <img src="./../../img/Instagram.png" alt="Instagram"
+                                class="social-icon-img">
                         </a>
                         <a href="https://www.facebook.com/cipcuatrovientos/?locale=es_ES" class="social-icon"
                             aria-label="Facebook" target="_blank">
-                            <img src="./../../img/facebook_azul.png" alt="Facebook" class="social-icon-img">
+                            <img src="./../../img/facebook_azul.png" alt="Facebook"
+                                class="social-icon-img">
                         </a>
                         <a href="https://www.youtube.com/@alviento/videos" class="social-icon" aria-label="YouTube"
                             target="_blank">
-                            <img src="./../../img/youtube_azul.png" alt="YouTube" class="social-icon-img">
+                            <img src="./../../img/youtube_azul.png" alt="YouTube"
+                                class="social-icon-img">
                         </a>
                     </div>
                 </div>

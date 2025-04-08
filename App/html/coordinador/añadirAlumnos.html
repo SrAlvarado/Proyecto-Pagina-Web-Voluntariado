@@ -129,17 +129,12 @@ Meta 16.4</textarea>
             <div class="field">
               <label class="label negrita" for="informacion">Información del Voluntariado
               </label>
-              <textarea class="textarea" id="informacion" readonly>
-                    El Proyecto Puzzle se basa en el apoyo escolar a niños, niñas y adolescentes
-                    a partir de 5º de Primaria. Dicho apoyo se ofrece en los locales de Fundación Santa Lucía Adsis,
-                    en el barrio de San Jorge, en Pamplona, las tardes de los martes y jueves, de 18:00 a 20:00, aproximadamente.
-                    Las personas voluntarias pueden venir los dos días o solo uno de ellos a la semana.
-                    El apoyo se ofrece de octubre a mayo, respetando las vacaciones marcadas en el calendario escolar.
+              <textarea class="textarea has-text-justified" id="informacion" readonly>
+      El Proyecto Puzzle se basa en el apoyo escolar a niños, niñas y adolesces a partir de 5º de Primaria. Dicho apoyo se ofrece en los locales de Fundación Santa Lucía Adsis, en el barrio de San Jorge, en Pamplona, las tardes de los martes y jueves, de 18:00 a 20:00, aproximadamente.
+              
+      Las personas voluntarias pueden venir los dos días o solo uno de ellos a la semana. El apoyo se ofrece de octubre a mayo, respetando las vacaciones marcadas en el calendario escolar.
 
-                    Las personas participantes en el Proyecto, por lo general, son niños y niñas de origen migrante,
-                    en situación de vulnerabilidad social. Muchos de ellos viven en el barrio de San Jorge,
-                    pero la oferta se amplía a niños y niñas de otras zonas de Pamplona y comarca.
-                </textarea>
+      Las personas participantes en el Proyecto, por lo general, son niños y niñas de origen migrante, en situación de vulnerabilidad social. Muchos de ellos viven en el barrio de San Jorge, pero la oferta se amplía a niños y niñas de otras zonas de Pamplona y comarca.</textarea>
             </div>
           </div>
         </div>
@@ -212,25 +207,36 @@ Meta 16.4</textarea>
             </div>
           </div>
 
-          <div class="columns">
-            <div class="column is-half">
-              <label class="label negrita">Alumnos seleccionados</label>
-              <div class="columns">
-                <div class="column is-half">
-                  <span class="tag is-info is-light mb-2">Laura Méndez<button
-                      class="delete is-small"></button></span><br>
-                  <span class="tag is-info is-light mb-2">Carlos Rojas<button
-                      class="delete is-small"></button></span><br>
-                  <span class="tag is-info is-light mb-2">Pablo Castro<button
-                      class="delete is-small"></button></span><br>
+          <div class="column is-half">
+            <div class="columns">
+              <div class="column is-7">
+                <div class="field">
+                  <label class="label negrita" for="ods">ODS implicados</label>
+                  <div class="control has-icons-left">
+                    <div class="select is-fullwidth">
+                      <select id="ods" required>
+                        <!-- Tus opciones de ODS aquí -->
+                      </select>
+                    </div>
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-globe"></i>
+                    </span>
+                  </div>
                 </div>
-                <div class="column is-half">
-                  <span class="tag is-info is-light mb-2">Ana López<button
-                      class="delete is-small"></button></span><br />
-                  <span class="tag is-info is-light mb-2">Miguel Torres<button
-                      class="delete is-small"></button></span><br />
-                  <span class="tag is-info is-light mb-2">Lucía Díaz<button
-                      class="delete is-small"></button></span><br />
+              </div>
+              <div class="column is-5">
+                <div class="field">
+                  <label class="label negrita" for="metas">Metas</label>
+                  <div class="control has-icons-left">
+                    <div class="select is-fullwidth">
+                      <select id="metas" required>
+                        <option value="">-Meta-</option>
+                      </select>
+                    </div>
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-bullseye"></i>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

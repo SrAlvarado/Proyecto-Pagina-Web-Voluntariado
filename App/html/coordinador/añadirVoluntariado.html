@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./../../../bulma/css/bulma.css" />
   <link rel="stylesheet" href="./../../css/coordinador.css" />
   <link rel="icon" type="image/png" href="./../../img/logo.png" />
-  <script src="./index.js"></script>
+  <script src="./../../js/añadirVoluntariado.js"></script>
   <script src="https://kit.fontawesome.com/dc47467364.js" crossorigin="anonymous"></script>
 </head>
 
@@ -114,16 +114,16 @@
                       <option value="16">16 Paz, justicia e instituciones sólidas</option>
                     </optgroup>
 
-                    <optgrouplabel="Desarrollo comunitario y participación ciudadana">
+                    <optgroup label="Desarrollo comunitario y participación ciudadana">
                       <option value="11">11 Ciudades y comunidades sostenibles</option>
                       <option value="16">16 Paz, justicia e instituciones sólidas</option>
                       </optgrouplabel=>
 
-                      <optgrouplabel="Innovación, tecnología y formación digital">
-                        <option value="04">04 Educación de calidad</option>
-                        <option value="09">09 Industria, innovación e infraestructura</option>
-                        <option value="10">10 Reducción de las desigualdades</option>
-                        </optgrouplabel=>
+                    <optgroup label="Innovación, tecnología y formación digital">
+                      <option value="04">04 Educación de calidad</option>
+                      <option value="09">09 Industria, innovación e infraestructura</option>
+                      <option value="10">10 Reducción de las desigualdades</option>
+                      </optgrouplabel=>
                   </select>
                 </div>
                 <span class="icon is-small is-left">
@@ -153,7 +153,7 @@
           </div>
         </div>
         <div class="columns">
-          <div class="column is-half">
+          <div class="column is-fullwidth">
             <div class="field">
               <label class="label negrita">Nº Voluntarios</label>
               <div class="control has-icons-left">
@@ -164,10 +164,16 @@
               </div>
             </div>
           </div>
-          <!-- ODS y Metas -->
-          <div class="column is-half">
-            <div class="columns">
-              <div class="column is-7">
+          <div class="column is-fullwidth">
+            <label class="label negrita has-text-centered">ODS seleccionados</label>
+            <div id="ods-seleccionados" class="tags">
+              <!-- tags de ODS+Metas -->
+            </div>
+          </div>
+        </div>
+            <!-- Nuevo bloque para ODS y Metas -->
+            <div class="columns mt-2">
+              <div class="column is-6">
                 <div class="field">
                   <label class="label negrita" for="ods">ODS implicados</label>
                   <div class="control has-icons-left">
@@ -203,19 +209,13 @@
                   </div>
                 </div>
               </div>
-              <div class="column is-5">
+              <div class="column is-6">
                 <div class="field">
                   <label class="label negrita" for="metas">Metas</label>
                   <div class="control has-icons-left">
                     <div class="select is-fullwidth">
                       <select id="metas" required>
                         <option value="">-Meta-</option>
-                        <option>Meta 4.1</option>
-                        <option>Meta 4.2</option>
-                        <option>Meta 4.3</option>
-                        <option>Meta 4.4</option>
-                        <option>Meta 4.a</option>
-                        <option>Meta 4.b</option>
                       </select>
                     </div>
                     <span class="icon is-small is-left">
@@ -225,104 +225,102 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="columns">
-          <div class="column is-half">
-            <div class="field">
-              <label class="label negrita" for="fecha-inicio">Fecha de Inicio</label>
-              <div class="control has-icons-left">
-                <input class="input" id="fecha-inicio" type="date" required>
-              </div>
-            </div>
-          </div>
-          <div class="column is-half">
-            <div class="field">
-              <label class="label negrita" for="fecha-fin">Fecha de Finalización</label>
-              <div class="control has-icons-left">
-                <input class="input" id="fecha-fin" type="date" required>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Nuevo bloque para seleccionar días y horarios -->
-        <div class="columns">
-          <div class="column is-half">
-            <div class="columns is-centered">
-              <div class="column is-narrow">
+            <div class="columns">
+              <div class="column is-half">
                 <div class="field">
-                  <label class="label negrita has-text-centered mb-4">Días de voluntariado</label>
-                  <div class="control has-text-centered">
-                    <div class="is-flex is-justify-content-center is-flex-wrap-wrap">
-                      <label class="checkbox mx-2">
-                        <input type="checkbox" name="dias" value="L"> L
-                      </label>
-                      <label class="checkbox mx-2">
-                        <input type="checkbox" name="dias" value="M"> M
-                      </label>
-                      <label class="checkbox mx-2">
-                        <input type="checkbox" name="dias" value="X"> X
-                      </label>
-                      <label class="checkbox mx-2">
-                        <input type="checkbox" name="dias" value="J"> J
-                      </label>
-                      <label class="checkbox mx-2">
-                        <input type="checkbox" name="dias" value="V"> V
-                      </label>
-                      <label class="checkbox mx-2">
-                        <input type="checkbox" name="dias" value="S"> S
-                      </label>
-                      <label class="checkbox mx-2">
-                        <input type="checkbox" name="dias" value="D"> D
-                      </label>
+                  <label class="label negrita" for="fecha-inicio">Fecha de Inicio</label>
+                  <div class="control has-icons-left">
+                    <input class="input" id="fecha-inicio" type="date" required>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-half">
+                <div class="field">
+                  <label class="label negrita" for="fecha-fin">Fecha de Finalización</label>
+                  <div class="control has-icons-left">
+                    <input class="input" id="fecha-fin" type="date" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Nuevo bloque para seleccionar días y horarios -->
+            <div class="columns">
+              <div class="column is-half">
+                <div class="columns is-centered">
+                  <div class="column is-narrow">
+                    <div class="field">
+                      <label class="label negrita has-text-centered mb-4">Días de voluntariado</label>
+                      <div class="control has-text-centered">
+                        <div class="is-flex is-justify-content-center is-flex-wrap-wrap">
+                          <label class="checkbox mx-2">
+                            <input type="checkbox" name="dias" value="L"> L
+                          </label>
+                          <label class="checkbox mx-2">
+                            <input type="checkbox" name="dias" value="M"> M
+                          </label>
+                          <label class="checkbox mx-2">
+                            <input type="checkbox" name="dias" value="X"> X
+                          </label>
+                          <label class="checkbox mx-2">
+                            <input type="checkbox" name="dias" value="J"> J
+                          </label>
+                          <label class="checkbox mx-2">
+                            <input type="checkbox" name="dias" value="V"> V
+                          </label>
+                          <label class="checkbox mx-2">
+                            <input type="checkbox" name="dias" value="S"> S
+                          </label>
+                          <label class="checkbox mx-2">
+                            <input type="checkbox" name="dias" value="D"> D
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-half">
+                <div class="columns">
+                  <div class="column is-5">
+                    <div class="field">
+                      <label class="label negrita" for="hora-inicio">Hora de inicio</label>
+                      <div class="control">
+                        <input class="input" id="hora-inicio" type="time" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column is-5">
+                    <div class="field">
+                      <label class="label negrita" for="hora-fin">Hora de fin</label>
+                      <div class="control">
+                        <input class="input" id="hora-fin" type="time" required>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="column is-half">
-            <div class="columns">
-              <div class="column is-5">
-                <div class="field">
-                  <label class="label negrita" for="hora-inicio">Hora de inicio</label>
-                  <div class="control">
-                    <input class="input" id="hora-inicio" type="time" required>
-                  </div>
-                </div>
-              </div>
-              <div class="column is-5">
-                <div class="field">
-                  <label class="label negrita" for="hora-fin">Hora de fin</label>
-                  <div class="control">
-                    <input class="input" id="hora-fin" type="time" required>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="columns">
-          <div class="column is-half">
-            <div class="field">
-              <label class="label negrita" for="informacion">Información del Voluntariado</label>
-              <div class="control">
-                <textarea class="textarea" id="informacion" rows="4" placeholder="Describe el voluntariado..."
-                  required></textarea>
+            <div class="columns">
+              <div class="column is-half">
+                <div class="field">
+                  <label class="label negrita" for="informacion">Información del Voluntariado</label>
+                  <div class="control">
+                    <textarea class="textarea" id="informacion" rows="4" placeholder="Describe el voluntariado..."
+                      required></textarea>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <!-- Botones -->
-        <div class="field is-grouped">
-          <div class="control">
-            <button type="submit" class="button has-background-info-20-invert">Añadir</button>
-          </div>
-          <div class="control">
-            <button type="reset" class="button">Limpiar Formulario</button>
-          </div>
-        </div>
+            <!-- Botones -->
+            <div class="field is-grouped">
+              <div class="control">
+                <button type="submit" class="button has-background-info-20-invert">Añadir</button>
+              </div>
+              <div class="control">
+                <button type="reset" class="button">Limpiar Formulario</button>
+              </div>
+            </div>
       </form>
     </div>
   </div>
