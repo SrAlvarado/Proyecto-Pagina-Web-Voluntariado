@@ -107,3 +107,32 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("hashchange", checkModal);
   checkModal();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.faq-question').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const item = btn.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
+      const icon = btn.querySelector('.toggle-icon');
+      const isActive = item.classList.contains('active');
+
+      if (isActive) {
+        answer.style.height = answer.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          answer.style.height = '0';
+        });
+      } else {
+        answer.style.height = answer.scrollHeight + 'px';
+        answer.addEventListener('transitionend', function handler() {
+          if (item.classList.contains('active')) {
+            answer.style.height = 'auto';
+          }
+          answer.removeEventListener('transitionend', handler);
+        });
+      }
+
+      item.classList.toggle('active');
+      icon.textContent = item.classList.contains('active') ? '−' : '+';
+    });
+  });
+});

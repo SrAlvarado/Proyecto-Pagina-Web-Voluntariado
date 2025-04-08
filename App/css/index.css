@@ -10,17 +10,26 @@ body {
   background-image: url("./../../App/img/fondo1.jpg");
   background-attachment: fixed;
 }
+.logo-4vv {
+  height: 4rem;        /* Ajusta aquí el tamaño real que quieres */
+  width: auto;         /* Mantiene la proporción */
+  object-fit: contain; /* Por si acaso se llegara a recortar */
+  padding: 0.25rem 0;  /* Para centrado vertical */
+}
 .navbar {
   background-image: url("./../../App/img/fondo_hero.jpg");
   background-size: cover;
   background-position: center top;
   height: 80px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombras más intensas */
-  background-color: rgba(252, 252, 252, 0.4); /* Fondo semitransparente en tonos grises */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+  background-color: rgba(252, 252, 252, 0.4); 
 }
 
 .navbar-item {
   font-size: 1.3rem;
+}
+.navbar-item img {
+  max-height: none;
 }
 
 .navbar-menu {
@@ -222,10 +231,7 @@ body {
   z-index: 2;
 }
 
-.logo-4vv {
-  width: 5rem;
-  height: 5rem;
-}
+
 
 .transparencia {
   background-color: black;
@@ -566,3 +572,66 @@ iframe{
   height: 120 px;
   border: 0;
 }
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 20px;
+  border-left: 2px solid #007acc;
+  font-family: "Courier New", monospace;
+  color: #003366;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #cce6ff;
+  padding-bottom: 10px;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  color: #005a99;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #007acc;
+}
+
+.faq-answer {
+  overflow: hidden;
+  height: 0;
+  color: #003d66;
+  padding-left: 15px;
+  margin-top: 0;
+  transition: height 0.4s ease, margin-top 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  margin-top: 10px;
+}
+
+
+.toggle-icon {
+  margin-left: 10px;
+  font-weight: normal;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .toggle-icon {
+  transform: rotate(45deg);
+}
+.faq-question:hover {
+  color: #007acc;
+  transform: translateX(7px);
+  animation: 1s;
+}
+

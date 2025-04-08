@@ -13,25 +13,40 @@
 </head>
 
 <body>
-  <nav class="navbar is-centered" aria-label="main navigation">
+  <nav class="navbar has-background-info">
     <div class="navbar-brand">
-      <img class="navbar-item logo-4vv" src="./../img/logo.png" alt="Logo 4V" />
-      <a role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+      <a class="navbar-item has-text-white" href="#">
+        <img class="logo-4vv" src="./../img/logo.png" alt="Logo">
       </a>
+    
+      <button class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
     </div>
-    <div class="navbar-menu is-centered">
-      <div class="navbar-menu is-centered">
-        <a class="navbar-item has-text-white is-size-3">Inicio</a>
-        <a class="navbar-item has-text-white is-size-3" href="./eventos.html">Eventos</a>
-        <a class="navbar-item has-text-white is-size-3" href="#login">Sign In<i class="fa-solid fa-right-to-bracket"></i></a>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item has-text-white" href="#">Inicio</a>
+        <a class="navbar-item has-text-white" href="./eventos.html">Eventos</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link has-text-white">Más</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item">Contacto</a>
+            <a class="navbar-item">Sobre nosotros</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <a class="button is-primary" href="#">Sign In</a>
+        </div>
       </div>
     </div>
   </nav>
-
+  
   <section class="hero is-fullheight hero-background">
     <div class="hero-body">
       <div class="container has-text-centered">
@@ -403,7 +418,7 @@
     </div>
     <div class="level-item has-text-centered">
       <div>
-        <p class="heading">actividades</p>
+        <p class="heading">ACTIVIDADES</p>
         <p class="title has-text-info-90-invert">40</p>
       </div>
     </div>
@@ -469,7 +484,7 @@
           </div>
         </div>
         <div class="column is-one-third fondo-card-voluntariados">
-          <h2 class="title has-text-centered has-text-info-100-invert">actividades</h2>
+          <h2 class="title has-text-centered has-text-info-100-invert">ACTIVIDADES</h2>
           <div class="card">
             <div class="card-image">
               <a href="./eventos.html">
@@ -492,6 +507,46 @@
       </div>
     </div>
   </section>
+<!--FAQ-->
+
+  <section class="faq-section">
+    <div class="faq-item">
+      <button class="faq-question">1. ¿Quién puede ser voluntario?<span class="toggle-icon">+</span></button>
+      <div class="faq-answer">
+        Cualquier persona mayor de 16 años con motivación y ganas de ayudar.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question">2. ¿Qué tipo de tareas se pueden realizar?<span class="toggle-icon">+</span></button>
+      <div class="faq-answer">
+        Actividades sociales, educativas, medioambientales, apoyo logístico, y mucho más.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question">3. ¿Cuánto tiempo necesito comprometerme?<span class="toggle-icon">+</span></button>
+      <div class="faq-answer">
+        Desde pocas horas semanales hasta programas intensivos, tú decides el nivel de compromiso.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question">4. ¿Recibo algún tipo de formación?<span class="toggle-icon">+</span></button>
+      <div class="faq-answer">
+        Sí. Todos los voluntarios reciben formación básica antes de comenzar.
+      </div>
+    </div>
+  
+    <div class="faq-item">
+      <button class="faq-question">5. ¿Cómo me inscribo como voluntario?<span class="toggle-icon">+</span></button>
+      <div class="faq-answer">
+        Puedes inscribirte desde el formulario en nuestra web o escribiendo a info@voluntariado.org.
+      </div>
+    </div>
+  </section>
+
+<!--CARRUSEL-->
   <section>
     <div class="carousel">
       <div class="carousel__content">
