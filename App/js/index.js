@@ -108,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
   checkModal();
 });
 
-<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.faq-question').forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -137,5 +136,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-=======
->>>>>>> 819847756e6553b6d1184d5e19b6ab19b26bc71c
