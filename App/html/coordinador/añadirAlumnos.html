@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./../../../bulma/css/bulma.css" />
   <link rel="stylesheet" href="./../../css/coordinador.css" />
   <link rel="icon" type="image/png" href="./../../img/logo.png" />
+  <script src="./../../js/añadirAlumnos.js"></script>
   <script src="https://kit.fontawesome.com/dc47467364.js" crossorigin="anonymous"></script>
 </head>
 
@@ -148,7 +149,7 @@ Meta 16.4</textarea>
                   <div class="select is-fullwidth">
                     <select id="añadirAlumnos">
                       <option value="">-Alumnos-</option>
-                      <optgroup label="Comercio y Marketing">
+                      <optgroup label="Comercio y Marketing" class="grupo-alumnos">
                         <option value="alumno1">Laura Méndez</option>
                         <option value="alumno2">Carlos Rojas</option>
                         <option value="alumno3">Sara Jiménez</option>
@@ -158,7 +159,7 @@ Meta 16.4</textarea>
                         <option value="alumno7">Lucía Gómez</option>
                         <option value="alumno8">Diego Sánchez</option>
                       </optgroup>
-                      <optgroup label="Administración y Gestión">
+                      <optgroup label="Administración y Gestión" class="grupo-alumnos">
                         <option value="alumno9">Ana Martínez</option>
                         <option value="alumno10">Pedro García</option>
                         <option value="alumno11">Elena Díaz</option>
@@ -172,7 +173,7 @@ Meta 16.4</textarea>
                         <option value="alumno19">María Rojas</option>
                         <option value="alumno20">Pablo Jiménez</option>
                       </optgroup>
-                      <optgroup label="Informática y Comunicaciones">
+                      <optgroup label="Informática y Comunicaciones" class="grupo-alumnos">
                         <option value="alumno21">Lucía Díaz</option>
                         <option value="alumno22">Jorge Morales</option>
                         <option value="alumno23">Carmen Ortega</option>
@@ -194,50 +195,22 @@ Meta 16.4</textarea>
 
             <div class="column is-4">
               <label class="label negrita" for="buscarAlumnos">Buscar alumnos</label>
-              <div class="field has-addons">
-                <div class="control is-expanded is-justify-content-flex-end">
-                  <input class="input" type="text" placeholder="Buscar" id="buscarAlumnos" />
-                </div>
-                <div class="control">
-                  <button class="button is-info is-light">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
+                <div class="field has-addons">
+                  <div class="control is-expanded">
+                    <input class="input" type="text" placeholder="Buscar por nombre" id="buscarAlumnos" />
+                  </div>
+                  <div class="control">
+                    <button class="button is-info is-light" id="btnBuscarAlumnos">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="column is-half">
-            <div class="columns">
-              <div class="column is-7">
-                <div class="field">
-                  <label class="label negrita" for="ods">ODS implicados</label>
-                  <div class="control has-icons-left">
-                    <div class="select is-fullwidth">
-                      <select id="ods" required>
-                        <!-- Tus opciones de ODS aquí -->
-                      </select>
-                    </div>
-                    <span class="icon is-small is-left">
-                      <i class="fas fa-globe"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="column is-5">
-                <div class="field">
-                  <label class="label negrita" for="metas">Metas</label>
-                  <div class="control has-icons-left">
-                    <div class="select is-fullwidth">
-                      <select id="metas" required>
-                        <option value="">-Meta-</option>
-                      </select>
-                    </div>
-                    <span class="icon is-small is-left">
-                      <i class="fas fa-bullseye"></i>
-                    </span>
-                  </div>
-                </div>
+          <div class="columns">
+            <div class="column is-half">
+              <label class="label negrita">Alumnos seleccionados</label>
+              <div id="alumnosSeleccionados" class="tags">
               </div>
             </div>
           </div>
