@@ -11,18 +11,15 @@ body {
   background-attachment: fixed;
 }
 .logo-4vv {
-  height: 4rem;        /* Ajusta aquí el tamaño real que quieres */
-  width: auto;         /* Mantiene la proporción */
-  object-fit: contain; /* Por si acaso se llegara a recortar */
-  padding: 0.25rem 0;  /* Para centrado vertical */
+  height: 8rem;       
+  width: auto;      
+  object-fit: contain; 
+  padding: 0.25rem 0; 
 }
 .navbar {
-  background-image: url("./../../App/img/fondo_hero.jpg");
-  background-size: cover;
-  background-position: center top;
   height: 80px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
-  background-color: rgba(252, 252, 252, 0.4); 
+  background-color: rgba(252, 252, 252, 1); 
 }
 
 .navbar-item {
