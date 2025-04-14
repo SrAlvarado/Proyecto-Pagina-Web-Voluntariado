@@ -576,11 +576,29 @@ iframe{
   max-width: 800px;
   margin: 0 auto;
   padding-left: 20px;
-  border-left: 2px solid #007acc;
+  /*border-left: 2px solid #007acc;*/
   font-family: "Courier New", monospace;
   color: #003366;
 }
 
+#faq-title{
+  color: #003366;
+}
+
+.elemento-con-borde {
+  position: relative;
+  padding-left: 1.5rem; 
+}
+
+.elemento-con-borde::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16%; 
+  height: 71%; 
+  width: 2px;
+  background-color: #007acc; 
+}
 .faq-item {
   margin-bottom: 30px;
   border-bottom: 1px solid #cce6ff;
@@ -634,4 +652,50 @@ iframe{
   transform: translateX(7px);
   animation: 1s;
 }
+
+/** Ajustar las secciones y que ocupen toda la pantalla y queden centradas */
+/* Añade esto a tu CSS */
+section.section, .acerca-de, .margen-arriba {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 1.5rem; /* Ajusta según necesites */
+}
+
+
+/* Para el carrusel */
+.carousel {
+  min-height: 30vh; /* Ajusta según necesites */
+  display: flex;
+  align-items: center;
+}
+
+/* Elimina márgenes automáticos y usa padding consistente */
+.section-padding{
+  margin: 0 !important;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Espaciado específico para algunas secciones */
+.acerca-de {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%; /* Para contenido dentro de contenedores */
+}
+
+/* Asegura que las secciones tengan posición relativa */
+section {
+  position: relative;
+  z-index: 1;
+}
+
 
