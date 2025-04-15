@@ -351,7 +351,6 @@ body {
 
 .fondo-card-noticias:hover {
   padding-right: 30px;
-  border: 2px solid transparent;
   transition: box-shadow 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
   transition: padding-right 0.3s ease;
@@ -359,7 +358,6 @@ body {
 
 .fondo-card-eventos:hover {
   padding-right: 30px;
-  border: 2px solid transparent;
   transition: box-shadow 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
   transition: all 0.3s ease;
@@ -367,7 +365,6 @@ body {
 
 .fondo-card-voluntariados:hover {
   padding-right: 30px;
-  border: 2px solid transparent;
   transition: box-shadow 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
   transition: padding-right 0.3s ease;
