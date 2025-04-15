@@ -136,3 +136,42 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// Función para redirigir usuario a sus html correspondientes según el email
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("idBotonEnviarInicioSesion").addEventListener("click", function (event) {
+    event.preventDefault(); // ✋ Evita que se envíe el formulario automáticamente
+
+    let email = document.getElementById("idEmailInicioSesion").value.trim();
+    const emailVoluntarios = "voluntarios.com";
+    const emailOrganizaciones = "org.com";
+    const emailCoordinador = "coordinador.com";
+
+    let finalEmail = email.substring(email.indexOf("@") + 1);
+
+    if (
+      finalEmail !== emailVoluntarios &&
+      finalEmail !== emailOrganizaciones &&
+      finalEmail !== emailCoordinador
+    ) {
+      mostrarModal();
+      return;
+    }
+
+    if (finalEmail === emailVoluntarios) {
+      window.location.href = "./voluntarios/index_voluntarios.html";
+    } else if (finalEmail === emailOrganizaciones) {
+      window.location.href = "./voluntariados/voluntariados_organizaciones.html";
+    } else if (finalEmail === emailCoordinador) {
+      window.location.href = "./coordinador/voluntariados_coordinador.html";
+    }
+  });
+});
+
+function mostrarModal() {
+  document.getElementById("modalDominioNoValido").style.display = "block";
+}
+
+function cerrarModal() {
+  document.getElementById("modalDominioNoValido").style.display = "none";
+}

@@ -25,9 +25,7 @@ body {
 .navbar-item {
   font-size: 1.3rem;
 }
-.navbar-item img {
-  max-height: none;
-}
+
 
 .navbar-menu {
   justify-content: center;
@@ -44,6 +42,9 @@ body {
 .hero-content {
   padding: 2rem;
   border-radius: 8px;
+}
+.texto-hero{
+  z-index: 300;
 }
 
 .hero-content::before {

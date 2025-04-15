@@ -18,7 +18,7 @@
       <a class="navbar-item" href="#">
         <img class="logo-4vv" src="./../img/logo.png" alt="Logo">
       </a>
-    
+  
       <button class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -26,15 +26,15 @@
       </button>
     </div>
   
-    <div id="navbarBasicExample" class="navbar-menu is-align-content-center">
-      <div class="navbar-start">
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start is-flex-grow-1 is-justify-content-center">
         <a class="navbar-item has-text-dark" href="#">Inicio</a>
         <a class="navbar-item has-text-dark" href="./eventos.html">Eventos</a>
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link has-text-dark">Más</a>
           <div class="navbar-dropdown">
             <a class="navbar-item has-text-dark" href="#idFooter">Contacto</a>
-            <a class="navbar-item has-text-dark"  href="#idFooter">Sobre nosotros</a>
+            <a class="navbar-item has-text-dark" href="#idFooter">Sobre nosotros</a>
           </div>
         </div>
       </div>
@@ -47,12 +47,13 @@
     </div>
   </nav>
   
+  
   <section class="hero is-fullheight hero-background">
     <div class="hero-body">
       <div class="container has-text-centered">
         <div class="hero-content" style="position: relative">
-          <h1 class="title is-2 has-text-white">¡ÚNETE A LA FAMILIA 4V!</h1>
-          <h2 class="subtitle is-3 has-text-white">
+          <h1 class="title is-2 has-text-white texto-hero">¡ÚNETE A LA FAMILIA 4V!</h1>
+          <h2 class="subtitle is-3 has-text-white texto-hero">
             ¿Quieres ayudar a la ciudadanía?
           </h2>
           <a id="boton-volun" class="button has-background-info-00-invert is-medium" href="#signin">
@@ -70,7 +71,7 @@
       <form action="./voluntariados/voluntariados_coordinador.html" method="get">
         <div class="field">
           <div class="control has-icons-left">
-            <input class="input" type="email" name="email" placeholder="E-mail" required>
+            <input id="idEmailInicioSesion" class="input" type="email" name="email" placeholder="E-mail" required>
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -99,7 +100,7 @@
         </div>
         <div class="field">
           <div class="control">
-            <button type="submit" class="button is-fullwidth is-rounded custom-signin-button">
+            <button id="idBotonEnviarInicioSesion" type="button" class="button is-fullwidth is-rounded custom-signin-button">
               <span>Sign in</span>
               <span class="icon custom-icon">
                 <i class="fas fa-arrow-right"></i>
@@ -119,7 +120,13 @@
       </div>
     </div>
   </div>
-
+<!-- Modal de error -->
+<div id="modalDominioNoValido" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5);">
+  <div style="background:white; padding:20px; margin:100px auto; width:300px; border-radius:10px; text-align:center;">
+    <p>El dominio del correo no está registrado en la base de datos.</p>
+    <button onclick="cerrarModal()">Cerrar</button>
+  </div>
+</div>
   <div id="signin" class="modal mt-6">
     <div class="modal-content">
       <a href="#" class="close-btn">✖</a>

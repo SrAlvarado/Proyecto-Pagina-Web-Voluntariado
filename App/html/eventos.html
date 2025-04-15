@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos</title>
-    <link rel="stylesheet" href="./../css/index.css">
+    <link rel="stylesheet" href="./../css/coordinador.css">
     <link rel="stylesheet" href="./../../bulma/css/bulma.css">
     <link rel="icon" type="image/png" href="./../img/logo.png">
     <script src="https://kit.fontawesome.com/dc47467364.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <nav class="navbar ">
+    <nav class="navbar has-background-info-20-invert">
         <div class="navbar-brand">
-          <a class="navbar-item has-text-white" href="#">
+          <a class="navbar-item" href="#">
             <img class="logo-4vv" src="./../img/logo.png" alt="Logo">
           </a>
-        
+      
           <button class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -26,314 +26,313 @@
         </div>
       
         <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item has-text-white" href="./index.html">Inicio</a>
-            <a class="navbar-item has-text-white" href="#">Eventos</a>
+          <div class="navbar-start is-flex-grow-1 is-justify-content-center">
+            <a class="navbar-item has-text-dark" href="./index.html">Inicio</a>
+            <a class="navbar-item has-text-dark" href="#">Eventos</a>
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link has-text-white">Más</a>
+              <a class="navbar-link has-text-dark">Más</a>
               <div class="navbar-dropdown">
-                <a class="navbar-item">Contacto</a>
-                <a class="navbar-item">Sobre nosotros</a>
+                <a class="navbar-item has-text-dark" href="#idFooter">Contacto</a>
+                <a class="navbar-item has-text-dark" href="#idFooter">Sobre nosotros</a>
               </div>
             </div>
           </div>
       
           <div class="navbar-end">
             <div class="navbar-item">
-              <a class="button is-primary" href="#login">Sign In</a>
+              <a class="button is-primary" href="#login2">Sign In</a>
             </div>
           </div>
         </div>
       </nav>
-      
     
-      <div id="login" class="modal">
-        <div class="modal-content">
-          <a href="#" class="close-btn">✖</a>
-          <h2 class="title is-3 has-text-centered has-text-info-65-invert">Iniciar Sesión</h2>
-          <form action="./voluntariados/voluntariados_coordinador.html" method="get">
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="email" name="email" placeholder="E-mail" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
-                </span>
-              </div>
-            </div>
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="password" name="password" placeholder="Password" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-lock"></i>
-                </span>
-              </div>
-            </div>
-            <div class="field m-0 p-0">
-              <div id="level_Recordarusr" class="level is-mobile is-align-items-center m-0 p-0"
-                style="margin-bottom: 0.25rem;">
-                <div class="level-left">
-                  <label class="checkbox m-0">
-                    <input type="checkbox"> Recordar usuario
-                  </label>
-                </div>
-                <div class="level-right">
-                  <a href="#" class="is-size-7">¿Has olvidado la contraseña?</a>
-                </div>
-              </div>
-            </div>
-            <div class="field">
-              <div class="control">
-                <button type="submit" class="button is-fullwidth is-rounded custom-signin-button">
-                  <span>Sign in</span>
-                  <span class="icon custom-icon">
-                    <i class="fas fa-arrow-right"></i>
-                  </span>
-                </button>
-              </div>
-            </div>
-    
-          </form>
-          <div class="has-text-centered mt-4">
-            <p>¿No tienes una cuenta? - Regístrate</p>
-            <a class="button" href="#signin">Registro Voluntario</a>
-            <a class="button" href="#signinEmpresa">Nueva Organización</a>
-          </div>
-          <div class="has-text-centered mt-4">
-            <a href="https://www.cuatrovientos.org/aviso-legal/" class="is-size-7">Learn user licence agreement</a>
+  <div id="login2" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close-btn">✖</a>
+      <h2 class="title is-3 has-text-centered has-text-info-65-invert">Iniciar Sesión</h2>
+      <form id="idLoginEventos" action="./voluntariados/voluntariados_coordinador.html" method="get">
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="email" name="email" placeholder="E-mail" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
           </div>
         </div>
-      </div>
-    
-      <div id="signin" class="modal mt-6">
-        <div class="modal-content">
-          <a href="#" class="close-btn">✖</a>
-          <h2 class="title is-3 has-text-centered has-text-info-65-invert">Registro Voluntario</h2>
-          <form>
-    
-            <!-- Nombre Completo -->
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="text" placeholder="Nombre Completo" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-user"></i>
-                </span>
-              </div>
-            </div>
-    
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="date" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-calendar-alt"></i>
-                </span>
-              </div>
-            </div>
-    
-            <!-- Dirección -->
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="text" placeholder="Dirección" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-map-marker-alt"></i>
-                </span>
-              </div>
-            </div>
-    
-            <!-- DNI -->
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="text" placeholder="DNI" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-id-card"></i>
-                </span>
-              </div>
-            </div>
-    
-            <!-- Teléfono -->
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="tel" placeholder="Teléfono" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-phone"></i>
-                </span>
-              </div>
-            </div>
-    
-            <!-- Email -->
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="email" placeholder="Correo Electrónico" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
-                </span>
-              </div>
-            </div>
-    
-            <!-- Password -->
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="password" placeholder="Contraseña" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-lock"></i>
-                </span>
-              </div>
-            </div>
-    
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="text" placeholder="Curso" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-chalkboard-teacher"></i>
-                </span>
-              </div>
-            </div>
-            <div class="field-registro">
-              <div class="control">
-                <fieldset class="custom-checkbox-group">
-                  <legend>Áreas de interés</legend>
-    
-                  <label class="custom-checkbox">
-                    <input type="checkbox" name="areasInteres" value="educacion" />
-                    <span class="checkmark"></span> Educación
-                  </label>
-    
-                  <label class="custom-checkbox">
-                    <input type="checkbox" name="areasInteres" value="salud" />
-                    <span class="checkmark"></span> Salud
-                  </label>
-    
-                  <label class="custom-checkbox">
-                    <input type="checkbox" name="areasInteres" value="medioambiente" />
-                    <span class="checkmark"></span> Medio Ambiente
-                  </label>
-    
-                  <label class="custom-checkbox">
-                    <input type="checkbox" name="areasInteres" value="tecnico" />
-                    <span class="checkmark"></span> Técnico
-                  </label>
-                </fieldset>
-              </div>
-            </div>
-            <div class="field">
-              <label class="checkbox">
-                <input type="checkbox" required /> Acepto los
-                <a href="#">términos y condiciones</a>.
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="password" name="password" placeholder="Password" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </div>
+        </div>
+        <div class="field m-0 p-0">
+          <div id="level_Recordarusr" class="level is-mobile is-align-items-center m-0 p-0"
+            style="margin-bottom: 0.25rem;">
+            <div class="level-left">
+              <label class="checkbox m-0">
+                <input type="checkbox"> Recordar usuario
               </label>
             </div>
-    
-            <!-- Botón Registrarse -->
-            <div class="field">
-              <div class="control">
-                <button class="button is-primary is-fullwidth">Registrarse</button>
-              </div>
+            <div class="level-right">
+              <a href="#" class="is-size-7">¿Has olvidado la contraseña?</a>
             </div>
-    
-          </form>
-          <div class="has-text-centered mt-4">
-            <p>¿Ya tienes una cuenta? <a href="#login">Iniciar Sesión</a></p>
           </div>
         </div>
-      </div>
-    
-      <div id="signinEmpresa" class="modal">
-        <div class="modal-content">
-          <a href="#" class="close-btn">✖</a>
-          <h2 class="title is-3 has-text-centered has-text-info-65-invert">Nueva Organización</h2>
-          <form>
-    
-            <!-- Nombre de la Empresa -->
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="text" placeholder="Nombre de la Empresa" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-building"></i>
-                </span>
-              </div>
-            </div>
-    
-            <!-- NIF EMPRESA -->
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="text" placeholder="NIF EMPRESA" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-id-card"></i>
-                </span>
-              </div>
-            </div>
-    
-            <!-- Persona de Contacto -->
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="text" placeholder="Persona de Contacto" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-user"></i>
-                </span>
-              </div>
-            </div>
-    
-            <!-- Localidad -->
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="text" placeholder="Localidad" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-map-marker-alt"></i>
-                </span>
-              </div>
-            </div>
-    
-            <!-- Actividad Económica -->
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="text" placeholder="Actividad Económica" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-industry"></i>
-                </span>
-              </div>
-            </div>
-    
-            <!-- Teléfono -->
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="tel" placeholder="Teléfono" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-phone"></i>
-                </span>
-              </div>
-            </div>
-    
-            <!-- Correo Electrónico -->
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="email" placeholder="Correo Electrónico" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
-                </span>
-              </div>
-            </div>
-    
-            <!-- Contraseña -->
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="password" placeholder="Contraseña" required>
-                <span class="icon is-small is-left">
-                  <i class="fas fa-lock"></i>
-                </span>
-              </div>
-            </div>
-    
-            <!-- Botón Registrarse -->
-            <div class="field">
-              <div class="control">
-                <button class="button is-primary is-fullwidth">Registrarse</button>
-              </div>
-            </div>
-    
-          </form>
-          <div class="has-text-centered mt-4">
-            <p>¿Ya tienes una cuenta? <a href="#login">Iniciar Sesión</a></p>
+        <div class="field">
+          <div class="control">
+            <button type="submit" class="button is-fullwidth is-rounded custom-signin-button">
+              <span>Sign in</span>
+              <span class="icon custom-icon">
+                <i class="fas fa-arrow-right"></i>
+              </span>
+            </button>
           </div>
         </div>
+
+      </form>
+      <div class="has-text-centered mt-4">
+        <p>¿No tienes una cuenta? - Regístrate</p>
+        <a class="button" href="#signin">Registro Voluntario</a>
+        <a class="button" href="#signinEmpresa">Nueva Organización</a>
       </div>
+      <div class="has-text-centered mt-4">
+        <a href="https://www.cuatrovientos.org/aviso-legal/" class="is-size-7">Learn user licence agreement</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="signin" class="modal mt-6">
+    <div class="modal-content">
+      <a href="#" class="close-btn">✖</a>
+      <h2 class="title is-3 has-text-centered has-text-info-65-invert">Registro Voluntario</h2>
+      <form>
+
+        <!-- Nombre Completo -->
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="text" placeholder="Nombre Completo" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="date" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-calendar-alt"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Dirección -->
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="text" placeholder="Dirección" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- DNI -->
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="text" placeholder="DNI" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-id-card"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Teléfono -->
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="tel" placeholder="Teléfono" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-phone"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="email" placeholder="Correo Electrónico" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="password" placeholder="Contraseña" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="text" placeholder="Curso" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </span>
+          </div>
+        </div>
+        <div class="field-registro">
+          <div class="control">
+            <fieldset class="custom-checkbox-group">
+              <legend>Áreas de interés</legend>
+
+              <label class="custom-checkbox">
+                <input type="checkbox" name="areasInteres" value="educacion" />
+                <span class="checkmark"></span> Educación
+              </label>
+
+              <label class="custom-checkbox">
+                <input type="checkbox" name="areasInteres" value="salud" />
+                <span class="checkmark"></span> Salud
+              </label>
+
+              <label class="custom-checkbox">
+                <input type="checkbox" name="areasInteres" value="medioambiente" />
+                <span class="checkmark"></span> Medio Ambiente
+              </label>
+
+              <label class="custom-checkbox">
+                <input type="checkbox" name="areasInteres" value="tecnico" />
+                <span class="checkmark"></span> Técnico
+              </label>
+            </fieldset>
+          </div>
+        </div>
+        <div class="field">
+          <label class="checkbox">
+            <input type="checkbox" required /> Acepto los
+            <a href="#">términos y condiciones</a>.
+          </label>
+        </div>
+
+        <!-- Botón Registrarse -->
+        <div class="field">
+          <div class="control">
+            <button class="button is-primary is-fullwidth">Registrarse</button>
+          </div>
+        </div>
+
+      </form>
+      <div class="has-text-centered mt-4">
+        <p>¿Ya tienes una cuenta? <a href="#login">Iniciar Sesión</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="signinEmpresa" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close-btn">✖</a>
+      <h2 class="title is-3 has-text-centered has-text-info-65-invert">Nueva Organización</h2>
+      <form>
+
+        <!-- Nombre de la Empresa -->
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="text" placeholder="Nombre de la Empresa" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-building"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- NIF EMPRESA -->
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="text" placeholder="NIF EMPRESA" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-id-card"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Persona de Contacto -->
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="text" placeholder="Persona de Contacto" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Localidad -->
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="text" placeholder="Localidad" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Actividad Económica -->
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="text" placeholder="Actividad Económica" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-industry"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Teléfono -->
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="tel" placeholder="Teléfono" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-phone"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Correo Electrónico -->
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="email" placeholder="Correo Electrónico" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="field">
+          <div class="control has-icons-left">
+            <input class="input" type="password" placeholder="Contraseña" required>
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Botón Registrarse -->
+        <div class="field">
+          <div class="control">
+            <button class="button is-primary is-fullwidth">Registrarse</button>
+          </div>
+        </div>
+
+      </form>
+      <div class="has-text-centered mt-4">
+        <p>¿Ya tienes una cuenta? <a href="#login">Iniciar Sesión</a></p>
+      </div>
+    </div>
+  </div>
 
     <section class="section">
         <div class="container">
@@ -491,68 +490,79 @@
     </section>
 
     <!-- Pie de página -->
-    <footer class="has-background-info-20-invert py-6">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column is-4">
-                    <h3 class="title is-4 has-text-centered has-text-info-90-invert">Sobre Nosotros</h3>
-                    <p class="has-text-centered has-text-info-90-invert">
-                        Somos el departamento de voluntariado de Cuatrovientos y buscamos
-                        gente dispuesta a colaborar por aquellos que lo necesitan.
-                    </p>
-                    <p class="has-text-centered has-text-info-90-invert">
-                        ¡Conéctate con nosotros!
-                    </p>
-                </div>
-                <div class="column is-4">
-                    <h3 class="title is-4 has-text-centered has-text-info-90-invert">Redes Sociales</h3>
-                    <div class="social-icons is-flex is-justify-content-center">
-                        <a href="https://twitter.com/_cuatrovientos?lang=es" class="social-icon" aria-label="Twitter"
-                            target="_blank">
-                            <img src="./../img/twitter_azul.png" alt="Twitter" class="social-icon-img">
-                        </a>
-                        <a href="https://www.instagram.com/cipcuatrovientos/?hl=es" class="social-icon"
-                            aria-label="Instagram" target="_blank">
-                            <img src="./../img/Instagram.png" alt="Instagram" class="social-icon-img">
-                        </a>
-                        <a href="https://www.facebook.com/cipcuatrovientos/?locale=es_ES" class="social-icon"
-                            aria-label="Facebook" target="_blank">
-                            <img src="./../img/facebook_azul.png" alt="Facebook" class="social-icon-img">
-                        </a>
-                        <a href="https://www.youtube.com/@alviento/videos" class="social-icon" aria-label="YouTube"
-                            target="_blank">
-                            <img src="./../img/youtube_azul.png" alt="YouTube" class="social-icon-img">
-                        </a>
-                    </div>
-                </div>
-                <div class="column is-4">
-                    <h3 class="title is-4 has-text-centered has-text-info-90-invert">Contacto</h3>
-                    <p class="has-text-centered has-text-info-90-invert">
-                        <span class="icon is-small is-left">
-                            <i class="fa-solid fa-phone"></i>
-                        </span>
-                        <a href="tel:+34948124129">948 12 41 29</a>
-                    </p>
-                    <p class="has-text-centered has-text-info-90-invert">
-                        <span class="icon is-small is-left">
-                            <i class="fa-solid fa-envelope"></i>
-                        </span>
-                        <a href="mailto:secretaria@cuatrovientos.org">secretaria@cuatrovientos.org</a>
-                    </p>
-                    <p class="has-text-centered has-text-info-90-invert">
-                        <span class="icon is-small is-left">
-                            <i class="fa-solid fa-envelope"></i>
-                        </span>
-                        <a href="mailto:info@cuatrovientos.org">info@cuatrovientos.org</a>
-                    </p>
-                </div>
+    <footer id="idFooter" class="has-background-info-20-invert py-6">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-4">
+            <h3 class="title is-4 has-text-centered has-text-info-90-invert">Sobre Nosotros</h3>
+            <p class="has-text-centered has-text-info-90-invert">Somos el departamento de voluntariado de Cuatrovientos y
+              buscamos gente dispuesta a colaborar por aquellos que lo necesitan.</p>
+            <p class="has-text-centered has-text-info-90-invert">¡Conéctate con nosotros!</p>
+          </div>
+          <div class="column is-4">
+            <h3 class="title is-4 has-text-centered has-text-info-90-invert">Redes Sociales</h3>
+            <div class="social-icons is-flex is-justify-content-center mb-4">
+              <a href="https://twitter.com/_cuatrovientos?lang=es" class="social-icon" target="_blank">
+                <img src="./../img/twitter_azul.png" alt="Twitter" class="social-icon-img">
+              </a>
+              <a href="https://www.instagram.com/cipcuatrovientos/?hl=es" class="social-icon" target="_blank">
+                <img src="./../img/Instagram.png" alt="Instagram" class="social-icon-img">
+              </a>
+              <a href="https://www.facebook.com/cipcuatrovientos/?locale=es_ES" class="social-icon" target="_blank">
+                <img src="./../img/facebook_azul.png" alt="Facebook" class="social-icon-img">
+              </a>
+              <a href="https://www.youtube.com/@alviento/videos" class="social-icon" target="_blank">
+                <img src="./../img/youtube_azul.png" alt="YouTube" class="social-icon-img">
+              </a>
             </div>
-            <div class="has-text-centered mt-4">
-                <p class="has-text-info-90-invert">
-                    © 2023 Cuatrovientos. Todos los derechos reservados.
-                </p>
+            <div class="footer-map-container has-text-centered">
+              <h4 class="title is-5 has-text-info-90-invert">Dónde estamos</h4>
+              <div class="map-wrapper">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2926.2995058267397!2d-1.6624290251092935!3d42.82428680564868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5092855cefdac7%3A0xab7c62765f5209e2!2sCuatrovientos%20Centro%20Integrado!5e0!3m2!1ses!2sus!4v1744016406244!5m2!1ses!2sus" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <p class="mt-2">
+                <a 
+                  href="https://www.google.com/maps/dir/?api=1&destination=Cuatrovientos+Centro+Integrado" 
+                  target="_blank" 
+                  class="button is-link is-small mt-2">
+                  Cómo llegar
+                </a>
+              </p>
             </div>
+          </div>
+          <div class="column is-4">
+            <h3 class="title is-4 has-text-centered has-text-info-90-invert">Contacto</h3>
+            <p class="has-text-centered has-text-info-90-invert">
+              <span class="icon is-small is-left">
+                <i class="fa-solid fa-phone"></i>
+              </span>
+              <a href="tel:+34948124129">948 12 41 29</a>
+            </p>
+  
+            <p class="has-text-centered has-text-info-90-invert">
+              <span class="icon is-small is-left">
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+              <a href="mailto:secretaria@cuatrovientos.org">secretaria@cuatrovientos.org</a>
+            </p>
+            <p class="has-text-centered has-text-info-90-invert">
+              <span class="icon is-small is-left">
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+              <a href="mailto:info@cuatrovientos.org">info@cuatrovientos.org</a>
+            </p>
+          </div>
         </div>
+        <div class="has-text-centered mt-4">
+          <p class="has-text-info-90-invert">© 2023 Cuatrovientos. Todos los derechos reservados.</p>
+        </div>
+      </div>
+      </iframe>
     </footer>
 </body>
 
