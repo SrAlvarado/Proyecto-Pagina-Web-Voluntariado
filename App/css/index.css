@@ -568,12 +568,11 @@ iframe{
   border: 0;
 }
 .faq-section {
-  max-width: 800px;
+  max-width: 650px;
   margin: 0 auto;
   padding-left: 20px;
-  /*border-left: 2px solid #007acc;*/
-  font-family: "Courier New", monospace;
   color: #003366;
+  margin-left: 7rem;
 }
 
 #faq-title{
@@ -648,8 +647,6 @@ iframe{
   animation: 1s;
 }
 
-/** Ajustar las secciones y que ocupen toda la pantalla y queden centradas */
-/* Añade esto a tu CSS */
 section.section, .acerca-de, .margen-arriba {
   min-height: 100vh;
   display: flex;
@@ -693,4 +690,80 @@ section {
   z-index: 1;
 }
 
+#imagen_hombre_4v {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 20rem;
+  padding-top: 2rem;
+  margin-left: 2rem;
+}
+.contenedor-personaje {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  gap: 1rem;
+  width: 100%;
+}
+
+.bocadillo {
+  height: 5rem;
+  max-width: 100rem;
+  padding: 1rem;
+  background-color: white;
+  border: 2px solid #003366;
+  border-radius: 12px;
+  position: absolute;
+  left: 22rem;
+  bottom: 20rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: opacity 0.5s ease-in-out;
+  flex: 1;
+}
+
+.bocadillo::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: -15px;
+  border-width: 15px 10px 0;
+  border-style: solid;
+  border-color: #003366 transparent transparent transparent;
+}
+/* Animación de temblor */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+/* Animación suave al pasar el ratón */
+.app-button {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Asegura que las imágenes no sean gigantes en móviles */
+.app-button img {
+  height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .app-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
 
