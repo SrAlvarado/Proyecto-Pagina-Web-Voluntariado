@@ -1,6 +1,12 @@
 html {
   scroll-behavior: smooth;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body.modal-open,
 html.modal-open {
   overflow: hidden;
@@ -25,18 +31,93 @@ body {
 .navbar-item {
   font-size: 1.3rem;
 }
-
-
 .navbar-menu {
   justify-content: center;
   gap: 2rem;
 }
-
-.hero-background {
-  background-image: url("./../../App/img/fondo_hero.jpg");
+.carrusel-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+.carrusel-background .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  opacity: 0;
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards; 
+  z-index: 2;
+}
+
+.carrusel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Oscurece el fondo, ajusta opacidad si quieres */
+  z-index: 1;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+}
+
+.slide:nth-child(1) {
+  background-image: url('./../img/fondo1Carrusel.jpg');
+  animation-name: fade1;
+}
+.slide:nth-child(2) {
+  background-image: url('./../img/fondo2Carrusel.jpg');
+  animation-name: fade2;
+}
+.slide:nth-child(3) {
+  background-image: url('./../img/fondo3Carrusel.jpg');
+  animation-name: fade3;
+}
+@keyframes fade1 {
+  0%, 25% { opacity: 1; }
+  33%, 100% { opacity: 0; }
+}
+
+@keyframes fade2 {
+  0%, 33% { opacity: 0; }
+  41%, 58% { opacity: 1; }
+  66%, 100% { opacity: 0; }
+}
+
+@keyframes fade3 {
+  0%, 66% { opacity: 0; }
+  74%, 91% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Para que el contenido se vea por encima del fondo */
+.hero .hero-body {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Asegura que el contenido del hero esté por encima del fondo */
+.hero .hero-body {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content {
@@ -739,4 +820,3 @@ section {
     justify-content: center;
   }
 }
-

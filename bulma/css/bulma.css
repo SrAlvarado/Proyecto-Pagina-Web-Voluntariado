@@ -20350,7 +20350,9 @@ has-background-danger.is-hoverable:active {
 .ml-6 {
   margin-left: 3rem !important;
 }
-
+.ml-8 {
+  margin-left: 11rem !important;
+}
 .mx-6 {
   margin-left: 3rem !important;
   margin-right: 3rem !important;

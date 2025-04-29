@@ -16,7 +16,7 @@
   <nav class="navbar has-background-info-20-invert">
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
-        <img class="logo-4vv" src="./../img/LOGO-CENTRO-INTEGRADO-CUATROVIENTOS-transparent.png" alt="Logo">
+        <img class="logo-4vv" src="./../img/logo.png" alt="Logo">
       </a>
 
       <button class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -46,9 +46,14 @@
       </div>
     </div>
   </nav>
+  <section class="hero is-fullheight">
+    <div class="carrusel-background">
+      <div class="slide"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+    </div>
+    <div class="carrusel-overlay"></div>
 
-
-  <section class="hero is-fullheight hero-background">
     <div class="hero-body">
       <div class="container has-text-centered">
         <div class="hero-content" style="position: relative">
@@ -63,7 +68,6 @@
       </div>
     </div>
   </section>
-
   <div id="login" class="modal">
     <div class="modal-content">
       <a href="#" class="close-btn">✖</a>
@@ -732,7 +736,33 @@
           <h3 class="title is-4 has-text-centered has-text-info-90-invert">Sobre Nosotros</h3>
           <p class="has-text-centered has-text-info-90-invert">Somos el departamento de voluntariado de Cuatrovientos y
             buscamos gente dispuesta a colaborar por aquellos que lo necesitan.</p>
-          <p class="has-text-centered has-text-info-90-invert">¡Conéctate con nosotros!</p>
+          <fieldset>
+            <h3 class="title is-4 has-text-centered has-text-info-90-invert pt-4">Envía un mensaje</h3>
+            <!-- Envía un mensaje -->
+            <div class="mb-5">      
+              <div class="field">
+                <div class="control has-icons-left">
+                  <input class="input is-small is-radiusless" type="email" placeholder="ejemplo@gmail.com">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+              
+              <div class="field mt-3">
+                <div class="control">
+                  <textarea class="textarea is-small is-radiusless" rows="2" placeholder="Escribe tus dudas aquí"></textarea>
+                </div>
+              </div>
+              
+              <button class="button is-dark is-small is-radiusless mt-3 ml-8">
+                <span class="icon">
+                  <i class="fas fa-paper-plane"></i>
+                </span>
+                <span>Enviar</span>
+              </button>
+            </div>
+          </fieldset>
         </div>
         <div class="column is-4">
           <h3 class="title is-4 has-text-centered has-text-info-90-invert">Redes Sociales</h3>
