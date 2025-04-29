@@ -151,13 +151,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function mostrarNotificacion(tipo, mensaje) {
       const noti = document.createElement('div');
       noti.className = `notification is-${tipo}`;
-      noti.innerHTML = `<button class="delete"></button>${mensaje}`;
+      noti.innerHTML = `<button></button>${mensaje}`;
       Object.assign(noti.style, {
-        position: 'fixed', top: '20px', right: '20px', zIndex: 1000
+        position: 'fixed', top: '500px', right: '280px', zIndex: 1000
       });
-      noti.querySelector('.delete').onclick = () => noti.remove();
+      //noti.querySelector('.delete').onclick = () => noti.remove();
       document.body.appendChild(noti);
-      setTimeout(() => noti.remove(), 5000);
+      setTimeout(() => noti.remove(), 3000);
     }
   
     function renderAll() {
