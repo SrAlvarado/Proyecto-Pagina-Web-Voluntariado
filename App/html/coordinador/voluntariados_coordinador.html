@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../css/coordinador.css">
+    <link rel="stylesheet" href="./../../../bulma/css/bulma.css">
+    <link rel="icon" type="image/png" href="./../../img/logo.png">
+    <script src="https://kit.fontawesome.com/dc47467364.js" crossorigin="anonymous"></script>
+    <title>Voluntariados</title>
+</head>
+
+<body>
+    <nav class="navbar has-background-info-20-invert">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <img class="logo-4vv" src="./../../img/logo.png" alt="Logo">
+          </a>
+      
+          <button class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start is-flex-grow-1 is-justify-content-center">
+            <a class="navbar-item has-text-info-90-invert" href="./index_coordinador.html">Inicio</a>
+            <a class="navbar-item has-text-info-90-invert" href="./eventos_coordinador.html">Eventos</a>
+            <a class="navbar-item has-text-info-90-invert" href="./voluntariados_coordinador.html">Voluntariados</a>
+            <a class="navbar-item has-text-info-90-invert" href="./panelHistorialAlumnado.html">Historial de Alumnos</a>
+            <a class="navbar-item has-text-info-90-invert" href="./dashboard_coordinador.html">Dashboard</a>
+    
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link"><i class="fa fa-user fa-2x"></i></a>
+                    <div class="navbar-dropdown">
+                      <a class="navbar-item has-text-dark" href="./../index.html">Cerrar Sesión</a>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container mt-3">
+        <div class="filtro box ml-auto">
+            <div class="columns is-multiline is-variable is-1">
+                <div class="column is-half">
+                    <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+                        <ul>
+                            <li><a href="#"><span class="tag is-info is-light">Burlada</span></a></li>
+                            <li><a href="#"><span class="tag is-info is-light">Viernes</span></a></li>
+                            <li><a href="#"><span class="tag is-info is-light">Navarra + Voluntaria</span></a></li>
+                            <li><a href="#"><span class="tag is-info is-light">1ºDAM</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="column is-fullwidth">
+                    <div class="field has-addons is-justify-content-flex-end ">
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="Buscar voluntariados">
+                        </div>
+                        <div class="control">
+                            <button class="button is-info is-light">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns is-multiline is-variable is-1">
+                <div class="column is-3">
+                    <div class="field">
+                        <div class="control">
+                            <div class="select is-fullwidth">
+                                <div class="control has-icons-left">
+                                    <div class="select is-fullwidth">
+                                        <select id="organizadores" required>
+                                            <option value="">-Organizaciones-</option>
+                                            <option>Cruz Roja</option>
+                                            <option>Hacesfalta.org</option>
+                                            <option>Navarra + Voluntaria</option>
+                                            <option>Instituto Navarro de la Juventud</option>
+                                            <option>
+                                                Red Navarra de Lucha contra la Pobreza y la Exclusión
+                                                Social
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-building"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="field">
+                        <div class="control">
+                            <div class="select is-fullwidth">
+                                <div class="control has-icons-left">
+                                    <div class="select is-fullwidth">
+                                        <select id="sectores" required>
+                                            <option value="">-Sectores-</option>
+                                            <optgroup label="Educación y Cultura">
+                                                <option value="04">04 Educación de calidad</option>
+                                                <option value="10">
+                                                    10 Reducción de las desigualdades
+                                                </option>
+                                                <option value="16">
+                                                    16 Paz, justicia e instituciones sólidas
+                                                </option>
+                                            </optgroup>
+
+                                            <optgroup label="Inclusión social y lucha contra la pobreza">
+                                                <option value="01">01 Fin de la pobreza</option>
+                                                <option value="02">02 Hambre cero</option>
+                                                <option value="10">
+                                                    10 Reducción de las desigualdades
+                                                </option>
+                                            </optgroup>
+
+                                            <optgroup label="Medio ambiente y sostenibilidad">
+                                                <option value="13">13 Acción por el clima</option>
+                                                <option value="14">14 Vida submarina</option>
+                                                <option value="15">
+                                                    15 Vida de ecosistemas terrestres
+                                                </option>
+                                            </optgroup>
+
+                                            <optgroup label="Salud y bienestar">
+                                                <option value="03">03 Salud y bienestar</option>
+                                                <option value="10">
+                                                    10 Reducción de las desigualdades
+                                                </option>
+                                            </optgroup>
+
+                                            <optgroup label="Igualdad de género y derechos humanos">
+                                                <option value="05">05 Igualdad de género</option>
+                                                <option value="10">
+                                                    10 Reducción de las desigualdades
+                                                </option>
+                                                <option value="16">
+                                                    16 Paz, justicia e instituciones sólidas
+                                                </option>
+                                            </optgroup>
+
+                                            <optgroup label="Desarrollo comunitario y participación ciudadana">
+                                                <option value="11">
+                                                    11 Ciudades y comunidades sostenibles
+                                                </option>
+                                                <option value="16">
+                                                    16 Paz, justicia e instituciones sólidas
+                                                </option>
+                                            </optgroup>
+
+                                            <optgroup label="Innovación, tecnología y formación digital">
+                                                <option value="04">04 Educación de calidad</option>
+                                                <option value="09">
+                                                    09 Industria, innovación e infraestructura
+                                                </option>
+                                                <option value="10">
+                                                    10 Reducción de las desigualdades
+                                                </option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-layer-group"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-2">
+                    <div class="field">
+                        <div class="control">
+                            <div class="select is-fullwidth">
+                                <div class="control has-icons-left">
+                                    <div class="select is-fullwidth">
+                                        <select id="curso" required>
+                                            <option value="">-Curso-</option>
+                                            <option>Cualquiera</option>
+                                            <option>1ºDAM</option>
+                                            <option>2ºDAM</option>
+                                            <option>1ºASIR</option>
+                                            <option>2ºASIR</option>
+                                        </select>
+                                    </div>
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-users"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-2">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input is-justify-content-center" type="date" id="fechaInicio">
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-2 ">
+                    <div class="field ">
+                        <div class="control ">
+                            <input class="input is-justify-content-center" type="date" id="fechaFin">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="encabezado-iniciativas-container mb-4">
+            <div class="encabezado-iniciativas box">
+                <div class="columns is-multiline">
+                    <div class="column is-5"><strong>Nombre</strong></div>
+                    <div class="column is-1"><strong>Sector</strong></div>
+                    <div class="column is-2"><strong>ODS</strong></div>
+                    <div class="column is-1"><strong>Curso</strong></div>
+                    <div class="column is-2 col-coordinador"><strong>Alumnos</strong></div>
+                    <div class="column is-1 has-text-centered"><a class="button is-info is-light btn-crear-voluntariado" href="./../coordinador/añadirVoluntariado.html"><i class="fa-solid fa-plus"></i></a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="iniciativa mb-4">
+            <div class="iniciativa box">
+                <div class="detalles-iniciativa columns is-multiline">
+                    <div class="column is-5"><strong class="nombre-proyecto negrita">Proyecto Puzle
+                            Digital<br><br>Actividades</strong>
+                        <br>
+                        <p>Apoyo escolar, enseñanza de idiomas, promoción de la lectura, conservación del patrimonio
+                            cultural.</p>
+                    </div>
+                    <div class="column is-1 dimension-social">Educación y Cultura</div>
+                    <div class="column is-2">
+                        <img class="icono-dimension" src="./../../img/04educacion.png" alt="ODS04">
+                        <img class="icono-dimension" src="./../../img/10reduccion.png" alt="ODS10">
+                        <img class="icono-dimension" src="./../../img/16paz.png" alt="ODS16">
+                    </div>
+                    <div class="column is-1">1ºDAM</div>
+                    <div class="column is-2">Apuntados: 0<br><br>
+                        <a class="button is-info is-light" href="./../coordinador/añadirAlumnos.html">Añadir</a>
+                    </div> <!--O plazas disponibles:-->
+                    <div class="column is-1 has-text-centered"><i
+                            class="fa-solid fa-pen-to-square is-warning btn-editar"></i><i
+                            class="fa-solid fa-trash is-danger btn-eliminar"></i></div>
+                </div>
+                <details>
+                    <summary>Información adicional</summary>
+                    <table class="table is-fullwidth">
+                        <tbody>
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-solid fa-graduation-cap"></i>
+                                </td>
+                                <td class="columna-detalle-dato">1ºDAM</td>
+                            </tr>
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-solid fa-handshake"></i></td>
+                                <td class="columna-detalle-dato">Navarra + Voluntaria</td>
+                            </tr>
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-solid fa-clock "></i></td>
+                                <td class="columna-detalle-dato">Martes y jueves de 18h-20h</td>
+                            </tr>
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-solid fa-calendar-days"></i>
+                                </td>
+                                <td class="columna-detalle-dato">Octubre </td>
+                            </tr>
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-regular fa-calendar-check"></i>
+                                </td>
+                                <td class="columna-detalle-dato">Mayo</td>
+                            </tr>
+
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-solid fa-list-check"></i></td>
+                                <td class="columna-detalle-dato">El Proyecto Puzzle se basa en el apoyo escolar a niños,
+                                    niñas y adolescentes
+                                    a partir de 5º de Primaria. Dicho apoyo se ofrece en los locales de Fundación Santa
+                                    Lucía Adsis,
+                                    en el barrio de San Jorge, en Pamplona, las tardes de los martes y jueves, de 18:00
+                                    a 20:00, aproximadamente.
+                                    Las personas voluntarias pueden venir los dos días o solo uno de ellos a la semana.
+                                    El apoyo se ofrece de octubre a mayo, respetando las vacaciones marcadas en el
+                                    calendario escolar.<br><br>
+
+                                    Las personas participantes en el Proyecto, por lo general, son niños y niñas de
+                                    origen migrante,
+                                    en situación de vulnerabilidad social. Muchos de ellos viven en el barrio de San
+                                    Jorge,
+                                    pero la oferta se amplía a niños y niñas de otras zonas de Pamplona y comarca.</td>
+                            </tr>
+
+
+                            <tr>
+                                <td></td>
+                                <td class="columna-detalle-dato">
+                                    <a href="https://www.ine.es/dyngs/ODS/es/objetivo.htm?id=4869"
+                                        class="boton-meta tres button">Meta 4.2</a>
+                                    <a href="https://www.ine.es/dyngs/ODS/es/objetivo.htm?id=4901"
+                                        class="boton-meta siete button">Meta 10.3</a>
+                                    <a href="https://www.ine.es/dyngs/ODS/es/objetivo.htm?id=5252"
+                                        class="boton-meta ocho button">Meta 16.4</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div>
+            <div class="iniciativa box">
+                <div class="detalles-iniciativa columns is-multiline">
+                    <div class="column is-5"><strong class="nombre-proyecto negrita">Proyecto Puzle
+                            Digital<br><br>Actividades</strong>
+                        <br>
+                        <p>Apoyo escolar, enseñanza de idiomas, promoción de la lectura, conservación del patrimonio
+                            cultural.</p>
+                    </div>
+                    <div class="column is-1 dimension-social">Educación y Cultura</div>
+                    <div class="column is-2">
+                        <img class="icono-dimension" src="./../../img/04educacion.png" alt="ODS04">
+                        <img class="icono-dimension" src="./../../img/10reduccion.png" alt="ODS10">
+                        <img class="icono-dimension" src="./../../img/16paz.png" alt="ODS16">
+                    </div>
+                    <div class="column is-1 ">1ºDAM</div>
+                    <div class="column is-2">Apuntados: 0<br><br>
+                        <a class="button is-info is-light" href="./../coordinador/añadirAlumnos.html">Añadir</a>
+                    </div>
+                    <div class="column is-1 has-text-centered"><i class="fa-solid fa-pen-to-square"></i><i
+                            class="fa-solid fa-trash"></i></div>
+                </div>
+                <details>
+                    <summary>Información adicional</summary>
+                    <table class="table is-fullwidth">
+                        <tbody>
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-solid fa-graduation-cap"></i>
+                                </td>
+                                <td class="columna-detalle-dato">1ºDAM</td>
+                            </tr>
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-solid fa-handshake"></i></td>
+                                <td class="columna-detalle-dato">Navarra + Voluntaria</td>
+                            </tr>
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-solid fa-clock "></i></td>
+                                <td class="columna-detalle-dato">Martes y jueves de 18h-20h</td>
+                            </tr>
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-solid fa-calendar-days"></i>
+                                </td>
+                                <td class="columna-detalle-dato">Octubre </td>
+                            </tr>
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-regular fa-calendar-check"></i>
+                                </td>
+                                <td class="columna-detalle-dato">Mayo</td>
+                            </tr>
+
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-solid fa-list-check"></i></td>
+                                <td class="columna-detalle-dato">El Proyecto Puzzle se basa en el apoyo escolar a niños,
+                                    niñas y adolescentes
+                                    a partir de 5º de Primaria. Dicho apoyo se ofrece en los locales de Fundación Santa
+                                    Lucía Adsis,
+                                    en el barrio de San Jorge, en Pamplona, las tardes de los martes y jueves, de 18:00
+                                    a 20:00, aproximadamente.
+                                    Las personas voluntarias pueden venir los dos días o solo uno de ellos a la semana.
+                                    El apoyo se ofrece de octubre a mayo, respetando las vacaciones marcadas en el
+                                    calendario escolar.<br><br>
+
+                                    Las personas participantes en el Proyecto, por lo general, son niños y niñas de
+                                    origen migrante,
+                                    en situación de vulnerabilidad social. Muchos de ellos viven en el barrio de San
+                                    Jorge,
+                                    pero la oferta se amplía a niños y niñas de otras zonas de Pamplona y comarca.</td>
+                            </tr>
+
+
+                            <tr>
+                                <td></td>
+                                <td class="columna-detalle-dato">
+                                    <a href="https://www.ine.es/dyngs/ODS/es/objetivo.htm?id=4869"
+                                        class="boton-meta tres button">Meta 4.2</a>
+                                    <a href="https://www.ine.es/dyngs/ODS/es/objetivo.htm?id=4901"
+                                        class="boton-meta siete button">Meta 10.3</a>
+                                    <a href="https://www.ine.es/dyngs/ODS/es/objetivo.htm?id=5252"
+                                        class="boton-meta ocho button">Meta 16.4</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div>
+
+            <div class="iniciativa box">
+                <div class="detalles-iniciativa columns is-multiline">
+                    <div class="column is-5">
+                        <strong class="nombre-proyecto">Acompañamiento a Personas Mayores<br><br>Actividades </strong>
+                        <br>
+                        <p>Acompañamiento a personas mayores, apoyo a personas con discapacidad, donación de sangre.</p>
+                    </div>
+                    <div class="column is-1 dimension-economico">Salud y Bienestar</div>
+                    <div class="column is-2">
+                        <img class="icono-dimension" src="./../../img/03saludybienestar.png" alt="ODS03">
+                        <img class="icono-dimension" src="./../../img/10reduccion.png" alt="ODS10">
+                    </div>
+                    <div class="column is-1">2ºASIR</div>
+                    <div class="column is-2">Apuntados: 0<br><br>
+                        <a class="button is-info is-light" href="./../coordinador/añadirAlumnos.html">Añadir</a>
+                    </div>
+                    <div class="column is-1 has-text-centered"><i class="fa-solid fa-pen-to-square"></i><i
+                            class="fa-solid fa-trash"></i></div>
+                </div>
+                <details>
+                    <summary>Información adicional</summary>
+                    <table class="table is-fullwidth">
+                        <tbody>
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-solid fa-graduation-cap"></i>
+                                </td>
+                                <td class="columna-detalle-dato">2ºASIR</td>
+                            </tr>
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-solid fa-handshake"></i></td>
+                                <td class="columna-detalle-dato">Cruz Roja</td>
+                            </tr>
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-solid fa-clock "></i></td>
+                                <td class="columna-detalle-dato">Entre semana de 16h-19h</td>
+                            </tr>
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-solid fa-calendar-days"></i>
+                                </td>
+                                <td class="columna-detalle-dato">Septiembre </td>
+                            </tr>
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-regular fa-calendar-check"></i>
+                                </td>
+                                <td class="columna-detalle-dato">Mayo</td>
+                            </tr>
+
+                            <tr>
+                                <td class="icono-detalle has-text-centered"><i class="fa-solid fa-list-check"></i></td>
+                                <td class="columna-detalle-dato">Voluntarios acompañan a personas mayores en su
+                                    domicilio o en residencias,
+                                    ofreciendo compañía, apoyo emocional y ayuda en la realización de actividades
+                                    diarias.</td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td class="columna-detalle-dato">
+                                    <a href="https://www.ine.es/dyngs/ODS/es/objetivo.htm?id=4846"
+                                        class="boton-meta tres button">Meta 3.4</a>
+                                    <a href="https://www.ine.es/dyngs/ODS/es/objetivo.htm?id=4846"
+                                        class="boton-meta siete button">Meta 3.8</a>
+                                    <a href="https://www.ine.es/dyngs/ODS/es/objetivo.htm?id=4901"
+                                        class="boton-meta ocho button">Meta 10.2</a>
+                                    <a href="https://www.ine.es/dyngs/ODS/es/objetivo.htm?id=4901"
+                                        class="boton-meta ocho button">Meta 10.3</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </div>
+        </div>
+    </div>
+    <footer class="has-background-info-20-invert py-6">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-4">
+                    <h3 class="title is-4 has-text-centered has-text-info-90-invert">Sobre Nosotros</h3>
+                    <p class="has-text-centered has-text-info-90-invert">Somos el departamento de voluntariado de
+                        Cuatrovientos y buscamos gente dispuesta a colaborar por aquellos que lo necesitan.</p>
+                    <p class="has-text-centered has-text-info-90-invert">¡Conéctate con nosotros!</p>
+                </div>
+                <div class="column is-4">
+                    <h3 class="title is-4 has-text-centered has-text-info-90-invert">Redes Sociales</h3>
+                    <div class="social-icons is-flex is-justify-content-center">
+                        <a href="https://twitter.com/_cuatrovientos?lang=es" class="social-icon" aria-label="Twitter"
+                            target="_blank">
+                            <img src="./../../img/twitter_azul.png" alt="Twitter" class="social-icon-img">
+                        </a>
+                        <a href="https://www.instagram.com/cipcuatrovientos/?hl=es" class="social-icon"
+                            aria-label="Instagram" target="_blank">
+                            <img src="./../../img/Instagram.png" alt="Instagram" class="social-icon-img">
+                        </a>
+                        <a href="https://www.facebook.com/cipcuatrovientos/?locale=es_ES" class="social-icon"
+                            aria-label="Facebook" target="_blank">
+                            <img src="./../../img/facebook_azul.png" alt="Facebook" class="social-icon-img">
+                        </a>
+                        <a href="https://www.youtube.com/@alviento/videos" class="social-icon" aria-label="YouTube"
+                            target="_blank">
+                            <img src="./../../img/youtube_azul.png" alt="YouTube" class="social-icon-img">
+                        </a>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <h3 class="title is-4 has-text-centered has-text-info-90-invert">Contacto</h3>
+
+                    <p class="has-text-centered has-text-info-90-invert"> <span class="icon is-small is-left">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+                        <a href="tel:+34948124129">948 12 41 29</a>
+                    </p>
+
+                    <p class="has-text-centered has-text-info-90-invert"><span class="icon is-small is-left">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        <a href="mailto:secretaria@cuatrovientos.org">secretaria@cuatrovientos.org
+                        </a>
+                    </p>
+                    <p class="has-text-centered has-text-info-90-invert"><span class="icon is-small is-left">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        <a href="mailto:info@cuatrovientos.org">info@cuatrovientos.org
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+            <div class="has-text-centered mt-4">
+                <p class="has-text-info-90-invert">© 2023 Cuatrovientos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+</html>

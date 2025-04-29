@@ -1,0 +1,769 @@
+html {
+  scroll-behavior: smooth;
+}
+body.modal-open,
+html.modal-open {
+  overflow: hidden;
+}
+
+body {
+  background-image: url("./../../App/img/fondo1.jpg");
+  background-attachment: fixed;
+}
+.logo-4vv {
+  height: 8rem;       
+  width: auto;      
+  object-fit: contain; 
+  padding: 0.25rem 0; 
+}
+.navbar {
+  height: 80px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+  background-color: rgba(252, 252, 252, 1); 
+}
+
+.navbar-item {
+  font-size: 1.3rem;
+}
+
+
+.navbar-menu {
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero-background {
+  background-image: url("./../../App/img/fondo_hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.hero-content {
+  padding: 2rem;
+  border-radius: 8px;
+}
+.texto-hero{
+  z-index: 300;
+}
+
+.hero-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+#boton-volun {
+  z-index: 1;
+}
+#level_Recordarusr {
+  margin-bottom: 0.25rem;
+}
+/* From Uiverse.io by d4niz */
+.contactButton {
+  background: #7079f0;
+  color: white;
+  font-family: inherit;
+  padding: 0.45em;
+  padding-left: 1em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3em;
+}
+
+.iconButton {
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7a8cf3;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.contactButton:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em #5566c2;
+}
+
+.contactButton:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em #5566c2;
+}
+.button:active {
+  letter-spacing: 0px;
+  transform: skew(-10deg) translateY(8px);
+}
+/*  registro */
+.select.is-multiple select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.select.is-multiple select:focus {
+  border-color: #88aaff;
+  outline: none;
+}
+
+.custom-checkbox-group {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 8px 0;
+  position: relative;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  content: "✔";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* From Uiverse.io by d4niz */ 
+.contactButton {
+  background: #7079f0;
+  color: white;
+  font-family: inherit;
+  padding: 0.45em;
+  padding-left: 1em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3em;
+}
+
+.iconButton {
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7a8cf3;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.contactButton:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em #5566c2;
+}
+
+.contactButton:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em #5566c2;
+}
+#idSvg{
+  height: 24;
+  width: 24;
+}
+/* registro */
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.transparencia {
+  background-color: black;
+  opacity: 0.7;
+}
+.negrita {
+  font-weight: bold;
+}
+.acerca-de {
+  padding: 2rem 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  /*overflow: hidden;  Para ocultar el contenido que se desliza */
+}
+
+.acerca-de-texto {
+  opacity: 0;
+  /*transform: translateX(-100%);*/
+  /*animation: slideInLeft 1s ease forwards;*/
+}
+
+.icon-box {
+  text-align: center;
+  margin: 1rem;
+  opacity: 0;
+  /*transform: translateY(50px);*/
+  /*animation: slideInUp 0.8s ease forwards;*/
+}
+
+/* Keyframes para las animaciones */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*Modales*/
+.modal {
+  display: none;
+}
+
+.modal:target {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.modal:target::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* negro con opacidad */
+  z-index: 0;
+}
+
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.margen-arriba {
+  margin-top: 150px;
+}
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.is-one-third {
+  padding: 20px;
+}
+.card {
+  transition: transform 0.3s ease;
+  padding: 5px;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.fondo-card-noticias:hover {
+  padding-right: 30px;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  transition: padding-right 0.3s ease;
+}
+
+.fondo-card-eventos:hover {
+  padding-right: 30px;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  transition: all 0.3s ease;
+}
+
+.fondo-card-voluntariados:hover {
+  padding-right: 30px;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  transition: padding-right 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.card {
+  width: 450px;
+  height: 30rem;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  margin: 10px;
+}
+.title.is-4 {
+  font-size: 1.5rem;
+  color: rgb(87, 168, 168);
+}
+
+.button {
+  margin-top: 8px;
+}
+.social-icon {
+  margin: 0 10px;
+}
+.social-icon-img {
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s;
+}
+.social-icon-img:hover {
+  transform: scale(1.1);
+}
+
+.heading {
+  color: black;
+  font-size: 20px;
+  font-family: var(--bulma-body-family);
+}
+
+.level {
+  padding: 5% 5% 5% 5%;
+}
+
+.media-content title {
+  margin-bottom: 40px;
+}
+
+button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.check {
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+}
+
+.check:before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(34, 50, 84, 0.03);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.check svg {
+  position: relative;
+  z-index: 1;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #c8ccd4;
+  stroke-width: 1.5;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+}
+
+.check svg path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+}
+
+.check svg polyline {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 66;
+}
+
+.check:hover:before {
+  opacity: 1;
+}
+
+.check:hover svg {
+  stroke: var(--accent-color, #a3e583);
+}
+
+#cbx2:checked + .check svg {
+  stroke: var(--accent-color, #a3e583);
+}
+
+#cbx2:checked + .check svg path {
+  stroke-dashoffset: 60;
+  transition: all 0.3s linear;
+}
+
+#cbx2:checked + .check svg polyline {
+  stroke-dashoffset: 42;
+  transition: all 0.2s linear;
+  transition-delay: 0.15s;
+}
+
+.isolated-button {
+  position: absolute;
+  left: 15%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+/* CSS DE VISTA DE USUARIO */
+.profile-header {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.profile-info {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/* CSS CARRUSEL */
+.carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel__content {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+.carousel__item {
+  flex: 0 0 auto;
+  padding: 0 20px;
+}
+
+.carousel__item img {
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
+}
+
+.carousel__separator {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #bbb;
+  padding: 0 10px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+iframe{
+  width: 200 px;
+  height: 120 px;
+  border: 0;
+}
+.faq-section {
+  max-width: 650px;
+  margin: 0 auto;
+  padding-left: 20px;
+  color: #003366;
+  margin-left: 7rem;
+}
+
+#faq-title{
+  color: #003366;
+}
+
+.elemento-con-borde {
+  position: relative;
+  padding-left: 1.5rem; 
+}
+
+.elemento-con-borde::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16%; 
+  height: 71%; 
+  width: 2px;
+  background-color: #007acc; 
+}
+.faq-item {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #cce6ff;
+  padding-bottom: 10px;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  color: #005a99;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #007acc;
+}
+
+.faq-answer {
+  overflow: hidden;
+  height: 0;
+  color: #003d66;
+  padding-left: 15px;
+  margin-top: 0;
+  transition: height 0.4s ease, margin-top 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  margin-top: 10px;
+}
+
+
+.toggle-icon {
+  margin-left: 10px;
+  font-weight: normal;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .toggle-icon {
+  transform: rotate(45deg);
+}
+.faq-question:hover {
+  color: #007acc;
+  transform: translateX(7px);
+  animation: 1s;
+}
+
+section.section, .acerca-de, .margen-arriba {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 1.5rem; /* Ajusta según necesites */
+}
+
+
+/* Para el carrusel */
+.carousel {
+  min-height: 30vh; /* Ajusta según necesites */
+  display: flex;
+  align-items: center;
+}
+
+/* Elimina márgenes automáticos y usa padding consistente */
+.section-padding{
+  margin: 0 !important;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Espaciado específico para algunas secciones */
+.acerca-de {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%; /* Para contenido dentro de contenedores */
+}
+
+/* Asegura que las secciones tengan posición relativa */
+section {
+  position: relative;
+  z-index: 1;
+}
+
+#imagen_hombre_4v {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 20rem;
+  padding-top: 2rem;
+  margin-left: 2rem;
+}
+.contenedor-personaje {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  gap: 1rem;
+  width: 100%;
+}
+
+.bocadillo {
+  height: 5rem;
+  max-width: 100rem;
+  padding: 1rem;
+  background-color: white;
+  border: 2px solid #003366;
+  border-radius: 12px;
+  position: absolute;
+  left: 22rem;
+  bottom: 20rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: opacity 0.5s ease-in-out;
+  flex: 1;
+}
+
+.bocadillo::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: -15px;
+  border-width: 15px 10px 0;
+  border-style: solid;
+  border-color: #003366 transparent transparent transparent;
+}
+/* Animación de temblor */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+/* Animación suave al pasar el ratón */
+.app-button {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Asegura que las imágenes no sean gigantes en móviles */
+.app-button img {
+  height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .app-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
