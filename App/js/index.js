@@ -176,140 +176,141 @@ function cerrarModal() {
   document.getElementById("modalDominioNoValido").style.display = "none";
 }
 
-// Validación del formulario de nombre
+// Validaciones múltiples para ambos formularios
 document.addEventListener('DOMContentLoaded', function () {
-  const formulario = document.getElementById("formulario");
-  const nombreInput = document.getElementById("nombre");
-  const mensajeNombre = document.getElementById("mensaje-Nombre");
+  const formularios = document.querySelectorAll(".formularioRegistro");
 
-  formulario.addEventListener("submit", function (event) {
-    const nombre = nombreInput.value.trim();
-    const regex = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
+  formularios.forEach(formulario => {
+    formulario.addEventListener("submit", function (event) {
+      // Validación de Nombre
+      const nombreInput = formulario.querySelector(".nombreFormulario");
+      const mensajeNombre = formulario.querySelector(".mensaje-Nombre");
+      const regexNombre = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
+      const nombre = nombreInput?.value.trim();
 
-    if (!regex.test(nombre)) {
-      mensajeNombre.textContent = "El nombre solo puede contener letras y espacios.";
-      mensajeNombre.style.color = "blue";
-      event.preventDefault();
-    } else {
-      mensajeNombre.textContent = "";
-    }
+      if (nombreInput && !regexNombre.test(nombre)) {
+        if (mensajeNombre) {
+          mensajeNombre.textContent = "El nombre solo puede contener letras y espacios.";
+          mensajeNombre.style.color = "blue";
+        }
+        nombreInput.classList.add("is-danger", "shake");
+        event.preventDefault();
+        setTimeout(() => nombreInput.classList.remove("shake"), 500);
+      } else if (mensajeNombre) {
+        mensajeNombre.textContent = "";
+        nombreInput?.classList.remove("is-danger");
+      }
+
+      // Validación de Fecha de Nacimiento
+      const fechaNacimientoInput = formulario.querySelector(".fechaNacimientoFormulario");
+      const mensajeFecha = formulario.querySelector(".mensaje-Fecha");
+
+      if (fechaNacimientoInput) {
+        const fechaNacimiento = new Date(fechaNacimientoInput.value);
+        const hoy = new Date();
+        hoy.setHours(0, 0, 0, 0);
+
+        if (fechaNacimiento >= hoy) {
+          if (mensajeFecha) {
+            mensajeFecha.textContent = "La fecha de nacimiento no puede ser igual o mayor a hoy.";
+            mensajeFecha.style.color = "blue";
+          }
+          fechaNacimientoInput.classList.add("is-danger", "shake");
+          event.preventDefault();
+          setTimeout(() => fechaNacimientoInput.classList.remove("shake"), 500);
+        } else if (mensajeFecha) {
+          mensajeFecha.textContent = "";
+          fechaNacimientoInput.classList.remove("is-danger");
+        }
+      }
+
+      // Validación de Teléfono
+      const telefonoInput = formulario.querySelector(".telefonoFormulario");
+      const mensajeTelefono = formulario.querySelector(".mensaje-Telefono");
+      const regexTelefono = /^(6|7|8|9)\d{8}$/;
+
+      if (telefonoInput) {
+        const telefono = telefonoInput.value.trim();
+        if (!regexTelefono.test(telefono)) {
+          if (mensajeTelefono) {
+            mensajeTelefono.textContent = "El número debe empezar por 6, 7, 8 o 9 y tener 9 dígitos.";
+            mensajeTelefono.style.color = "blue";
+          }
+          telefonoInput.classList.add("is-danger", "shake");
+          event.preventDefault();
+          setTimeout(() => telefonoInput.classList.remove("shake"), 500);
+        } else if (mensajeTelefono) {
+          mensajeTelefono.textContent = "";
+          telefonoInput.classList.remove("is-danger");
+        }
+      }
+
+      // Validación de DNI
+      const dniInput = formulario.querySelector(".dniFormulario");
+      const mensajeDNI = formulario.querySelector(".mensaje-DNI");
+      const regexDNI = /^\d{8}[A-Z]$/;
+
+      if (dniInput) {
+        const dni = dniInput.value.trim();
+        if (!regexDNI.test(dni)) {
+          if (mensajeDNI) {
+            mensajeDNI.textContent = "El DNI debe tener 8 dígitos seguidos de una letra.";
+            mensajeDNI.style.color = "blue";
+          }
+          dniInput.classList.add("is-danger", "shake");
+          event.preventDefault();
+          setTimeout(() => dniInput.classList.remove("shake"), 500);
+        } else if (mensajeDNI) {
+          mensajeDNI.textContent = "";
+          dniInput.classList.remove("is-danger");
+        }
+      }
+
+      // Validación de Email
+      const emailInput = formulario.querySelector(".emailFormulario");
+      const mensajeEmail = formulario.querySelector(".mensaje-Email");
+      const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+      if (emailInput) {
+        const email = emailInput.value.trim();
+        if (!regexEmail.test(email)) {
+          if (mensajeEmail) {
+            mensajeEmail.textContent = "El email no es válido.";
+            mensajeEmail.style.color = "blue";
+          }
+          emailInput.classList.add("is-danger", "shake");
+          event.preventDefault();
+          setTimeout(() => emailInput.classList.remove("shake"), 500);
+        } else if (mensajeEmail) {
+          mensajeEmail.textContent = "";
+          emailInput.classList.remove("is-danger");
+        }
+      }
+
+      // Validación de Contraseña
+      const passwordInput = formulario.querySelector(".passwordFormulario");
+      const mensajePassword = formulario.querySelector(".mensaje-password");
+      const regexPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+      if (passwordInput) {
+        const password = passwordInput.value.trim();
+        if (!regexPassword.test(password)) {
+          if (mensajePassword) {
+            mensajePassword.textContent = "La contraseña debe tener al menos 8 caracteres y contener letras y números.";
+            mensajePassword.style.color = "blue";
+          }
+          passwordInput.classList.add("is-danger", "shake");
+          event.preventDefault();
+          setTimeout(() => passwordInput.classList.remove("shake"), 500);
+        } else if (mensajePassword) {
+          mensajePassword.textContent = "";
+          passwordInput.classList.remove("is-danger");
+        }
+      }
+    });
   });
 });
-// Validación del formulario de fecha de nacimiento
-document.addEventListener('DOMContentLoaded', function () {
-  const formulario = document.getElementById("formulario");
-  const fechaNacimientoInput = document.getElementById("fechaNacimiento");
-  const mensajeFecha = document.getElementById("mensaje-Fecha");
 
-  formulario.addEventListener("submit", function (event) {
-    const fechaNacimiento = new Date(fechaNacimientoInput.value);
-    const hoy = new Date();
-    hoy.setHours(0, 0, 0, 0); // Elimina la hora para comparar solo la fecha
-
-    if (fechaNacimiento >= hoy) {
-      mensajeFecha.textContent = "La fecha de nacimiento no puede ser igual o mayor a hoy.";
-      mensajeFecha.style.color = "blue";
-      event.preventDefault();
-    } else {
-      mensajeFecha.textContent = "";
-    }
-  });
-});
-// Validación del formulario de teléfono
-document.addEventListener('DOMContentLoaded', function () {
-  const formulario = document.getElementById("formulario");
-  const telefonoInput = document.getElementById("telefono");
-  const mensajeTelefono = document.getElementById("mensaje-Telefono");
-
-  formulario.addEventListener("submit", function (event) {
-    const telefono = telefonoInput.value.trim();
-    const regex = /^\d{9}$/;
-
-    if (!regex.test(telefono)) {
-      mensajeTelefono.textContent = "El teléfono debe tener 9 dígitos.";
-      mensajeTelefono.style.color = "blue";
-      event.preventDefault();
-    } else {
-      mensajeTelefono.textContent = "";
-    }
-  });
-});
-// Validación del formulario de DNI
-document.addEventListener('DOMContentLoaded', function () {
-  const formulario = document.getElementById("formulario");
-  const dniInput = document.getElementById("dni");
-  const mensajeDNI = document.getElementById("mensaje-DNI");
-
-  formulario.addEventListener("submit", function (event) {
-    const dni = dniInput.value.trim();
-    const regex = /^\d{8}[A-Z]$/;
-
-    if (!regex.test(dni)) {
-      mensajeDNI.textContent = "El DNI debe tener 8 dígitos seguidos de una letra.";
-      mensajeDNI.style.color = "blue";
-      event.preventDefault();
-    } else {
-      mensajeDNI.textContent = "";
-    }
-  });
-});
-//Validación del formulario de teléfono para que tenga 9 dígitos y empiece por 6 o 7 o 8 o 9
-document.addEventListener('DOMContentLoaded', function () {
-  const formulario = document.getElementById("formulario");
-  const telefonoInput = document.getElementById("telefono");
-  const mensajeTelefono = document.getElementById("mensaje-Telefono");
-
-  formulario.addEventListener("submit", function (event) {
-    const telefono = telefonoInput.value.trim();
-    const regex = /^(6|7|8|9)\d{8}$/;
-
-    if (!regex.test(telefono)) {
-      mensajeTelefono.textContent = "El número debe empezar por 6, 7, 8 o 9 y tener 9 dígitos.";
-      mensajeTelefono.style.color = "blue";
-      event.preventDefault();
-    } else {
-      mensajeTelefono.textContent = "";
-    }
-  });
-});
-// Validación del formulario de email
-document.addEventListener('DOMContentLoaded', function () {
-  const formulario = document.getElementById("formulario");
-  const emailInput = document.getElementById("email");
-  const mensajeEmail = document.getElementById("mensaje-Email");
-
-  formulario.addEventListener("submit", function (event) {
-    const email = emailInput.value.trim();
-    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-    if (!regex.test(email)) {
-      mensajeEmail.textContent = "El email no es válido.";
-      mensajeEmail.style.color = "blue";
-      event.preventDefault();
-    } else {
-      mensajeEmail.textContent = "";
-    }
-  });
-});
-//Validación del formulario de contraseña
-document.addEventListener('DOMContentLoaded', function () {
-  const formulario = document.getElementById("formulario");
-  const contrasenaInput = document.getElementById("password");
-  const mensajeContrasena = document.getElementById("mensaje-password");
-
-  formulario.addEventListener("submit", function (event) {
-    const contrasena = contrasenaInput.value.trim();
-    const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-
-    if (!regex.test(contrasena)) {
-      mensajeContrasena.textContent = "La contraseña debe tener al menos 8 caracteres y contener letras y números.";
-      mensajeContrasena.style.color = "blue";
-      event.preventDefault();
-    } else {
-      mensajeContrasena.textContent = "";
-    }
-  });
-});
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.day-availability input[type="checkbox"]').forEach(checkbox => {
     checkbox.addEventListener('change', function () {
