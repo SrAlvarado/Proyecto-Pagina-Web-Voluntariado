@@ -700,38 +700,11 @@ section {
 }
 .contenedor-personaje {
   display: flex;
-  align-items: center;
-  justify-content: start;
-  position: relative;
+  justify-content: space-evenly;
   gap: 1rem;
   width: 100%;
 }
 
-.bocadillo {
-  height: 5rem;
-  max-width: 100rem;
-  padding: 1rem;
-  background-color: white;
-  border: 2px solid #003366;
-  border-radius: 12px;
-  position: absolute;
-  left: 22rem;
-  bottom: 20rem;
-  font-weight: bold;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  transition: opacity 0.5s ease-in-out;
-  flex: 1;
-}
-
-.bocadillo::after {
-  content: "";
-  position: absolute;
-  left: 20px;
-  bottom: -15px;
-  border-width: 15px 10px 0;
-  border-style: solid;
-  border-color: #003366 transparent transparent transparent;
-}
 /* Animación de temblor */
 @keyframes shake {
   0% { transform: translateX(0); }
