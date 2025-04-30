@@ -16,7 +16,7 @@
   <nav class="navbar has-background-info-20-invert">
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
-        <img class="logo-4vv" src="./../../img/logo.png" alt="Logo">
+        <img class="logo-4vv" src="./../../img/LOGO-CENTRO-INTEGRADO-CUATROVIENTOS-transparent.png" alt="Logo">
       </a>
 
       <button class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -36,18 +36,17 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link"><i class="fa fa-user fa-2x"></i></a>
+          <a class="navbar-link mr-5"><i class="fa fa-user fa-2x"></i></a>
           <div class="navbar-dropdown">
-            <a class="navbar-item has-text-dark" href="./usuario_org.html">Perfil</a>
-            <a class="navbar-item has-text-dark" href="./../index.html">Cerrar Sesión</a>
+            <a class="dropdown-content is-size-5 has-text-dark" href="./usuario_org.html">Perfil<br></a>
+            <a class="dropdown-content is-size-5 has-text-dark" href="./../index.html">Cerrar Sesión</a>
           </div>
         </div>
       </div>
     </div>
-    </div>
   </nav>
 
-  
+
   <div class="container mt-5">
     <div class="form-container">
       <form>
@@ -183,195 +182,229 @@
             </div>
           </div>
         </div>
-            <!-- Nuevo bloque para ODS y Metas -->
-            <div class="columns mt-2">
-              <div class="column is-6">
-                <div class="field">
-                  <label class="label negrita" for="ods">ODS implicados</label>
-                  <div class="control has-icons-left">
-                    <div class="select is-fullwidth">
-                      <select id="ods" required>
-                        <option value="">-ODS-</option>
-                        <optgroup label="Económico">
-                          <option value="01">01 Fin de la pobreza</option>
-                          <option value="02">02 Hambre cero</option>
-                          <option value="03">03 Salud y bienestar</option>
-                          <option value="04">04 Educación de calidad</option>
-                          <option value="05">05 Igualdad de género</option>
-                          <option value="17">17 Alianzas para lograr los objetivos</option>
-                        </optgroup>
-                        <optgroup label="Económico">
-                          <option value="08">08 Trabajo decente y crecimiento económico</option>
-                          <option value="09">09 Industria, innovación e infraestructura</option>
-                          <option value="10">10 Reducción de las desigualdades</option>
-                          <option value="12">12 Producción y consumo responsables</option>
-                          <option value="16">16 Paz, justicia e instituciones sólidas</option>
-                        </optgroup>
-                        <optgroup label="Medioambiental">
-                          <option value="13">13 Acción por el clima</option>
-                          <option value="12">12 Producción y consumo responsables</option>
-                          <option value="07">07 Energía asequible y no contaminante</option>
-                          <option value="11">11 Ciudades y comunidades sostenibles</option>
-                        </optgroup>
-                      </select>
-                    </div>
-                    <span class="icon is-small is-left">
-                      <i class="fas fa-globe"></i>
-                    </span>
-                  </div>
+        <!-- Nuevo bloque para ODS y Metas -->
+        <div class="columns mt-2">
+          <div class="column is-6">
+            <div class="field">
+              <label class="label negrita" for="ods">ODS implicados</label>
+              <div class="control has-icons-left">
+                <div class="select is-fullwidth">
+                  <select id="ods" required>
+                    <option value="">-ODS-</option>
+                    <optgroup label="Económico">
+                      <option value="01">01 Fin de la pobreza</option>
+                      <option value="02">02 Hambre cero</option>
+                      <option value="03">03 Salud y bienestar</option>
+                      <option value="04">04 Educación de calidad</option>
+                      <option value="05">05 Igualdad de género</option>
+                      <option value="17">17 Alianzas para lograr los objetivos</option>
+                    </optgroup>
+                    <optgroup label="Económico">
+                      <option value="08">08 Trabajo decente y crecimiento económico</option>
+                      <option value="09">09 Industria, innovación e infraestructura</option>
+                      <option value="10">10 Reducción de las desigualdades</option>
+                      <option value="12">12 Producción y consumo responsables</option>
+                      <option value="16">16 Paz, justicia e instituciones sólidas</option>
+                    </optgroup>
+                    <optgroup label="Medioambiental">
+                      <option value="13">13 Acción por el clima</option>
+                      <option value="12">12 Producción y consumo responsables</option>
+                      <option value="07">07 Energía asequible y no contaminante</option>
+                      <option value="11">11 Ciudades y comunidades sostenibles</option>
+                    </optgroup>
+                  </select>
                 </div>
-              </div>
-              <div class="column is-6">
-                <div class="field">
-                  <label class="label negrita" for="metas">Metas</label>
-                  <div class="control has-icons-left">
-                    <div class="select is-fullwidth">
-                      <select id="metas" required>
-                        <option value="">-Meta-</option>
-                      </select>
-                    </div>
-                    <span class="icon is-small is-left">
-                      <i class="fas fa-bullseye"></i>
-                    </span>
-                  </div>
-                </div>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-globe"></i>
+                </span>
               </div>
             </div>
-            <div class="columns">
-              <div class="column is-half">
-                <div class="field">
-                  <label class="label negrita" for="fecha-inicio">Fecha de Inicio</label>
-                  <div class="control has-icons-left">
-                    <input class="input" id="fecha-inicio" type="date" required>
-                  </div>
+          </div>
+          <div class="column is-6">
+            <div class="field">
+              <label class="label negrita" for="metas">Metas</label>
+              <div class="control has-icons-left">
+                <div class="select is-fullwidth">
+                  <select id="metas" required>
+                    <option value="">-Meta-</option>
+                  </select>
                 </div>
-              </div>
-              <div class="column is-half">
-                <div class="field">
-                  <label class="label negrita" for="fecha-fin">Fecha de Finalización</label>
-                  <div class="control has-icons-left">
-                    <input class="input" id="fecha-fin" type="date" required>
-                  </div>
-                </div>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-bullseye"></i>
+                </span>
               </div>
             </div>
-            <!-- Nuevo bloque para seleccionar días y horarios -->
-            <div class="columns">
-              <div class="column is-half">
-                <div class="columns is-centered">
-                  <div class="column is-narrow">
-                    <div class="field">
-                      <label class="label negrita has-text-centered mb-4">Días de voluntariado</label>
-                      <div class="control has-text-centered">
-                        <div class="is-flex is-justify-content-center is-flex-wrap-wrap">
-                          <label class="checkbox mx-2">
-                            <input type="checkbox" name="dias" value="L"> L
-                          </label>
-                          <label class="checkbox mx-2">
-                            <input type="checkbox" name="dias" value="M"> M
-                          </label>
-                          <label class="checkbox mx-2">
-                            <input type="checkbox" name="dias" value="X"> X
-                          </label>
-                          <label class="checkbox mx-2">
-                            <input type="checkbox" name="dias" value="J"> J
-                          </label>
-                          <label class="checkbox mx-2">
-                            <input type="checkbox" name="dias" value="V"> V
-                          </label>
-                          <label class="checkbox mx-2">
-                            <input type="checkbox" name="dias" value="S"> S
-                          </label>
-                          <label class="checkbox mx-2">
-                            <input type="checkbox" name="dias" value="D"> D
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-half">
+            <div class="field">
+              <label class="label negrita" for="fecha-inicio">Fecha de Inicio</label>
+              <div class="control has-icons-left">
+                <input class="input" id="fecha-inicio" type="date" required>
               </div>
-              <div class="column is-half">
-                <div class="columns">
-                  <div class="column is-5">
-                    <div class="field">
-                      <label class="label negrita" for="hora-inicio">Hora de inicio</label>
-                      <div class="control">
-                        <input class="input" id="hora-inicio" type="time" required>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="column is-5">
-                    <div class="field">
-                      <label class="label negrita" for="hora-fin">Hora de fin</label>
-                      <div class="control">
-                        <input class="input" id="hora-fin" type="time" required>
-                      </div>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="field">
+              <label class="label negrita" for="fecha-fin">Fecha de Finalización</label>
+              <div class="control has-icons-left">
+                <input class="input" id="fecha-fin" type="date" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Nuevo bloque para seleccionar días y horarios -->
+        <div class="columns">
+          <div class="column is-half">
+            <div class="columns is-centered">
+              <div class="column is-narrow">
+                <div class="field">
+                  <label class="label negrita has-text-centered mb-4">Días de voluntariado</label>
+                  <div class="control has-text-centered">
+                    <div class="is-flex is-justify-content-center is-flex-wrap-wrap">
+                      <label class="checkbox mx-2">
+                        <input type="checkbox" name="dias" value="L"> L
+                      </label>
+                      <label class="checkbox mx-2">
+                        <input type="checkbox" name="dias" value="M"> M
+                      </label>
+                      <label class="checkbox mx-2">
+                        <input type="checkbox" name="dias" value="X"> X
+                      </label>
+                      <label class="checkbox mx-2">
+                        <input type="checkbox" name="dias" value="J"> J
+                      </label>
+                      <label class="checkbox mx-2">
+                        <input type="checkbox" name="dias" value="V"> V
+                      </label>
+                      <label class="checkbox mx-2">
+                        <input type="checkbox" name="dias" value="S"> S
+                      </label>
+                      <label class="checkbox mx-2">
+                        <input type="checkbox" name="dias" value="D"> D
+                      </label>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
+          </div>
+          <div class="column is-half">
             <div class="columns">
-              <div class="column is-half">
+              <div class="column is-5">
                 <div class="field">
-                  <label class="label negrita" for="informacion">Información del Voluntariado</label>
+                  <label class="label negrita" for="hora-inicio">Hora de inicio</label>
                   <div class="control">
-                    <textarea class="textarea" id="informacion" rows="4" placeholder="Describe el voluntariado..."
-                      required></textarea>
+                    <input class="input" id="hora-inicio" type="time" required>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-5">
+                <div class="field">
+                  <label class="label negrita" for="hora-fin">Hora de fin</label>
+                  <div class="control">
+                    <input class="input" id="hora-fin" type="time" required>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Botones -->
-            <div class="field is-grouped">
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column is-half">
+            <div class="field">
+              <label class="label negrita" for="informacion">Información del Voluntariado</label>
               <div class="control">
-                <button type="submit" class="button has-background-info-20-invert">Añadir</button>
-              </div>
-              <div class="control">
-                <button type="reset" class="button">Limpiar Formulario</button>
+                <textarea class="textarea" id="informacion" rows="4" placeholder="Describe el voluntariado..."
+                  required></textarea>
               </div>
             </div>
+          </div>
+        </div>
+        <!-- Botones -->
+        <div class="field is-grouped">
+          <div class="control">
+            <button type="submit" class="button has-background-info-20-invert">Añadir</button>
+          </div>
+          <div class="control">
+            <button type="reset" class="button">Limpiar Formulario</button>
+          </div>
+        </div>
       </form>
     </div>
   </div>
 
-
-  <footer class="has-background-info-20-invert py-6">
+  <!-- FOOTER-->
+  <footer id="idFooter" class="has-background-info-20-invert py-6">
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-4">
           <h3 class="title is-4 has-text-centered has-text-info-90-invert">Sobre Nosotros</h3>
-          <p class="has-text-centered has-text-info-90-invert">
-            Somos el departamento de voluntariado de Cuatrovientos y buscamos
-            gente dispuesta a colaborar por aquellos que lo necesitan.
-          </p>
-          <p class="has-text-centered has-text-info-90-invert">
-            ¡Conéctate con nosotros!
-          </p>
+          <p class="has-text-centered has-text-info-90-invert">Somos el departamento de voluntariado de Cuatrovientos y
+            buscamos gente dispuesta a colaborar por aquellos que lo necesitan.</p>
+          <fieldset>
+            <h3 class="title is-4 has-text-centered has-text-info-90-invert pt-4">Envía un mensaje</h3>
+            <!-- Envía un mensaje -->
+            <div class="mb-5">
+              <div class="field">
+                <div class="control has-icons-left">
+                  <input class="input is-small is-radiusless" type="email" placeholder="ejemplo@gmail.com">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="field mt-3">
+                <div class="control">
+                  <textarea class="textarea is-small is-radiusless" rows="2"
+                    placeholder="Escribe tus dudas aquí"></textarea>
+                </div>
+              </div>
+
+              <button class="button is-dark is-small is-radiusless mt-3 ml-8">
+                <span class="icon">
+                  <i class="fas fa-paper-plane"></i>
+                </span>
+                <span>Enviar</span>
+              </button>
+            </div>
+          </fieldset>
         </div>
         <div class="column is-4">
-          <h3 class="title is-4 has-text-centered has-text-info-90-invert">
-            Redes Sociales
-          </h3>
-          <div class="social-icons is-flex is-justify-content-center">
-            <a href="https://twitter.com/_cuatrovientos?lang=es" class="social-icon" aria-label="Twitter"
-              target="_blank">
+          <h3 class="title is-4 has-text-centered has-text-info-90-invert">Redes Sociales</h3>
+          <div class="social-icons is-flex is-justify-content-center mb-4">
+            <a href="https://twitter.com/_cuatrovientos?lang=es" class="social-icon" target="_blank">
               <img src="./../../img/twitter_azul.png" alt="Twitter" class="social-icon-img">
             </a>
-            <a href="https://www.instagram.com/cipcuatrovientos/?hl=es" class="social-icon" aria-label="Instagram"
-              target="_blank">
+            <a href="https://www.instagram.com/cipcuatrovientos/?hl=es" class="social-icon" target="_blank">
               <img src="./../../img/Instagram.png" alt="Instagram" class="social-icon-img">
             </a>
-            <a href="https://www.facebook.com/cipcuatrovientos/?locale=es_ES" class="social-icon" aria-label="Facebook"
-              target="_blank">
+            <a href="https://www.facebook.com/cipcuatrovientos/?locale=es_ES" class="social-icon" target="_blank">
               <img src="./../../img/facebook_azul.png" alt="Facebook" class="social-icon-img">
             </a>
-            <a href="https://www.youtube.com/@alviento/videos" class="social-icon" aria-label="YouTube" target="_blank">
+            <a href="https://www.youtube.com/@alviento/videos" class="social-icon" target="_blank">
               <img src="./../../img/youtube_azul.png" alt="YouTube" class="social-icon-img">
             </a>
           </div>
+          <div class="footer-map-container has-text-centered">
+            <h4 class="title is-5 has-text-info-90-invert">Dónde estamos</h4>
+            <div class="map-wrapper">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2926.2995058267397!2d-1.6624290251092935!3d42.82428680564868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5092855cefdac7%3A0xab7c62765f5209e2!2sCuatrovientos%20Centro%20Integrado!5e0!3m2!1ses!2sus!4v1744016406244!5m2!1ses!2sus"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <p class="mt-2">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Cuatrovientos+Centro+Integrado"
+                target="_blank" class="button is-link is-small mt-2">
+                Cómo llegar
+              </a>
+            </p>
+          </div>
+
         </div>
         <div class="column is-4">
           <h3 class="title is-4 has-text-centered has-text-info-90-invert">Contacto</h3>
@@ -386,23 +419,42 @@
             <span class="icon is-small is-left">
               <i class="fa-solid fa-envelope"></i>
             </span>
-            <a href="mailto:secretaria@cuatrovientos.org">secretaria@cuatrovientos.org
-            </a>
+            <a href="mailto:secretaria@cuatrovientos.org">secretaria@cuatrovientos.org</a>
           </p>
           <p class="has-text-centered has-text-info-90-invert">
             <span class="icon is-small is-left">
               <i class="fa-solid fa-envelope"></i>
             </span>
-            <a href="mailto:info@cuatrovientos.org">info@cuatrovientos.org </a>
+            <a href="mailto:info@cuatrovientos.org">info@cuatrovientos.org</a>
           </p>
+
+          <h3 class="title is-4 has-text-centered has-text-info-90-invert pt-6">Nuestra App</h3>
+          <p class="has-text-centered has-text-info-90-invert mb-4">
+            ¡Descarga nuestra app de voluntariado y mantente conectado estés donde estés!
+          </p>
+          <div class="buttons is-centered is-flex is-flex-wrap-wrap is-justify-content-center">
+            <a href="https://play.google.com/store/apps/details?id=nombre.app" target="_blank"
+              class="button is-primary is-rounded app-button m-2">
+              <span class="icon">
+                <img src="./../../img/googlePlayIcon.png" alt="Google Play">
+              </span>
+              <span>Google Play</span>
+            </a>
+            <a href="https://apps.apple.com/app/idXXXXXXXXX" target="_blank"
+              class="button is-link is-rounded app-button m-2">
+              <span class="icon">
+                <img src="./../../img/appStoreIcon.png" alt="App Store">
+              </span>
+              <span>App Store</span>
+            </a>
+          </div>
         </div>
       </div>
       <div class="has-text-centered mt-4">
-        <p class="has-text-info-90-invert">
-          © 2023 Cuatrovientos. Todos los derechos reservados.
-        </p>
+        <p class="has-text-info-90-invert">© 2023 Cuatrovientos. Todos los derechos reservados.</p>
       </div>
     </div>
+    </iframe>
   </footer>
 </body>
 

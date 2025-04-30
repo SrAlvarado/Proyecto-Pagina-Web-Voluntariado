@@ -37,14 +37,13 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link"><i class="fa fa-user fa-2x"></i></a>
-          <div class="navbar-dropdown is-small">
-            <a class="navbar-item has-text-dark" href="./usuario_voluntarios.html">Perfil</a>
-            <a class="navbar-item has-text-dark" href="./../index.html">Cerrar Sesión</a>
+          <a class="navbar-link mr-5"><i class="fa fa-user fa-2x"></i></a>
+          <div class="navbar-dropdown">
+            <a class="dropdown-content is-size-5 has-text-dark" href="./usuario_voluntarios.html">Perfil<br></a>
+            <a class="dropdown-content is-size-5 has-text-dark" href="./../index.html">Cerrar Sesión</a>
           </div>
         </div>
       </div>
-    </div>
     </div>
   </nav>
 
@@ -85,7 +84,7 @@
             colaborar en proyectos de voluntariado, le ofrecemos la
             posibilidad de inscribirse en nuestro voluntariado.
           </p>
-          
+
           <p class="subtitle has-text-justified acerca-de-texto">
             Nosotros nos encargamos de gestionar y coordinar las actividades
             de voluntariado, y para que llevemos nuestro trabajo a cabo,
@@ -123,7 +122,7 @@
             </nav>
           </div>
         </div>
-        
+
         <div class="column is-half">
           <div class="icons">
             <div class="icon-box">
@@ -232,46 +231,59 @@
       </div>
     </div>
   </section>
-  <!--FAQ-->
-  <section class="faq-section elemento-con-borde pt-6 pb-6">
-    <div class="faq-item ">
-      <p class="title" id="faq-title">FAQ</p>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question">1. ¿Quién puede ser voluntario?<span class="toggle-icon">+</span></button>
-      <div class="faq-answer">
-        Cualquier persona mayor de 16 años con motivación y ganas de ayudar.
+  
+  <div class="columns is-vcentered">
+    <div class="column is-two-fifths">
+      <div class="contenedor-personaje">
+        <img id="imagen_hombre_4v" src="./../../img/muneco_4v_texto.png" alt="personaje">
       </div>
-    </div>
 
-    <div class="faq-item">
-      <button class="faq-question">2. ¿Qué tipo de tareas se pueden realizar?<span class="toggle-icon">+</span></button>
-      <div class="faq-answer">
-        Actividades sociales, educativas, medioambientales, apoyo logístico, y mucho más.
-      </div>
     </div>
+    <div class="column is-three-fifths">
+      <!--FAQ-->
+      <section class="faq-section elemento-con-borde pt-6 pb-6">
+        <div class="faq-item">
+          <p class="title" id="faq-title">FAQ</p>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">1. ¿Quién puede ser voluntario?<span class="toggle-icon">+</span></button>
+          <div class="faq-answer">
+            Cualquier persona mayor de 16 años con motivación y ganas de ayudar.
+          </div>
+        </div>
 
-    <div class="faq-item">
-      <button class="faq-question">3. ¿Cuánto tiempo necesito comprometerme?<span class="toggle-icon">+</span></button>
-      <div class="faq-answer">
-        Desde pocas horas semanales hasta programas intensivos, tú decides el nivel de compromiso.
-      </div>
-    </div>
+        <div class="faq-item">
+          <button class="faq-question">2. ¿Qué tipo de tareas se pueden realizar?<span
+              class="toggle-icon">+</span></button>
+          <div class="faq-answer">
+            Actividades sociales, educativas, medioambientales, apoyo logístico, y mucho más.
+          </div>
+        </div>
 
-    <div class="faq-item">
-      <button class="faq-question">4. ¿Recibo algún tipo de formación?<span class="toggle-icon">+</span></button>
-      <div class="faq-answer">
-        Sí. Todos los voluntarios reciben formación básica antes de comenzar.
-      </div>
-    </div>
+        <div class="faq-item">
+          <button class="faq-question">3. ¿Cuánto tiempo necesito comprometerme?<span
+              class="toggle-icon">+</span></button>
+          <div class="faq-answer">
+            Desde pocas horas semanales hasta programas intensivos, tú decides el nivel de compromiso.
+          </div>
+        </div>
 
-    <div class="faq-item">
-      <button class="faq-question">5. ¿Cómo me inscribo como voluntario?<span class="toggle-icon">+</span></button>
-      <div class="faq-answer">
-        Puedes inscribirte desde el formulario en nuestra web o escribiendo a info@voluntariado.org.
-      </div>
+        <div class="faq-item">
+          <button class="faq-question">4. ¿Recibo algún tipo de formación?<span class="toggle-icon">+</span></button>
+          <div class="faq-answer">
+            Sí. Todos los voluntarios reciben formación básica antes de comenzar.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">5. ¿Cómo me inscribo como voluntario?<span class="toggle-icon">+</span></button>
+          <div class="faq-answer">
+            Puedes inscribirte desde el formulario en nuestra web o escribiendo a info@voluntariado.org.
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
+  </div>
   <!--CARRUSEL-->
   <section>
     <div class="carousel section-padding">
@@ -313,7 +325,34 @@
           <h3 class="title is-4 has-text-centered has-text-info-90-invert">Sobre Nosotros</h3>
           <p class="has-text-centered has-text-info-90-invert">Somos el departamento de voluntariado de Cuatrovientos y
             buscamos gente dispuesta a colaborar por aquellos que lo necesitan.</p>
-          <p class="has-text-centered has-text-info-90-invert">¡Conéctate con nosotros!</p>
+          <fieldset>
+            <h3 class="title is-4 has-text-centered has-text-info-90-invert pt-4">Envía un mensaje</h3>
+            <!-- Envía un mensaje -->
+            <div class="mb-5">
+              <div class="field">
+                <div class="control has-icons-left">
+                  <input class="input is-small is-radiusless" type="email" placeholder="ejemplo@gmail.com">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="field mt-3">
+                <div class="control">
+                  <textarea class="textarea is-small is-radiusless" rows="2"
+                    placeholder="Escribe tus dudas aquí"></textarea>
+                </div>
+              </div>
+
+              <button class="button is-dark is-small is-radiusless mt-3 ml-8">
+                <span class="icon">
+                  <i class="fas fa-paper-plane"></i>
+                </span>
+                <span>Enviar</span>
+              </button>
+            </div>
+          </fieldset>
         </div>
         <div class="column is-4">
           <h3 class="title is-4 has-text-centered has-text-info-90-invert">Redes Sociales</h3>
@@ -346,6 +385,7 @@
               </a>
             </p>
           </div>
+
         </div>
         <div class="column is-4">
           <h3 class="title is-4 has-text-centered has-text-info-90-invert">Contacto</h3>
@@ -368,6 +408,27 @@
             </span>
             <a href="mailto:info@cuatrovientos.org">info@cuatrovientos.org</a>
           </p>
+
+          <h3 class="title is-4 has-text-centered has-text-info-90-invert pt-6">Nuestra App</h3>
+          <p class="has-text-centered has-text-info-90-invert mb-4">
+            ¡Descarga nuestra app de voluntariado y mantente conectado estés donde estés!
+          </p>
+          <div class="buttons is-centered is-flex is-flex-wrap-wrap is-justify-content-center">
+            <a href="https://play.google.com/store/apps/details?id=nombre.app" target="_blank"
+              class="button is-primary is-rounded app-button m-2">
+              <span class="icon">
+                <img src="./../../img/googlePlayIcon.png" alt="Google Play">
+              </span>
+              <span>Google Play</span>
+            </a>
+            <a href="https://apps.apple.com/app/idXXXXXXXXX" target="_blank"
+              class="button is-link is-rounded app-button m-2">
+              <span class="icon">
+                <img src="./../../img/appStoreIcon.png" alt="App Store">
+              </span>
+              <span>App Store</span>
+            </a>
+          </div>
         </div>
       </div>
       <div class="has-text-centered mt-4">

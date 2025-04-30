@@ -136,18 +136,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
 // Función para redirigir usuario a sus html correspondientes según el email
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("idBotonEnviarInicioSesion").addEventListener("click", function (event) {
     event.preventDefault(); // ✋ Evita que se envíe el formulario automáticamente
 
     let email = document.getElementById("idEmailInicioSesion").value.trim();
-    const emailVoluntarios = "voluntarios.com";
+    const emailVoluntarios = "voluntario.com";
     const emailOrganizaciones = "org.com";
     const emailCoordinador = "coordinador.com";
 
     let finalEmail = email.substring(email.indexOf("@") + 1);
+
+    if (!email) {
+      alert("Por favor, ingresa un email correcto.");
+      return;
+    }
 
     if (
       finalEmail !== emailVoluntarios &&
@@ -161,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (finalEmail === emailVoluntarios) {
       window.location.href = "./voluntarios/index_voluntarios.html";
     } else if (finalEmail === emailOrganizaciones) {
-      window.location.href = "./voluntariados/voluntariados_organizaciones.html";
+      window.location.href = "./organizaciones/voluntariados_org.html";
     } else if (finalEmail === emailCoordinador) {
       window.location.href = "./coordinador/voluntariados_coordinador.html";
     }
@@ -311,6 +315,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// Validación de disponibilidad de días y horas
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.day-availability input[type="checkbox"]').forEach(checkbox => {
     checkbox.addEventListener('change', function () {
@@ -324,3 +329,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.querySelector(".navbar-burger");
+  const menu = document.getElementById(burger.dataset.target);
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("is-active");
+    menu.classList.toggle("is-active");
+  });
+});

@@ -2,21 +2,21 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos</title>
-    <link rel="stylesheet" href="./../../css/coordinador.css">
-    <link rel="stylesheet" href="./../../../bulma/css/bulma.css">
-    <link rel="icon" type="image/png" href="./../../img/logo.png">
-    <script src="https://kit.fontawesome.com/dc47467364.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos</title>
+  <link rel="stylesheet" href="./../../css/coordinador.css">
+  <link rel="stylesheet" href="./../../../bulma/css/bulma.css">
+  <link rel="icon" type="image/png" href="./../../img/logo.png">
+  <script src="https://kit.fontawesome.com/dc47467364.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-   
+
   <nav class="navbar has-background-info-20-invert">
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
-        <img class="logo-4vv" src="./../../img/logo.png" alt="Logo">
+        <img class="logo-4vv" src="./../../img/LOGO-CENTRO-INTEGRADO-CUATROVIENTOS-transparent.png" alt="Logo">
       </a>
 
       <button class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -36,173 +36,170 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link"><i class="fa fa-user fa-2x"></i></a>
+          <a class="navbar-link mr-5"><i class="fa fa-user fa-2x"></i></a>
           <div class="navbar-dropdown">
-            <a class="navbar-item has-text-dark" href="./usuario_voluntarios.html">Perfil</a>
-            <a class="navbar-item has-text-dark" href="./../index.html">Cerrar Sesión</a>
+            <a class="dropdown-content is-size-5 has-text-dark" href="./usuario_voluntarios.html">Perfil<br></a>
+            <a class="dropdown-content is-size-5 has-text-dark" href="./../index.html">Cerrar Sesión</a>
           </div>
         </div>
       </div>
     </div>
-    </div>
   </nav>
 
   <section class="section">
-      <div class="container">
-          <div class="filtro box">
-              <div class="columns is-multiline">
-                  <div class="column is-2 ">
-                      <div class="field">
-                          <label class="label">
-                              Tipo
-                          </label>
-                          <div class="select control has-icons-left">
-                              <div class="select">
-                                  <select id="disponibilidad" required>
-                                      <option value="">- Tipo -</option>
-                                      <option>Noticia</option>
-                                      <option>Evento</option>
-                                      <option>Voluntariado</option>
-                                  </select>
-                              </div>
-                              <span class="icon is-left">
-                                  <i class="fas fa-list"></i>
-                              </span>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="column is-2">
-                      <div class="field">
-                          <label class="label">Fecha Inicio</label>
-                          <div class="control">
-                              <input class="input is-justify-content-center" type="date" id="fechaInicio">
-                          </div>
-                      </div>
-                  </div>
-                  <div class="column is-2 ">
-                      <div class="field ">
-                          <label class="label">Fecha Fin</label>
-                          <div class="control ">
-                              <input class="input is-justify-content-center" type="date" id="fechaFin">
-                          </div>
-                      </div>
-                  </div>
-                  <div class="column is-3">
-                      <div class="field">
-                          <label class="label">Nombre</label>
-                          <div class="control has-icons-left">
-                              <input class="input" type="text" id="ubicacion" placeholder="Taller de ">
-                              <span class="icon is-small is-left">
-                                  <i class="fas fa-heading"></i>
-                              </span>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="column is-fullwidth">
-                      <div class="columns is-vcentered">
-                          <div class="column is-fullwidth mt-4">
-                              <div class="field is-grouped is-grouped-right mt-3">
-                                  <div class="control">
-                                      <button class="button is-info is-light">
-                                          <span class="icon">
-                                              <i class="fas fa-search"></i>
-                                          </span>
-                                          <span>Buscar</span>
-                                      </button>
-                                  </div>
-                                  <div class="control">
-                                      <button class="button is-light">
-                                          <span class="icon">
-                                              <i class="fas fa-undo"></i>
-                                          </span>
-                                          <span>Limpiar filtros</span>
-                                      </button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
+    <div class="container">
+      <div class="filtro box">
+        <div class="columns is-multiline">
+          <div class="column is-2 ">
+            <div class="field">
+              <label class="label">
+                Tipo
+              </label>
+              <div class="select control has-icons-left">
+                <div class="select">
+                  <select id="disponibilidad" required>
+                    <option value="">- Tipo -</option>
+                    <option>Noticia</option>
+                    <option>Evento</option>
+                    <option>Voluntariado</option>
+                  </select>
+                </div>
+                <span class="icon is-left">
+                  <i class="fas fa-list"></i>
+                </span>
               </div>
+            </div>
+          </div>
+          <div class="column is-2">
+            <div class="field">
+              <label class="label">Fecha Inicio</label>
+              <div class="control">
+                <input class="input is-justify-content-center" type="date" id="fechaInicio">
+              </div>
+            </div>
+          </div>
+          <div class="column is-2 ">
+            <div class="field ">
+              <label class="label">Fecha Fin</label>
+              <div class="control ">
+                <input class="input is-justify-content-center" type="date" id="fechaFin">
+              </div>
+            </div>
+          </div>
+          <div class="column is-3">
+            <div class="field">
+              <label class="label">Nombre</label>
+              <div class="control has-icons-left">
+                <input class="input" type="text" id="ubicacion" placeholder="Taller de ">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-heading"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="column is-fullwidth">
+            <div class="columns is-vcentered">
+              <div class="column is-fullwidth mt-4">
+                <div class="field is-grouped is-grouped-right mt-3">
+                  <div class="control">
+                    <button class="button is-info is-light">
+                      <span class="icon">
+                        <i class="fas fa-search"></i>
+                      </span>
+                      <span>Buscar</span>
+                    </button>
+                  </div>
+                  <div class="control">
+                    <button class="button is-light">
+                      <span class="icon">
+                        <i class="fas fa-undo"></i>
+                      </span>
+                      <span>Limpiar filtros</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-
-          <div class="columns">
-              <div class="column is-half">
-                  <div class="iniciativa box">
-                      <div class="columns is-vcentered">
-                          <div class="column is-5">
-                              <div class="columns is-vcentered">
-                                  <div class="column is-fullwidth">
-                                      <strong class="nombre-proyecto">Taller de Competencias Básicas Digitales en
-                                          ANFAS Sangüesa</strong><br>
-                                      <h2><span class="tag is-info is-light">Noticia</span></h2>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="column is-fullwidth">
-                              <div class="column is-flex is-justify-content-center ">
-                                  <img class="imagenes-eventos" src="./../../img/imagen-reunion.png"
-                                      alt="Imagen ANFAS Sangüesa">
-                              </div>
-                          </div>
-
-                      </div>
-                      <div>
-                          <details class="has-text-justified">
-                              <summary>Detalles</summary>
-                              Nuestro profesor, Javier Pascual, ha realizado un taller de competencias básicas
-                              digitales en la Asociación ANFAS de Sangüesa, una entidad que apoya a personas con
-                              discapacidad intelectual y del desarrollo.
-                              Durante la sesión, los participantes aprendieron a manejar herramientas
-                          </details>
-                      </div>
-
-                  </div>
-              </div>
-              <div class="column is-half">
-                  <div class="iniciativa box">
-                      <div class="columns is-vcentered">
-                          <div class="column is-5">
-                              <div class="columns is-vcentered">
-                                  <div class="column is-fullwidth">
-                                      <strong class="nombre-proyecto">Fiesta del Voluntariado 11 de
-                                          Octubre</strong><br>
-                                      <h2><span class="tag is-warning is-light">Voluntariado</span></h2>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="column is-fullwidth">
-                              <div class="column is-flex is-justify-content-center">
-                                  <img class="imagenes-eventos" src="./../../img/imagen-fiesta-voluntariado.png"
-                                      alt="Imagen fiesta voluntariado">
-                              </div>
-                          </div>
-                      </div>
-                      <div>
-                          <details class="has-text-justified">
-                              <summary>Detalles</summary>
-                              La Fiesta del Voluntariado de Navarra es una iniciativa organizada en el marco del III
-                              Plan de Voluntariado de Navarra. Su objetivo es poner en valor a las personas
-                              voluntarias, las entidades sociales, las empresas y cualquier otro actor clave
-                              involucrado en el ecosistema del voluntariado en la comunidad.
-                              Este evento pretende dar a conocer el trabajo y la importancia del voluntario en
-                              navarra, promover el intercambio de experiencias, la creación de redes y el fortalecer
-                              de la colaboración entre organizaciones. <br><br>
-
-                              La primera edición de esta fiesta, que tendrá lugar en Baluarte, pretende ser un espacio
-                              para evidenciar el impacto positivo del voluntariado en la sociedad navarra, fomentar la
-                              participación ciudadana y visibilizar el compromiso solidario.
-
-                          </details>
-                      </div>
-                  </div>
-              </div>
-          </div>
+        </div>
       </div>
-  </section>
 
-  <!-- Pie de página -->
+
+      <div class="columns">
+        <div class="column is-half">
+          <div class="iniciativa box">
+            <div class="columns is-vcentered">
+              <div class="column is-5">
+                <div class="columns is-vcentered">
+                  <div class="column is-fullwidth">
+                    <strong class="nombre-proyecto">Taller de Competencias Básicas Digitales en
+                      ANFAS Sangüesa</strong><br>
+                    <h2><span class="tag is-info is-light">Noticia</span></h2>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-fullwidth">
+                <div class="column is-flex is-justify-content-center ">
+                  <img class="imagenes-eventos" src="./../../img/imagen-reunion.png" alt="Imagen ANFAS Sangüesa">
+                </div>
+              </div>
+
+            </div>
+            <div>
+              <details class="has-text-justified">
+                <summary>Detalles</summary>
+                Nuestro profesor, Javier Pascual, ha realizado un taller de competencias básicas
+                digitales en la Asociación ANFAS de Sangüesa, una entidad que apoya a personas con
+                discapacidad intelectual y del desarrollo.
+                Durante la sesión, los participantes aprendieron a manejar herramientas
+              </details>
+            </div>
+
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="iniciativa box">
+            <div class="columns is-vcentered">
+              <div class="column is-5">
+                <div class="columns is-vcentered">
+                  <div class="column is-fullwidth">
+                    <strong class="nombre-proyecto">Fiesta del Voluntariado 11 de
+                      Octubre</strong><br>
+                    <h2><span class="tag is-warning is-light">Voluntariado</span></h2>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-fullwidth">
+                <div class="column is-flex is-justify-content-center">
+                  <img class="imagenes-eventos" src="./../../img/imagen-fiesta-voluntariado.png"
+                    alt="Imagen fiesta voluntariado">
+                </div>
+              </div>
+            </div>
+            <div>
+              <details class="has-text-justified">
+                <summary>Detalles</summary>
+                La Fiesta del Voluntariado de Navarra es una iniciativa organizada en el marco del III
+                Plan de Voluntariado de Navarra. Su objetivo es poner en valor a las personas
+                voluntarias, las entidades sociales, las empresas y cualquier otro actor clave
+                involucrado en el ecosistema del voluntariado en la comunidad.
+                Este evento pretende dar a conocer el trabajo y la importancia del voluntario en
+                navarra, promover el intercambio de experiencias, la creación de redes y el fortalecer
+                de la colaboración entre organizaciones. <br><br>
+
+                La primera edición de esta fiesta, que tendrá lugar en Baluarte, pretende ser un espacio
+                para evidenciar el impacto positivo del voluntariado en la sociedad navarra, fomentar la
+                participación ciudadana y visibilizar el compromiso solidario.
+
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER-->
   <footer id="idFooter" class="has-background-info-20-invert py-6">
     <div class="container">
       <div class="columns is-centered">
@@ -210,7 +207,34 @@
           <h3 class="title is-4 has-text-centered has-text-info-90-invert">Sobre Nosotros</h3>
           <p class="has-text-centered has-text-info-90-invert">Somos el departamento de voluntariado de Cuatrovientos y
             buscamos gente dispuesta a colaborar por aquellos que lo necesitan.</p>
-          <p class="has-text-centered has-text-info-90-invert">¡Conéctate con nosotros!</p>
+          <fieldset>
+            <h3 class="title is-4 has-text-centered has-text-info-90-invert pt-4">Envía un mensaje</h3>
+            <!-- Envía un mensaje -->
+            <div class="mb-5">
+              <div class="field">
+                <div class="control has-icons-left">
+                  <input class="input is-small is-radiusless" type="email" placeholder="ejemplo@gmail.com">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="field mt-3">
+                <div class="control">
+                  <textarea class="textarea is-small is-radiusless" rows="2"
+                    placeholder="Escribe tus dudas aquí"></textarea>
+                </div>
+              </div>
+
+              <button class="button is-dark is-small is-radiusless mt-3 ml-8">
+                <span class="icon">
+                  <i class="fas fa-paper-plane"></i>
+                </span>
+                <span>Enviar</span>
+              </button>
+            </div>
+          </fieldset>
         </div>
         <div class="column is-4">
           <h3 class="title is-4 has-text-centered has-text-info-90-invert">Redes Sociales</h3>
@@ -231,22 +255,19 @@
           <div class="footer-map-container has-text-centered">
             <h4 class="title is-5 has-text-info-90-invert">Dónde estamos</h4>
             <div class="map-wrapper">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2926.2995058267397!2d-1.6624290251092935!3d42.82428680564868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5092855cefdac7%3A0xab7c62765f5209e2!2sCuatrovientos%20Centro%20Integrado!5e0!3m2!1ses!2sus!4v1744016406244!5m2!1ses!2sus" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2926.2995058267397!2d-1.6624290251092935!3d42.82428680564868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5092855cefdac7%3A0xab7c62765f5209e2!2sCuatrovientos%20Centro%20Integrado!5e0!3m2!1ses!2sus!4v1744016406244!5m2!1ses!2sus"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
               </iframe>
             </div>
             <p class="mt-2">
-              <a 
-                href="https://www.google.com/maps/dir/?api=1&destination=Cuatrovientos+Centro+Integrado" 
-                target="_blank" 
-                class="button is-link is-small mt-2">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Cuatrovientos+Centro+Integrado"
+                target="_blank" class="button is-link is-small mt-2">
                 Cómo llegar
               </a>
             </p>
           </div>
+
         </div>
         <div class="column is-4">
           <h3 class="title is-4 has-text-centered has-text-info-90-invert">Contacto</h3>
@@ -269,6 +290,27 @@
             </span>
             <a href="mailto:info@cuatrovientos.org">info@cuatrovientos.org</a>
           </p>
+
+          <h3 class="title is-4 has-text-centered has-text-info-90-invert pt-6">Nuestra App</h3>
+          <p class="has-text-centered has-text-info-90-invert mb-4">
+            ¡Descarga nuestra app de voluntariado y mantente conectado estés donde estés!
+          </p>
+          <div class="buttons is-centered is-flex is-flex-wrap-wrap is-justify-content-center">
+            <a href="https://play.google.com/store/apps/details?id=nombre.app" target="_blank"
+              class="button is-primary is-rounded app-button m-2">
+              <span class="icon">
+                <img src="./../../img/googlePlayIcon.png" alt="Google Play">
+              </span>
+              <span>Google Play</span>
+            </a>
+            <a href="https://apps.apple.com/app/idXXXXXXXXX" target="_blank"
+              class="button is-link is-rounded app-button m-2">
+              <span class="icon">
+                <img src="./../../img/appStoreIcon.png" alt="App Store">
+              </span>
+              <span>App Store</span>
+            </a>
+          </div>
         </div>
       </div>
       <div class="has-text-centered mt-4">
@@ -278,4 +320,5 @@
     </iframe>
   </footer>
 </body>
+
 </html>

@@ -8,38 +8,40 @@
   <link rel="stylesheet" href="./../../../bulma/css/bulma.css">
   <link rel="icon" type="image/png" href="./../img/logo.png">
   <script src="https://kit.fontawesome.com/dc47467364.js" crossorigin="anonymous"></script>
+  <script src="./../../js/index.js"></script>
+
   <title>4V Voluntariado</title>
 </head>
 
 <body>
-  <nav class="navbar has-background-info-20-invert">
+  <nav class="navbar has-background-info-20-invert" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
         <img class="logo-4vv" src="./../../img/LOGO-CENTRO-INTEGRADO-CUATROVIENTOS-transparent.png" alt="Logo">
       </a>
-
-      <button class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
-      </button>
+      </a>
     </div>
-
+  
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start is-flex-grow-1 is-justify-content-center">
-        <a class="navbar-item has-text-info-90-invert" href="./index_org.html">Inicio</a>
-        <a class="navbar-item has-text-info-90-invert" href="./eventos_org.html">Eventos</a>
-        <a class="navbar-item has-text-info-90-invert" href="./voluntariados_org.html">Voluntariados</a>
+        <a class="navbar-item has-text-info-90-invert" href="./index_coordinador.html">Inicio</a>
+        <a class="navbar-item has-text-info-90-invert" href="./eventos_coordinador.html">Eventos</a>
+        <a class="navbar-item has-text-info-90-invert" href="./voluntariados_coordinador.html">Voluntariados</a>
+        <a class="navbar-item has-text-info-90-invert" href="./panelHistorialAlumnado.html">Historial de Alumnos</a>
+        <a class="navbar-item has-text-info-90-invert" href="./dashboard_coordinador.html">Dashboard</a>
       </div>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
+  
+      <div class="navbar-end">
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link mr-5"><i class="fa fa-user fa-2x"></i></a>
           <div class="navbar-dropdown">
-            <a class="dropdown-content is-size-5 has-text-dark" href="./usuario_org.html">Perfil<br></a>
-            <a class="dropdown-content is-size-5 has-text-dark" href="./../index.html">Cerrar Sesión</a>
+            <a class="navbar-item is-size-5 has-text-dark" href="./usuario_coordinador.html">Perfil</a>
+            <a class="navbar-item is-size-5 has-text-dark" href="./../index.html">Cerrar Sesión</a>
           </div>
         </div>
       </div>
@@ -196,7 +198,6 @@
     </div>
     </iframe>
   </footer>
-
 </body>
 
 </html>
