@@ -875,3 +875,22 @@ section {
     justify-content: center;
   }
 }
+.edit-icon {
+  cursor: pointer;
+  margin-left: 5px;
+  color: #4a4a4a;
+  transition: color 0.2s;
+}
+
+.edit-icon:hover {
+  color: #3273dc;
+}
+
+.modal-content {
+  width: 80%;
+  max-width: 500px;
+}
+
+.field-value {
+  display: inline-block;
+}

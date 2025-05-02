@@ -8,12 +8,13 @@
   <link rel="stylesheet" href="./../../../bulma/css/bulma.css">
   <link rel="icon" type="image/png" href="./../../img/logo.png">
   <script src="https://kit.fontawesome.com/dc47467364.js" crossorigin="anonymous"></script>
+  <script src="./../../js/editarProfile.js"></script>
   <title>4V Voluntariado</title>
 </head>
 
 <body>
 
-  <nav class="navbar has-background-info-20-invert" role="navigation" aria-label="main navigation">
+  <nav class="navbar has-background-info-20-invert" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
         <img class="logo-4vv" src="./../../img/LOGO-CENTRO-INTEGRADO-CUATROVIENTOS-transparent.png" alt="Logo">
@@ -48,37 +49,90 @@
       </div>
     </div>
   </nav>
-
-
   <div class="container">
     <div class="profile-header has-text-centered">
       <figure class="image is-128x128 is-inline-block">
         <img class="is-rounded" src="./../../img/avatar-usuario.jpg" alt="Avatar">
       </figure>
-      <h1 class="title is-4">Nombre del Usuario <i class="fa-solid fa-pen-to-square"></i></h1>
-      <h2 class="subtitle is-6">@nombredeusuario</h2>
+      <h1 class="title is-4">
+        <span class="field-value" id="nombreUsuario">Nombre del Usuario</span>
+        <i class="fa-solid fa-pen-to-square edit-icon" data-field-id="nombreUsuario" data-field-name="Nombre"></i>
+      </h1>
+      <h2 class="subtitle is-6">
+        <span class="field-value" id="usernameUsuario">@nombredeusuario</span>
+        <i class="fa-solid fa-pen-to-square edit-icon" data-field-id="usernameUsuario" data-field-name="Nombre de usuario"></i>
+      </h2>
     </div>
 
     <div class="profile-info">
       <h3 class="title is-5">Información Personal</h3>
       <div class="box">
-        <p><strong>Correo Electrónico:</strong> usuario@example.com <i class="fa-solid fa-pen-to-square"></i></p>
-        <p><strong>Teléfono:</strong> +34 123 456 789 <i class="fa-solid fa-pen-to-square"></i></p>
-        <p><strong>Ubicación:</strong> Ciudad, País <i class="fa-solid fa-pen-to-square"></i></p>
+        <p>
+          <strong>Correo Electrónico:</strong> 
+          <span class="field-value" id="correoUsuario">usuario@example.com</span>
+          <i class="fa-solid fa-pen-to-square edit-icon" data-field-id="correoUsuario" data-field-name="Correo Electrónico"></i>
+        </p>
+        <p>
+          <strong>Teléfono:</strong> 
+          <span class="field-value" id="telefonoUsuario">+34 123 456 789</span>
+          <i class="fa-solid fa-pen-to-square edit-icon" data-field-id="telefonoUsuario" data-field-name="Teléfono"></i>
+        </p>
+        <p>
+          <strong>Ubicación:</strong> 
+          <span class="field-value" id="ubicacionUsuario">Ciudad, País</span>
+          <i class="fa-solid fa-pen-to-square edit-icon" data-field-id="ubicacionUsuario" data-field-name="Ubicación"></i>
+        </p>
       </div>
 
       <h3 class="title is-5">Biografía</h3>
       <div class="box">
-        <p>Esta es la biografía de el usuario donde se podrá ver <i class="fa-solid fa-pen-to-square"></i> </p>
+        <p>
+          <span class="field-value" id="biografiaUsuario">Esta es la biografía de el usuario donde se podrá ver información relevante sobre sus intereses y experiencia en voluntariados.</span>
+          <i class="fa-solid fa-pen-to-square edit-icon" data-field-id="biografiaUsuario" data-field-name="Biografía"></i>
+        </p>
       </div>
 
       <h3 class="title is-5">Redes Sociales</h3>
       <div class="box">
-        <p><strong>Twitter:</strong> <a href="https://twitter.com/nombredeusuario" target="_blank">@nombredeusuario <i
-              class="fa-solid fa-pen-to-square"></i></a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/nombredeusuario"
-            target="_blank">linkedin.com/in/nombredeusuario <i class="fa-solid fa-pen-to-square"></i></a></p>
+        <p>
+          <strong>Twitter:</strong> 
+          <a href="https://twitter.com/nombredeusuario" target="_blank">
+            <span class="field-value" id="twitterUsuario">@nombredeusuario</span>
+          </a>
+          <i class="fa-solid fa-pen-to-square edit-icon" data-field-id="twitterUsuario" data-field-name="Twitter"></i>
+        </p>
+        <p>
+          <strong>LinkedIn:</strong> 
+          <a href="https://linkedin.com/in/nombredeusuario" target="_blank">
+            <span class="field-value" id="linkedinUsuario">linkedin.com/in/nombredeusuario</span>
+          </a>
+          <i class="fa-solid fa-pen-to-square edit-icon" data-field-id="linkedinUsuario" data-field-name="LinkedIn"></i>
+        </p>
       </div>
+    </div>
+  </div>
+
+  <!-- Modal para edición -->
+  <div class="modal" id="editModal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Editar <span id="modalFieldName"></span></p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="field">
+          <label class="label" id="modalFieldLabel"></label>
+          <div class="control">
+            <input class="input" type="text" id="modalFieldInput">
+            <textarea class="textarea is-hidden" id="modalFieldTextarea"></textarea>
+          </div>
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" id="saveButton">Guardar</button>
+        <button class="button" id="cancelButton">Cancelar</button>
+      </footer>
     </div>
   </div>
   <!-- FOOTER-->
