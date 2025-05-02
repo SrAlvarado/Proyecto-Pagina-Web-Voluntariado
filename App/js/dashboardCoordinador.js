@@ -136,3 +136,36 @@ document.addEventListener('DOMContentLoaded', () => {
     return `${dia}/${mes}/${año}`;
   }
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('modal-editar');
+  const btnCerrar = document.getElementById('btn-cerrar');
+  const btnGuardar = document.getElementById('btn-guardar');
+  
+  document.querySelectorAll('.btn-editar').forEach(button => {
+    button.addEventListener('click', (event) => {
+      const row = event.target.closest('tr');
+      const cells = row.cells;
+
+      document.getElementById('input-nombre').value = cells[0].innerText;
+      document.getElementById('input-descripcion').value = cells[1].innerText;
+      document.getElementById('input-fecha').value = cells[2].innerText;
+      document.getElementById('input-organizacion').value = cells[3].innerText;
+
+      modal.classList.add('is-active');
+      
+      btnGuardar.onclick = function () {
+        cells[0].innerText = document.getElementById('input-nombre').value;
+        cells[1].innerText = document.getElementById('input-descripcion').value;
+        cells[2].innerText = document.getElementById('input-fecha').value;
+        cells[3].innerText = document.getElementById('input-organizacion').value;
+
+        modal.classList.remove('is-active');
+      };
+    });
+  });
+
+  btnCerrar.addEventListener('click', () => {
+    modal.classList.remove('is-active');
+  });
+});
+

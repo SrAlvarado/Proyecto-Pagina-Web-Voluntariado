@@ -144,3 +144,44 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const filtroTipo = document.getElementById("disponibilidad");
+    const filtroFechaInicio = document.getElementById("fechaInicio");
+    const filtroFechaFin = document.getElementById("fechaFin");
+    const filtroNombre = document.getElementById("ubicacion");
+    const btnBuscar = document.querySelector("button:has(.fa-search)");
+    const btnLimpiar = document.querySelector("button:has(.fa-undo)");
+    const tarjetas = document.querySelectorAll("#contenedor-cards .iniciativa");
+
+    btnBuscar.addEventListener("click", () => {
+        console.log("Filtrando...");
+        const tipoSeleccionado = filtroTipo.value.toLowerCase().trim();
+        const fechaInicio = filtroFechaInicio.value;
+        const fechaFin = filtroFechaFin.value;
+        const nombreBuscado = filtroNombre.value.toLowerCase().trim();
+
+        tarjetas.forEach(tarjeta => {
+            const tipoTarjeta = tarjeta.querySelector(".tag").innerText.trim().toLowerCase();
+            const nombreTarjeta = tarjeta.querySelector(".nombre-proyecto").innerText.trim().toLowerCase();
+            let mostrar = true;
+
+            if (tipoSeleccionado && tipoSeleccionado !== tipoTarjeta) {
+                mostrar = false;
+            }
+            if (nombreBuscado && !nombreTarjeta.includes(nombreBuscado)) {
+                mostrar = false;
+            }
+
+            tarjeta.style.display = mostrar ? "block" : "none";
+        });
+    });
+
+    btnLimpiar.addEventListener("click", () => {
+        filtroTipo.value = "";
+        filtroFechaInicio.value = "";
+        filtroFechaFin.value = "";
+        filtroNombre.value = "";
+        tarjetas.forEach(tarjeta => tarjeta.style.display = "block");
+    });
+});
+    

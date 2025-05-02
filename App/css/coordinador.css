@@ -422,3 +422,47 @@ footer {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal.is-active {
+  display: block;
+}
+
+.modal-card {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.modal-card-head, .modal-card-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.modal-card-head {
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-card-foot {
+  border-top: 1px solid #ddd;
+  justify-content: flex-end;
+}
+
+.modal-card-foot .button {
+  margin-left: 10px;
+}
