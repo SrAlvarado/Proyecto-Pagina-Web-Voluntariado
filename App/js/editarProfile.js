@@ -1,96 +1,112 @@
-// Variables para controlar el estado del modal
-let currentFieldId = '';
-let isTextarea = false;
-let originalValue = '';
-
-// Elementos del DOM
-const editModal = document.getElementById('editModal');
-const modalFieldName = document.getElementById('modalFieldName');
-const modalFieldLabel = document.getElementById('modalFieldLabel');
-const modalFieldInput = document.getElementById('modalFieldInput');
-const modalFieldTextarea = document.getElementById('modalFieldTextarea');
-const saveButton = document.getElementById('saveButton');
-const cancelButton = document.getElementById('cancelButton');
-const closeModalButton = document.getElementById('closeModalButton');
-const modalBackground = document.querySelector('.modal-background');
-
-// Función para abrir el modal
-function openModal(fieldId, fieldName) {
-  currentFieldId = fieldId;
-  const fieldElement = document.getElementById(fieldId);
-  originalValue = fieldElement.textContent.trim();
+// Configuración del modal de edición
+document.addEventListener('DOMContentLoaded', function() {
+    // Verificar si todos los elementos necesarios existen
+    if (!document.getElementById('editModal')) {
+      console.error('Modal no encontrado en el DOM');
+      return;
+    }
   
-  // Configurar el modal
-  modalFieldName.textContent = fieldName;
-  modalFieldLabel.textContent = fieldName;
+    // Mapeo de campos editables
+    const editableFields = {
+      'nombreUsuario': { type: 'text', name: 'Nombre' },
+      'usernameUsuario': { type: 'text', name: 'Nombre de usuario' },
+      'correoUsuario': { type: 'text', name: 'Correo Electrónico' },
+      'telefonoUsuario': { type: 'text', name: 'Teléfono' },
+      'ubicacionUsuario': { type: 'text', name: 'Ubicación' },
+      'biografiaUsuario': { type: 'textarea', name: 'Biografía' },
+      'twitterUsuario': { type: 'text', name: 'Twitter' },
+      'linkedinUsuario': { type: 'text', name: 'LinkedIn' }
+    };
   
-  // Determinar si usamos input o textarea
-  isTextarea = fieldId === 'biografiaUsuario';
+    // Variables de estado
+    let currentFieldId = '';
   
-  // Mostrar el control adecuado
-  if (isTextarea) {
-    modalFieldInput.classList.add('is-hidden');
-    modalFieldTextarea.classList.remove('is-hidden');
-    modalFieldTextarea.value = originalValue;
-  } else {
-    modalFieldInput.classList.remove('is-hidden');
-    modalFieldTextarea.classList.add('is-hidden');
-    modalFieldInput.value = originalValue;
-  }
+    // Función para abrir el modal
+    function openModal(fieldId) {
+      const fieldConfig = editableFields[fieldId];
+      if (!fieldConfig) {
+        console.error('Configuración no encontrada para:', fieldId);
+        return;
+      }
   
-  // Mostrar el modal
-  editModal.classList.add('is-active');
-}
-
-// Función para cerrar el modal
-function closeModal() {
-  editModal.classList.remove('is-active');
-}
-
-// Función para guardar los cambios
-function saveChanges() {
-  const fieldElement = document.getElementById(currentFieldId);
-  let newValue = isTextarea ? modalFieldTextarea.value : modalFieldInput.value;
+      const fieldElement = document.getElementById(fieldId);
+      if (!fieldElement) {
+        console.error('Elemento no encontrado:', fieldId);
+        return;
+      }
   
-  // Actualizar el campo en la página
-  fieldElement.textContent = newValue;
+      currentFieldId = fieldId;
+      const value = fieldElement.textContent.trim();
   
-  // Aquí podrías agregar código para guardar los cambios en el servidor
-  console.log(`Campo ${currentFieldId} actualizado a: ${newValue}`);
+      // Configurar el modal
+      document.getElementById('modalFieldName').textContent = fieldConfig.name;
+      document.getElementById('modalFieldLabel').textContent = fieldConfig.name;
   
-  closeModal();
-}
-
-// Inicialización de eventos
-function initEditProfile() {
-  // Asignar eventos a los iconos de edición
-  document.querySelectorAll('.edit-icon').forEach(icon => {
-    icon.addEventListener('click', function() {
-      const fieldId = this.getAttribute('data-field-id');
-      const fieldName = this.getAttribute('data-field-name');
-      openModal(fieldId, fieldName);
-    });
-  });
-
-  // Botón Guardar
-  saveButton.addEventListener('click', saveChanges);
-
-  // Botón Cancelar
-  cancelButton.addEventListener('click', closeModal);
-
-  // Botón Cerrar (X)
-  closeModalButton.addEventListener('click', closeModal);
-
-  // Clic en el fondo oscuro
-  modalBackground.addEventListener('click', closeModal);
-
-  // Cerrar con tecla ESC
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape' && editModal.classList.contains('is-active')) {
+      // Mostrar el control adecuado
+      const input = document.getElementById('modalFieldInput');
+      const textarea = document.getElementById('modalFieldTextarea');
+  
+      if (fieldConfig.type === 'textarea') {
+        input.classList.add('is-hidden');
+        textarea.classList.remove('is-hidden');
+        textarea.value = value;
+      } else {
+        input.classList.remove('is-hidden');
+        textarea.classList.add('is-hidden');
+        input.value = value;
+      }
+  
+      // Mostrar el modal
+      document.getElementById('editModal').classList.add('is-active');
+    }
+  
+    // Función para cerrar el modal
+    function closeModal() {
+      document.getElementById('editModal').classList.remove('is-active');
+    }
+  
+    // Función para guardar cambios
+    function saveChanges() {
+      const fieldElement = document.getElementById(currentFieldId);
+      if (!fieldElement) return;
+  
+      const fieldConfig = editableFields[currentFieldId];
+      let newValue;
+  
+      if (fieldConfig.type === 'textarea') {
+        newValue = document.getElementById('modalFieldTextarea').value;
+      } else {
+        newValue = document.getElementById('modalFieldInput').value;
+      }
+  
+      fieldElement.textContent = newValue;
       closeModal();
     }
+  
+    // Asignar eventos a los iconos de edición
+    document.querySelectorAll('.edit-icon').forEach(icon => {
+      icon.addEventListener('click', function() {
+        const fieldId = this.getAttribute('data-field-id');
+        if (editableFields[fieldId]) {
+          openModal(fieldId);
+        } else {
+          console.error('Campo no configurado:', fieldId);
+        }
+      });
+    });
+  
+    // Asignar eventos a los botones del modal
+    document.getElementById('saveButton')?.addEventListener('click', saveChanges);
+    document.getElementById('cancelButton')?.addEventListener('click', closeModal);
+    document.getElementById('closeModalButton')?.addEventListener('click', closeModal);
+    document.querySelector('.modal-background')?.addEventListener('click', closeModal);
+  
+    // Cerrar modal con ESC
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && document.getElementById('editModal').classList.contains('is-active')) {
+        closeModal();
+      }
+    });
+  
+    console.log('Sistema de edición de perfil inicializado correctamente');
   });
-}
-
-// Inicializar cuando el DOM esté cargado
-document.addEventListener('DOMContentLoaded', initEditProfile);

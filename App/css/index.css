@@ -886,10 +886,6 @@ section {
   color: #3273dc;
 }
 
-.modal-content {
-  width: 80%;
-  max-width: 500px;
-}
 
 .field-value {
   display: inline-block;
