@@ -12,7 +12,7 @@
   <title>4V Voluntariado</title>
 </head>
 
-<body>
+
   <nav class="navbar has-background-info-20-invert">
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
@@ -41,15 +41,15 @@
 
       <div class="navbar-end">
         <div class="navbar-item">
-          <button class="cta">
-            <span class="hover-underline-animation"><a href="#login">Sign up</a></span>
+          <a href="#login" class="cta">
+            <span class="hover-underline-animation">Sign up</span>
             <svg id="arrow-horizontal" viewBox="0 0 46 16">
               <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)">
               </path>
             </svg>
-          </button>
+          </a>
         </div>
-      </div>
+      </div>      
     </div>
   </nav>
   <section class="hero is-fullheight">
@@ -153,13 +153,14 @@
         <!--Fecha de nacimiento-->
         <div class="field">
           <div class="control has-icons-left">
-            <input class="input fechaNacimientoFormulario" type="date" placeholder="Fecha de Nacimiento" required>
+            <input class="input fechaNacimientoFormulario" type="date" required>
             <span class="icon is-small is-left">
               <i class="fas fa-calendar-alt"></i>
             </span>
           </div>
           <p class="has-text-warning mensaje-Fecha"></p>
         </div>
+        
 
         <!-- Dirección -->
         <div class="field">
@@ -201,7 +202,7 @@
               <i class="fas fa-envelope"></i>
             </span>
           </div>
-          <p class="has-text-warning" id="mensaje-email"></p>
+          <p class="has-text-warning mensaje-email"></p>
         </div>
 
         <!-- Password -->
@@ -219,20 +220,21 @@
           <label class="label">Curso</label>
           <div class="control has-icons-left">
             <div class="select is-fullwidth">
-              <select id="añadirAlumnos" required>
-                <optgroup label="Comercio y Marketing" class="grupo-alumnos">
+              <select id="añadirAlumnos" name="añadirAlumnos" required>
+                <option value="" disabled selected>Selecciona un curso</option> <!-- Opción predeterminada -->
+                <optgroup label="Comercio y Marketing">
                   <option value="CM1">1º Año</option>
                   <option value="CM2">2º Año</option>
                 </optgroup>
-                <optgroup label="Administración y Gestión" class="grupo-alumnos">
+                <optgroup label="Administración y Gestión">
                   <option value="AG1">1º Año</option>
                   <option value="AG2">2º Año</option>
                 </optgroup>
-                <optgroup label="DAM" class="grupo-alumnos">
+                <optgroup label="DAM">
                   <option value="DAM1">1º Año</option>
                   <option value="DAM2">2º Año</option>
                 </optgroup>
-                <optgroup label="ASIR" class="grupo-alumnos">
+                <optgroup label="ASIR">
                   <option value="ASIR1">1º Año</option>
                   <option value="ASIR2">2º Año</option>
                 </optgroup>
@@ -365,9 +367,10 @@
         <!-- Botón Registrarse -->
         <div class="field">
           <div class="control">
-            <button class="button is-primary is-fullwidth"><a href="./index.html">Registrarse</a></button>
+            <a href="./index.html" class="button is-primary is-fullwidth">Registrarse</a>
           </div>
         </div>
+        
 
       </form>
       <div class="has-text-centered mt-4">
@@ -375,7 +378,7 @@
       </div>
     </div>
   </div>
-</body>
+
 
 <div id="signinEmpresa" class="modal">
   <div class="modal-content">
@@ -412,7 +415,7 @@
             <i class="fas fa-user mensaje-Nombre"></i>
           </span>
         </div>
-        <p class="has-text-warning" id="mensaje-Nombre"></p>
+        <p class="has-text-warning mensaje-Nombre"></p>
       </div>
 
       <!-- Localidad -->
@@ -423,7 +426,7 @@
             <i class="fas fa-map-marker-alt"></i>
           </span>
         </div>
-        <p class="has-text-warning" id="mensaje-Nombre"></p>
+        <p class="has-text-warning mensaje-Nombre"></p>
       </div>
 
       <!-- Actividad Económica -->
@@ -455,7 +458,7 @@
             <i class="fas fa-envelope"></i>
           </span>
         </div>
-        <p class="has-text-warning" id="mensaje-email"></p>
+        <p class="has-text-warning mensaje-email"></p>
       </div>
 
       <!-- Contraseña -->
@@ -477,16 +480,17 @@
             <i class="fas fa-comment"></i>
           </span>
         </div>
-        <p class="has-text-warning" id="mensaje-Nombre"></p>
+        <p class="has-text-warning mensaje-Nombre"></p>
       </div>
 
 
       <!-- Botón Registrarse -->
       <div class="field">
         <div class="control">
-          <button class="button is-primary is-fullwidth"><a href="./index.html">Registrarse</a></button>
+          <button class="button is-primary is-fullwidth" id="abrirRegistro">Registrarse</button>
         </div>
       </div>
+      
 
     </form>
     <div class="has-text-centered mt-4">
@@ -857,7 +861,7 @@
       <p class="has-text-info-90-invert">© 2023 Cuatrovientos. Todos los derechos reservados.</p>
     </div>
   </div>
-  </iframe>
+  
 </footer>
 </body>
 
