@@ -1,598 +1,598 @@
-<!DOCTYPE html>
-<html lang="es">
+  <!DOCTYPE html>
+  <html lang="es">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard Coordinador</title>
-  <link rel="stylesheet" href="./../../../bulma/css/bulma.css" />
-  <link rel="stylesheet" href="./../../css/coordinador.css" />
-  <link rel="icon" type="image/png" href="./../../img/logo.png" />
-  <script src="https://kit.fontawesome.com/dc47467364.js" crossorigin="anonymous"></script>
-  <script src="./../../js/dashboardCoordinador.js"></script>
-  <script src="./../../js/index.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Coordinador</title>
+    <link rel="stylesheet" href="./../../../bulma/css/bulma.css" />
+    <link rel="stylesheet" href="./../../css/coordinador.css" />
+    <link rel="icon" type="image/png" href="./../../img/logo.png" />
+    <script src="https://kit.fontawesome.com/dc47467364.js" crossorigin="anonymous"></script>
+    <script src="./../../js/dashboardCoordinador.js"></script>
+    <script src="./../../js/index.js"></script>
 
-</head>
+  </head>
 
-<body>
-  <nav class="navbar has-background-info-20-invert" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="#">
-        <img class="logo-4vv" src="./../../img/LOGO-CENTRO-INTEGRADO-CUATROVIENTOS-transparent.png" alt="Logo">
-      </a>
-  
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-  
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start is-flex-grow-1 is-justify-content-center">
-        <a class="navbar-item has-text-info-90-invert" href="./index_coordinador.html">Inicio</a>
-        <a class="navbar-item has-text-info-90-invert" href="./eventos_coordinador.html">Eventos</a>
-        <a class="navbar-item has-text-info-90-invert" href="./voluntariados_coordinador.html">Voluntariados</a>
-        <a class="navbar-item has-text-info-90-invert" href="./panelHistorialAlumnado.html">Historial de Alumnos</a>
-        <a class="navbar-item has-text-info-90-invert" href="./dashboard_coordinador.html">Dashboard</a>
+  <body>
+    <nav class="navbar has-background-info-20-invert" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img class="logo-4vv" src="./../../img/LOGO-CENTRO-INTEGRADO-CUATROVIENTOS-transparent.png" alt="Logo">
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
       </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start is-flex-grow-1 is-justify-content-center">
+          <a class="navbar-item has-text-info-90-invert" href="./index_coordinador.html">Inicio</a>
+          <a class="navbar-item has-text-info-90-invert" href="./eventos_coordinador.html">Eventos</a>
+          <a class="navbar-item has-text-info-90-invert" href="./voluntariados_coordinador.html">Voluntariados</a>
+          <a class="navbar-item has-text-info-90-invert" href="./panelHistorialAlumnado.html">Historial de Alumnos</a>
+          <a class="navbar-item has-text-info-90-invert" href="./dashboard_coordinador.html">Dashboard</a>
+        </div>
 
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link mr-5"><i class="fa fa-user fa-2x"></i></a>
-            <div class="navbar-dropdown">
-              <a class="dropdown-content is-size-5 has-text-dark" href="./usuario_coordinador.html">Perfil<br></a>
-              <a class="dropdown-content is-size-5 has-text-dark" href="./../index.html">Cerrar Sesión</a>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link mr-5"><i class="fa fa-user fa-2x"></i></a>
+              <div class="navbar-dropdown">
+                <a class="dropdown-content is-size-5 has-text-dark" href="./usuario_coordinador.html">Perfil<br></a>
+                <a class="dropdown-content is-size-5 has-text-dark" href="./../index.html">Cerrar Sesión</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </nav>
-  <div class="container mt-5">
-    <div class="tabs is-centered is-boxed has-text-white">
-      <ul>
-        <li class="is-active" data-tab="organizaciones"><a>Organizaciones</a></li>
-        <li data-tab="voluntarios"><a>Voluntarios</a></li>
-        <li data-tab="actividades"><a>Actividades</a></li>
-        <li data-tab="match"><a>Match Voluntarios</a></li>
-      </ul>
-    </div>
-
-    <!-- Pestaña Organizaciones -->
-    <div id="organizaciones" class="tab-content is-active mb-6">
-      <div class="box">
-        <h2 class="title is-4">Solicitudes de Organizaciones</h2>
-        <div class="table-container">
-          <table class="table is-fullwidth is-striped">
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>Contacto</th>
-                <th>Email</th>
-                <th>Teléfono</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Cruz Roja Pamplona</td>
-                <td>Juan Pérez</td>
-                <td>juan.perez@cruzroja.es</td>
-                <td>948 123 456</td>
-                <td>
-                  <button class="button is-small is-success btn-aceptar-org" data-id="1"><i
-                      class="fa-solid fa-check"></i></button>
-                  <button class="button is-small is-danger btn-rechazar-org" data-id="1"><i
-                      class="fa-solid fa-xmark"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>ANFAS</td>
-                <td>María Gómez</td>
-                <td>maria.gomez@anfas.org</td>
-                <td>948 654 321</td>
-                <td>
-                  <button class="button is-small is-success btn-aceptar-org" data-id="2"><i
-                      class="fa-solid fa-check"></i></button>
-                  <button class="button is-small is-danger btn-rechazar-org" data-id="2"><i
-                      class="fa-solid fa-xmark"></i></button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+    </nav>
+    <div class="container mt-5">
+      <div class="tabs is-centered is-boxed has-text-white">
+        <ul>
+          <li class="is-active" data-tab="organizaciones"><a>Organizaciones</a></li>
+          <li data-tab="voluntarios"><a>Voluntarios</a></li>
+          <li data-tab="actividades"><a>Actividades</a></li>
+          <li data-tab="match"><a>Match Voluntarios</a></li>
+        </ul>
       </div>
 
-      <div class="box mt-5">
-        <h2 class="title is-4">Organizaciones Registradas</h2>
-        <div class="table-container">
+      <!-- Pestaña Organizaciones -->
+      <div id="organizaciones" class="tab-content is-active mb-6">
+        <div class="box">
+          <h2 class="title is-4">Solicitudes de Organizaciones</h2>
+          <div class="table-container">
             <table class="table is-fullwidth is-striped">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Contacto</th>
-                        <th>Email</th>
-                        <th>Teléfono</th>
-                        <th>Estado</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody id="organizaciones-registradas">
-              <tr>
-                <td>Navarra + Voluntaria</td>
-                <td>Laura Martínez</td>
-                <td>laura@navarravoluntaria.org</td>
-                <td>948 111 222</td>
-                <td><span class="tag is-success">Activa</span></td>
-                <td>
-                  <button class="button is-small is-warning"><i class="fa-solid fa-pen-to-square"></i></button>
-                  <button class="button is-small is-danger"><i class="fa-solid fa-trash"></i></button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Contacto</th>
+                  <th>Email</th>
+                  <th>Teléfono</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cruz Roja Pamplona</td>
+                  <td>Juan Pérez</td>
+                  <td>juan.perez@cruzroja.es</td>
+                  <td>948 123 456</td>
+                  <td>
+                    <button class="button is-small is-success btn-aceptar-org" data-id="1"><i
+                        class="fa-solid fa-check"></i></button>
+                    <button class="button is-small is-danger btn-rechazar-org" data-id="1"><i
+                        class="fa-solid fa-xmark"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>ANFAS</td>
+                  <td>María Gómez</td>
+                  <td>maria.gomez@anfas.org</td>
+                  <td>948 654 321</td>
+                  <td>
+                    <button class="button is-small is-success btn-aceptar-org" data-id="2"><i
+                        class="fa-solid fa-check"></i></button>
+                    <button class="button is-small is-danger btn-rechazar-org" data-id="2"><i
+                        class="fa-solid fa-xmark"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="box mt-5">
+          <h2 class="title is-4">Organizaciones Registradas</h2>
+          <div class="table-container">
+              <table class="table is-fullwidth is-striped">
+                  <thead>
+                      <tr>
+                          <th>Nombre</th>
+                          <th>Contacto</th>
+                          <th>Email</th>
+                          <th>Teléfono</th>
+                          <th>Estado</th>
+                          <th></th>
+                      </tr>
+                  </thead>
+                  <tbody id="organizaciones-registradas">
+                <tr>
+                  <td>Navarra + Voluntaria</td>
+                  <td>Laura Martínez</td>
+                  <td>laura@navarravoluntaria.org</td>
+                  <td>948 111 222</td>
+                  <td><span class="tag is-success">Activa</span></td>
+                  <td>
+                    <button class="button is-small is-warning"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="button is-small is-danger"><i class="fa-solid fa-trash"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Pestaña Voluntarios -->
-    <div id="voluntarios" class="tab-content mb-6">
-      <div class="box">
-        <h2 class="title is-4">Solicitudes de Voluntarios</h2>
-        <div class="table-container">
-          <table class="table is-fullwidth is-striped">
-            <thead>
-              <tr>
+      <!-- Pestaña Voluntarios -->
+      <div id="voluntarios" class="tab-content mb-6">
+        <div class="box">
+          <h2 class="title is-4">Solicitudes de Voluntarios</h2>
+          <div class="table-container">
+            <table class="table is-fullwidth is-striped">
+              <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Contacto/Curso</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Intereses (solo voluntarios)</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Laura Méndez</td>
+                  <td>1ºDAM</td>
+                  <td>laura.mendez@email.com</td>
+                  <td>600 111 222</td>
+                  <td>
+                    <!--<span class="tag is-info"><i class="fa-solid fa-school"></i></span>-->
+                    <i class="fa-solid fa-school has-text-info"></i>
+                    <i class="fa-solid fa-tree has-text-success"></i>
+                  </td>
+                  <td>
+                    <button class="button is-small is-success btn-aceptar-vol" data-id="1"><i
+                        class="fa-solid fa-check"></i></button>
+                    <button class="button is-small is-danger btn-rechazar-vol" data-id="1"><i
+                        class="fa-solid fa-xmark"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Raúl Navarro</td>
+                  <td>2ºASIR</td>
+                  <td>raul.navarro@email.com</td>
+                  <td>600 222 333</td>
+                  <td>
+                    <i class="fa-solid fa-user-doctor has-text-warning"></i>
+                  </td>
+                  <td>
+                    <button class="button is-small is-success btn-aceptar-vol" data-id="2"><i
+                        class="fa-solid fa-check"></i></button>
+                    <button class="button is-small is-danger btn-rechazar-vol" data-id="2"><i
+                        class="fa-solid fa-xmark"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="box mt-5">
+          <h2 class="title is-4">Voluntarios Registrados</h2>
+          <div class="table-container">
+            <table class="table is-fullwidth is-striped">
+              <thead>
+                <tr>
                   <th>Nombre</th>
                   <th>Contacto/Curso</th>
                   <th>Email</th>
                   <th>Teléfono</th>
                   <th>Intereses (solo voluntarios)</th>
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Laura Méndez</td>
-                <td>1ºDAM</td>
-                <td>laura.mendez@email.com</td>
-                <td>600 111 222</td>
-                <td>
-                  <!--<span class="tag is-info"><i class="fa-solid fa-school"></i></span>-->
-                  <i class="fa-solid fa-school has-text-info"></i>
-                  <i class="fa-solid fa-tree has-text-success"></i>
-                </td>
-                <td>
-                  <button class="button is-small is-success btn-aceptar-vol" data-id="1"><i
-                      class="fa-solid fa-check"></i></button>
-                  <button class="button is-small is-danger btn-rechazar-vol" data-id="1"><i
-                      class="fa-solid fa-xmark"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>Raúl Navarro</td>
-                <td>2ºASIR</td>
-                <td>raul.navarro@email.com</td>
-                <td>600 222 333</td>
-                <td>
-                  <i class="fa-solid fa-user-doctor has-text-warning"></i>
-                </td>
-                <td>
-                  <button class="button is-small is-success btn-aceptar-vol" data-id="2"><i
-                      class="fa-solid fa-check"></i></button>
-                  <button class="button is-small is-danger btn-rechazar-vol" data-id="2"><i
-                      class="fa-solid fa-xmark"></i></button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="box mt-5">
-        <h2 class="title is-4">Voluntarios Registrados</h2>
-        <div class="table-container">
-          <table class="table is-fullwidth is-striped">
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>Contacto/Curso</th>
-                <th>Email</th>
-                <th>Teléfono</th>
-                <th>Intereses (solo voluntarios)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Ana García</td>
-                <td>2ºDAM</td>
-                <td>ana.garcia@email.com</td>
-                <td>600 333 444</td>
-                <td><span class="tag is-success">Activo</span></td>
-                <td>
-                  <button class="button is-small is-warning"><i class="fa-solid fa-pen-to-square"></i></button>
-                  <button class="button is-small is-danger"><i class="fa-solid fa-trash"></i></button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pestaña Actividades -->
-    <div id="actividades" class="tab-content mb-6">
-      <div class="box">
-        <h2 class="title is-4">Actividades Propuestas por Organizaciones</h2>
-        <div class="table-container">
-          <table class="table is-fullwidth is-striped">
-            <thead>
-              <tr>
-                <th>Organización</th>
-                <th>Nombre Actividad</th>
-                <th>Descripción</th>
-                <th>Fecha</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Navarra + Voluntaria</td>
-                <td>Taller Digital para Mayores</td>
-                <td>Enseñanza de habilidades digitales básicas a personas mayores</td>
-                <td>15/10/2023</td>
-                <td>
-                  <button class="button is-small is-success btn-aceptar-act" data-id="1"><i
-                      class="fa-solid fa-check"></i></button>
-                  <button class="button is-small is-danger btn-rechazar-act" data-id="1"><i
-                      class="fa-solid fa-xmark"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>Navarra + Voluntaria</td>
-                <td>Taller Digital para Mayores</td>
-                <td>Enseñanza de habilidades digitales básicas a personas mayores</td>
-                <td>15/10/2023</td>
-                <td>
-                  <button class="button is-small is-success btn-aceptar-act" data-id="1"><i
-                      class="fa-solid fa-check"></i></button>
-                  <button class="button is-small is-danger btn-rechazar-act" data-id="1"><i
-                      class="fa-solid fa-xmark"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>Navarra + Voluntaria</td>
-                <td>Taller Digital para Mayores</td>
-                <td>Enseñanza de habilidades digitales básicas a personas mayores</td>
-                <td>15/10/2023</td>
-                <td>
-                  <button class="button is-small is-success btn-aceptar-act" data-id="1"><i
-                      class="fa-solid fa-check"></i></button>
-                  <button class="button is-small is-danger btn-rechazar-act" data-id="1"><i
-                      class="fa-solid fa-xmark"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <td>Navarra + Voluntaria</td>
-                <td>Taller Digital para Mayores</td>
-                <td>Enseñanza de habilidades digitales básicas a personas mayores</td>
-                <td>15/10/2023</td>
-                <td>
-                  <button class="button is-small is-success btn-aceptar-act" data-id="1"><i
-                      class="fa-solid fa-check"></i></button>
-                  <button class="button is-small is-danger btn-rechazar-act" data-id="1"><i
-                      class="fa-solid fa-xmark"></i></button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pestaña Match Voluntarios -->
-    <div id="match" class="tab-content mb-6">
-      <div class="columns">
-        <!-- Columna 1: Voluntarios Disponibles -->
-        <div class="column is-4 ">
-          <div class="box full-height">
-            <h2 class="title is-4">Voluntarios Disponibles</h2>
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="text" placeholder="Buscar voluntarios...">
-                <span class="icon is-small is-left">
-                  <i class="fas fa-search"></i>
-                </span>
-              </div>
-            </div>
-
-            <div class="voluntarios-list mt-3">
-              <div class="box voluntario-item" data-id="1">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-48x48">
-                      <img src="./../../img/avatar-usuario.jpg" alt="Voluntario">
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <p class="title is-5">Laura Méndez</p>
-                    <p class="subtitle is-6">1ºDAM - Educación, Medio Ambiente</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="box voluntario-item" data-id="2">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-48x48">
-                      <img src="./../../img/avatar-usuario.jpg" alt="Voluntario">
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <p class="title is-5">Raúl Navarro</p>
-                    <p class="subtitle is-6">2ºASIR - Salud</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Columna 2: Voluntariados Disponibles -->
-        <div class="column is-4">
-          <div class="box full-height">
-            <h2 class="title is-4">Voluntariados Disponibles</h2>
-            <div class="field">
-              <div class="control has-icons-left">
-                <input class="input" type="text" placeholder="Buscar voluntariados...">
-                <span class="icon is-small is-left">
-                  <i class="fas fa-search"></i>
-                </span>
-              </div>
-            </div>
-
-            <div class="voluntariados-list mt-3">
-              <div class="box voluntariado-item" data-id="1">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-48x48">
-                      <img src="./../../img/04educacion.png" alt="Voluntariado">
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <p class="title is-5">Proyecto Puzle Digital</p>
-                    <p class="subtitle is-6">Navarra + Voluntaria - Educación</p>
-                    <p>Plazas disponibles: 3/5</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="box voluntariado-item" data-id="2">
-                <div class="media">
-                  <div class="media-left">
-                    <figure class="image is-48x48">
-                      <img src="./../../img/03saludybienestar.png" alt="Voluntariado">
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <p class="title is-5">Acompañamiento a Mayores</p>
-                    <p class="subtitle is-6">Cruz Roja - Salud</p>
-                    <p>Plazas disponibles: 2/4</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Columna 3: Asignar Voluntario -->
-        <div class="column is-4">
-          <div class="box full-height">
-            <h2 class="title is-4">Asignar Voluntario</h2>
-            <div class="field">
-              <label class="label">Voluntario</label>
-              <div class="control">
-                <div class="select is-fullwidth">
-                  <select id="select-voluntario">
-                    <option value="">Seleccionar voluntario</option>
-                    <option>Laura Méndez (1ºDAM)</option>
-                    <option>Raúl Navarro (2ºASIR)</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <div class="field">
-              <label class="label">Voluntariado</label>
-              <div class="control">
-                <div class="select is-fullwidth">
-                  <select id="select-voluntariado">
-                    <option value="">Seleccionar voluntariado</option>
-                    <option>Proyecto Puzle Digital</option>
-                    <option>Acompañamiento a Mayores</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <div class="field mt-5">
-              <div class="control">
-                <button class="button is-primary is-fullwidth" id="btn-asignar">
-                  <span class="icon">
-                    <i class="fas fa-link"></i>
-                  </span>
-                  <span>Asignar Voluntario</span>
-                </button>
-              </div>
-            </div>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ana García</td>
+                  <td>2ºDAM</td>
+                  <td>ana.garcia@email.com</td>
+                  <td>600 333 444</td>
+                  <td><span class="tag is-success">Activo</span></td>
+                  <td>
+                    <button class="button is-small is-warning"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="button is-small is-danger"><i class="fa-solid fa-trash"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
 
-      <!-- Tabla de asignaciones (ocupa todo el ancho debajo de las 3 columnas) -->
-      <div class="box mt-5">
-        <h2 class="title is-4">Asignaciones Actuales</h2>
-        <div class="table-container">
-          <table id="tabla-asignaciones" class="table is-fullwidth is-striped">
-            <thead>
-              <tr>
-                <th>Voluntario</th>
-                <th>Voluntariado</th>
-                <th>Organización</th>
-                <th>Fecha Inicio</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Ana García</td>
-                <td>Proyecto Puzle Digital</td>
-                <td>Navarra + Voluntaria</td>
-                <td>01/09/2023</td>
-                <td>
-                  <button class="button is-small is-danger btn-eliminar-asignacion" data-id="1">
-                    <span>Eliminar</span>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>Carlos Ruiz</td>
-                <td>Acompañamiento a Mayores</td>
-                <td>Cruz Roja</td>
-                <td>15/09/2023</td>
-                <td>
-                  <button class="button is-small is-danger btn-eliminar-asignacion" data-id="2">
-                    <span>Eliminar</span>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      <!-- Pestaña Actividades -->
+      <div id="actividades" class="tab-content mb-6">
+        <div class="box">
+          <h2 class="title is-4">Actividades Propuestas por Organizaciones</h2>
+          <div class="table-container">
+            <table class="table is-fullwidth is-striped">
+              <thead>
+                <tr>
+                  <th>Organización</th>
+                  <th>Nombre Actividad</th>
+                  <th>Descripción</th>
+                  <th>Fecha</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Navarra + Voluntaria</td>
+                  <td>Taller Digital para Mayores</td>
+                  <td>Enseñanza de habilidades digitales básicas a personas mayores</td>
+                  <td>15/10/2023</td>
+                  <td>
+                    <button class="button is-small is-success btn-aceptar-act" data-id="1"><i
+                        class="fa-solid fa-check"></i></button>
+                    <button class="button is-small is-danger btn-rechazar-act" data-id="1"><i
+                        class="fa-solid fa-xmark"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Navarra + Voluntaria</td>
+                  <td>Taller Digital para Mayores</td>
+                  <td>Enseñanza de habilidades digitales básicas a personas mayores</td>
+                  <td>15/10/2023</td>
+                  <td>
+                    <button class="button is-small is-success btn-aceptar-act" data-id="1"><i
+                        class="fa-solid fa-check"></i></button>
+                    <button class="button is-small is-danger btn-rechazar-act" data-id="1"><i
+                        class="fa-solid fa-xmark"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Navarra + Voluntaria</td>
+                  <td>Taller Digital para Mayores</td>
+                  <td>Enseñanza de habilidades digitales básicas a personas mayores</td>
+                  <td>15/10/2023</td>
+                  <td>
+                    <button class="button is-small is-success btn-aceptar-act" data-id="1"><i
+                        class="fa-solid fa-check"></i></button>
+                    <button class="button is-small is-danger btn-rechazar-act" data-id="1"><i
+                        class="fa-solid fa-xmark"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Navarra + Voluntaria</td>
+                  <td>Taller Digital para Mayores</td>
+                  <td>Enseñanza de habilidades digitales básicas a personas mayores</td>
+                  <td>15/10/2023</td>
+                  <td>
+                    <button class="button is-small is-success btn-aceptar-act" data-id="1"><i
+                        class="fa-solid fa-check"></i></button>
+                    <button class="button is-small is-danger btn-rechazar-act" data-id="1"><i
+                        class="fa-solid fa-xmark"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <footer id="idFooter" class="has-background-info-20-invert py-6">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-4">
-          <h3 class="title is-4 has-text-centered has-text-info-90-invert">Sobre Nosotros</h3>
-          <p class="has-text-centered has-text-info-90-invert">Somos el departamento de voluntariado de Cuatrovientos y
-            buscamos gente dispuesta a colaborar por aquellos que lo necesitan.</p>
-          <fieldset>
-            <h3 class="title is-4 has-text-centered has-text-info-90-invert pt-4">Envía un mensaje</h3>
-            <!-- Envía un mensaje -->
-            <div class="mb-5">
+
+      <!-- Pestaña Match Voluntarios -->
+      <div id="match" class="tab-content mb-6">
+        <div class="columns">
+          <!-- Columna 1: Voluntarios Disponibles -->
+          <div class="column is-4 ">
+            <div class="box full-height">
+              <h2 class="title is-4">Voluntarios Disponibles</h2>
               <div class="field">
                 <div class="control has-icons-left">
-                  <input class="input is-small is-radiusless" type="email" placeholder="ejemplo@gmail.com">
+                  <input class="input" type="text" placeholder="Buscar voluntarios...">
                   <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-search"></i>
                   </span>
                 </div>
               </div>
 
-              <div class="field mt-3">
-                <div class="control">
-                  <textarea class="textarea is-small is-radiusless" rows="2"
-                    placeholder="Escribe tus dudas aquí"></textarea>
+              <div class="voluntarios-list mt-3">
+                <div class="box voluntario-item" data-id="1">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image is-48x48">
+                        <img src="./../../img/avatar-usuario.jpg" alt="Voluntario">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-5">Laura Méndez</p>
+                      <p class="subtitle is-6">1ºDAM - Educación, Medio Ambiente</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="box voluntario-item" data-id="2">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image is-48x48">
+                        <img src="./../../img/avatar-usuario.jpg" alt="Voluntario">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-5">Raúl Navarro</p>
+                      <p class="subtitle is-6">2ºASIR - Salud</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna 2: Voluntariados Disponibles -->
+          <div class="column is-4">
+            <div class="box full-height">
+              <h2 class="title is-4">Voluntariados Disponibles</h2>
+              <div class="field">
+                <div class="control has-icons-left">
+                  <input class="input" type="text" placeholder="Buscar voluntariados...">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-search"></i>
+                  </span>
                 </div>
               </div>
 
-              <button class="button is-dark is-small is-radiusless mt-3 ml-8">
-                <span class="icon">
-                  <i class="fas fa-paper-plane"></i>
-                </span>
-                <span>Enviar</span>
-              </button>
+              <div class="voluntariados-list mt-3">
+                <div class="box voluntariado-item" data-id="1">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image is-48x48">
+                        <img src="./../../img/04educacion.png" alt="Voluntariado">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-5">Proyecto Puzle Digital</p>
+                      <p class="subtitle is-6">Navarra + Voluntaria - Educación</p>
+                      <p>Plazas disponibles: 3/5</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="box voluntariado-item" data-id="2">
+                  <div class="media">
+                    <div class="media-left">
+                      <figure class="image is-48x48">
+                        <img src="./../../img/03saludybienestar.png" alt="Voluntariado">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <p class="title is-5">Acompañamiento a Mayores</p>
+                      <p class="subtitle is-6">Cruz Roja - Salud</p>
+                      <p>Plazas disponibles: 2/4</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </fieldset>
-        </div>
-        <div class="column is-4">
-          <h3 class="title is-4 has-text-centered has-text-info-90-invert">Redes Sociales</h3>
-          <div class="social-icons is-flex is-justify-content-center mb-4">
-            <a href="https://twitter.com/_cuatrovientos?lang=es" class="social-icon" target="_blank">
-              <img src="./../../img/twitter_azul.png" alt="Twitter" class="social-icon-img">
-            </a>
-            <a href="https://www.instagram.com/cipcuatrovientos/?hl=es" class="social-icon" target="_blank">
-              <img src="./../../img/Instagram.png" alt="Instagram" class="social-icon-img">
-            </a>
-            <a href="https://www.facebook.com/cipcuatrovientos/?locale=es_ES" class="social-icon" target="_blank">
-              <img src="./../../img/facebook_azul.png" alt="Facebook" class="social-icon-img">
-            </a>
-            <a href="https://www.youtube.com/@alviento/videos" class="social-icon" target="_blank">
-              <img src="./../../img/youtube_azul.png" alt="YouTube" class="social-icon-img">
-            </a>
           </div>
-          <div class="footer-map-container has-text-centered">
-            <h4 class="title is-5 has-text-info-90-invert">Dónde estamos</h4>
-            <div class="map-wrapper">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2926.2995058267397!2d-1.6624290251092935!3d42.82428680564868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5092855cefdac7%3A0xab7c62765f5209e2!2sCuatrovientos%20Centro%20Integrado!5e0!3m2!1ses!2sus!4v1744016406244!5m2!1ses!2sus"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
+
+          <!-- Columna 3: Asignar Voluntario -->
+          <div class="column is-4">
+            <div class="box full-height">
+              <h2 class="title is-4">Asignar Voluntario</h2>
+              <div class="field">
+                <label class="label">Voluntario</label>
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select id="select-voluntario">
+                      <option value="">Seleccionar voluntario</option>
+                      <option>Laura Méndez (1ºDAM)</option>
+                      <option>Raúl Navarro (2ºASIR)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Voluntariado</label>
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select id="select-voluntariado">
+                      <option value="">Seleccionar voluntariado</option>
+                      <option>Proyecto Puzle Digital</option>
+                      <option>Acompañamiento a Mayores</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field mt-5">
+                <div class="control">
+                  <button class="button is-primary is-fullwidth" id="btn-asignar">
+                    <span class="icon">
+                      <i class="fas fa-link"></i>
+                    </span>
+                    <span>Asignar Voluntario</span>
+                  </button>
+                </div>
+              </div>
             </div>
-            <p class="mt-2">
-              <a href="https://www.google.com/maps/dir/?api=1&destination=Cuatrovientos+Centro+Integrado"
-                target="_blank" class="button is-link is-small mt-2">
-                Cómo llegar
-              </a>
-            </p>
-          </div>
-
-        </div>
-        <div class="column is-4">
-          <h3 class="title is-4 has-text-centered has-text-info-90-invert">Contacto</h3>
-          <p class="has-text-centered has-text-info-90-invert">
-            <span class="icon is-small is-left">
-              <i class="fa-solid fa-phone"></i>
-            </span>
-            <a href="tel:+34948124129">948 12 41 29</a>
-          </p>
-
-          <p class="has-text-centered has-text-info-90-invert">
-            <span class="icon is-small is-left">
-              <i class="fa-solid fa-envelope"></i>
-            </span>
-            <a href="mailto:secretaria@cuatrovientos.org">secretaria@cuatrovientos.org</a>
-          </p>
-          <p class="has-text-centered has-text-info-90-invert">
-            <span class="icon is-small is-left">
-              <i class="fa-solid fa-envelope"></i>
-            </span>
-            <a href="mailto:info@cuatrovientos.org">info@cuatrovientos.org</a>
-          </p>
-
-          <h3 class="title is-4 has-text-centered has-text-info-90-invert pt-6">Nuestra App</h3>
-          <p class="has-text-centered has-text-info-90-invert mb-4">
-            ¡Descarga nuestra app de voluntariado y mantente conectado estés donde estés!
-          </p>
-          <div class="buttons is-centered is-flex is-flex-wrap-wrap is-justify-content-center">
-            <a href="https://play.google.com/store/apps/details?id=nombre.app" target="_blank"
-              class="button is-primary is-rounded app-button m-2">
-              <span class="icon">
-                <img src="./../../img/googlePlayIcon.png" alt="Google Play">
-              </span>
-              <span>Google Play</span>
-            </a>
-            <a href="https://apps.apple.com/app/idXXXXXXXXX" target="_blank"
-              class="button is-link is-rounded app-button m-2">
-              <span class="icon">
-                <img src="./../../img/appStoreIcon.png" alt="App Store">
-              </span>
-              <span>App Store</span>
-            </a>
           </div>
         </div>
-      </div>
-      <div class="has-text-centered mt-4">
-        <p class="has-text-info-90-invert">© 2023 Cuatrovientos. Todos los derechos reservados.</p>
+
+        <!-- Tabla de asignaciones (ocupa todo el ancho debajo de las 3 columnas) -->
+        <div class="box mt-5">
+          <h2 class="title is-4">Asignaciones Actuales</h2>
+          <div class="table-container">
+            <table id="tabla-asignaciones" class="table is-fullwidth is-striped">
+              <thead>
+                <tr>
+                  <th>Voluntario</th>
+                  <th>Voluntariado</th>
+                  <th>Organización</th>
+                  <th>Fecha Inicio</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ana García</td>
+                  <td>Proyecto Puzle Digital</td>
+                  <td>Navarra + Voluntaria</td>
+                  <td>01/09/2023</td>
+                  <td>
+                    <button class="button is-small is-danger btn-eliminar-asignacion" data-id="1">
+                      <span>Eliminar</span>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Carlos Ruiz</td>
+                  <td>Acompañamiento a Mayores</td>
+                  <td>Cruz Roja</td>
+                  <td>15/09/2023</td>
+                  <td>
+                    <button class="button is-small is-danger btn-eliminar-asignacion" data-id="2">
+                      <span>Eliminar</span>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
-    
-  </footer>
-</body>
+    <footer id="idFooter" class="has-background-info-20-invert py-6">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-4">
+            <h3 class="title is-4 has-text-centered has-text-info-90-invert">Sobre Nosotros</h3>
+            <p class="has-text-centered has-text-info-90-invert">Somos el departamento de voluntariado de Cuatrovientos y
+              buscamos gente dispuesta a colaborar por aquellos que lo necesitan.</p>
+            <fieldset>
+              <h3 class="title is-4 has-text-centered has-text-info-90-invert pt-4">Envía un mensaje</h3>
+              <!-- Envía un mensaje -->
+              <div class="mb-5">
+                <div class="field">
+                  <div class="control has-icons-left">
+                    <input class="input is-small is-radiusless" type="email" placeholder="ejemplo@gmail.com">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                  </div>
+                </div>
 
-</html>
+                <div class="field mt-3">
+                  <div class="control">
+                    <textarea class="textarea is-small is-radiusless" rows="2"
+                      placeholder="Escribe tus dudas aquí"></textarea>
+                  </div>
+                </div>
+
+                <button class="button is-dark is-small is-radiusless mt-3 ml-8">
+                  <span class="icon">
+                    <i class="fas fa-paper-plane"></i>
+                  </span>
+                  <span>Enviar</span>
+                </button>
+              </div>
+            </fieldset>
+          </div>
+          <div class="column is-4">
+            <h3 class="title is-4 has-text-centered has-text-info-90-invert">Redes Sociales</h3>
+            <div class="social-icons is-flex is-justify-content-center mb-4">
+              <a href="https://twitter.com/_cuatrovientos?lang=es" class="social-icon" target="_blank">
+                <img src="./../../img/twitter_azul.png" alt="Twitter" class="social-icon-img">
+              </a>
+              <a href="https://www.instagram.com/cipcuatrovientos/?hl=es" class="social-icon" target="_blank">
+                <img src="./../../img/Instagram.png" alt="Instagram" class="social-icon-img">
+              </a>
+              <a href="https://www.facebook.com/cipcuatrovientos/?locale=es_ES" class="social-icon" target="_blank">
+                <img src="./../../img/facebook_azul.png" alt="Facebook" class="social-icon-img">
+              </a>
+              <a href="https://www.youtube.com/@alviento/videos" class="social-icon" target="_blank">
+                <img src="./../../img/youtube_azul.png" alt="YouTube" class="social-icon-img">
+              </a>
+            </div>
+            <div class="footer-map-container has-text-centered">
+              <h4 class="title is-5 has-text-info-90-invert">Dónde estamos</h4>
+              <div class="map-wrapper">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2926.2995058267397!2d-1.6624290251092935!3d42.82428680564868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5092855cefdac7%3A0xab7c62765f5209e2!2sCuatrovientos%20Centro%20Integrado!5e0!3m2!1ses!2sus!4v1744016406244!5m2!1ses!2sus"
+                  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <p class="mt-2">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Cuatrovientos+Centro+Integrado"
+                  target="_blank" class="button is-link is-small mt-2">
+                  Cómo llegar
+                </a>
+              </p>
+            </div>
+
+          </div>
+          <div class="column is-4">
+            <h3 class="title is-4 has-text-centered has-text-info-90-invert">Contacto</h3>
+            <p class="has-text-centered has-text-info-90-invert">
+              <span class="icon is-small is-left">
+                <i class="fa-solid fa-phone"></i>
+              </span>
+              <a href="tel:+34948124129">948 12 41 29</a>
+            </p>
+
+            <p class="has-text-centered has-text-info-90-invert">
+              <span class="icon is-small is-left">
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+              <a href="mailto:secretaria@cuatrovientos.org">secretaria@cuatrovientos.org</a>
+            </p>
+            <p class="has-text-centered has-text-info-90-invert">
+              <span class="icon is-small is-left">
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+              <a href="mailto:info@cuatrovientos.org">info@cuatrovientos.org</a>
+            </p>
+
+            <h3 class="title is-4 has-text-centered has-text-info-90-invert pt-6">Nuestra App</h3>
+            <p class="has-text-centered has-text-info-90-invert mb-4">
+              ¡Descarga nuestra app de voluntariado y mantente conectado estés donde estés!
+            </p>
+            <div class="buttons is-centered is-flex is-flex-wrap-wrap is-justify-content-center">
+              <a href="https://play.google.com/store/apps/details?id=nombre.app" target="_blank"
+                class="button is-primary is-rounded app-button m-2">
+                <span class="icon">
+                  <img src="./../../img/googlePlayIcon.png" alt="Google Play">
+                </span>
+                <span>Google Play</span>
+              </a>
+              <a href="https://apps.apple.com/app/idXXXXXXXXX" target="_blank"
+                class="button is-link is-rounded app-button m-2">
+                <span class="icon">
+                  <img src="./../../img/appStoreIcon.png" alt="App Store">
+                </span>
+                <span>App Store</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="has-text-centered mt-4">
+          <p class="has-text-info-90-invert">© 2023 Cuatrovientos. Todos los derechos reservados.</p>
+        </div>
+      </div>
+      
+    </footer>
+  </body>
+
+  </html>
