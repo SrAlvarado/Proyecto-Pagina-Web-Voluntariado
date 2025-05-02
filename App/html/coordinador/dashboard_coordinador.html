@@ -36,18 +36,19 @@
         <a class="navbar-item has-text-info-90-invert" href="./panelHistorialAlumnado.html">Historial de Alumnos</a>
         <a class="navbar-item has-text-info-90-invert" href="./dashboard_coordinador.html">Dashboard</a>
       </div>
-  
+
       <div class="navbar-end">
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link mr-5"><i class="fa fa-user fa-2x"></i></a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item is-size-5 has-text-dark" href="./usuario_coordinador.html">Perfil</a>
-            <a class="navbar-item is-size-5 has-text-dark" href="./../index.html">Cerrar Sesión</a>
+        <div class="navbar-item">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link mr-5"><i class="fa fa-user fa-2x"></i></a>
+            <div class="navbar-dropdown">
+              <a class="dropdown-content is-size-5 has-text-dark" href="./usuario_org.html">Perfil<br></a>
+              <a class="dropdown-content is-size-5 has-text-dark" href="./../index.html">Cerrar Sesión</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
   <div class="container mt-5">
     <div class="tabs is-centered is-boxed has-text-white">
@@ -107,18 +108,18 @@
       <div class="box mt-5">
         <h2 class="title is-4">Organizaciones Registradas</h2>
         <div class="table-container">
-          <table class="table is-fullwidth is-striped">
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>Contacto</th>
-                <th>Email</th>
-                <th>Teléfono</th>
-                <th>Estado</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
+            <table class="table is-fullwidth is-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Contacto</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Estado</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="organizaciones-registradas">
               <tr>
                 <td>Navarra + Voluntaria</td>
                 <td>Laura Martínez</td>
@@ -144,12 +145,12 @@
           <table class="table is-fullwidth is-striped">
             <thead>
               <tr>
-                <th>Nombre</th>
-                <th>Curso</th>
-                <th>Email</th>
-                <th>Teléfono</th>
-                <th>Áreas de Interés</th>
-                <th></th>
+                  <th>Nombre</th>
+                  <th>Contacto/Curso</th>
+                  <th>Email</th>
+                  <th>Teléfono</th>
+                  <th>Intereses (solo voluntarios)</th>
+
               </tr>
             </thead>
             <tbody>
@@ -197,11 +198,10 @@
             <thead>
               <tr>
                 <th>Nombre</th>
-                <th>Curso</th>
+                <th>Contacto/Curso</th>
                 <th>Email</th>
                 <th>Teléfono</th>
-                <th>Estado</th>
-                <th></th>
+                <th>Intereses (solo voluntarios)</th>
               </tr>
             </thead>
             <tbody>
@@ -397,8 +397,8 @@
                 <div class="select is-fullwidth">
                   <select id="select-voluntario">
                     <option value="">Seleccionar voluntario</option>
-                    <option value="1">Laura Méndez (1ºDAM)</option>
-                    <option value="2">Raúl Navarro (2ºASIR)</option>
+                    <option>Laura Méndez (1ºDAM)</option>
+                    <option>Raúl Navarro (2ºASIR)</option>
                   </select>
                 </div>
               </div>
@@ -410,8 +410,8 @@
                 <div class="select is-fullwidth">
                   <select id="select-voluntariado">
                     <option value="">Seleccionar voluntariado</option>
-                    <option value="1">Proyecto Puzle Digital</option>
-                    <option value="2">Acompañamiento a Mayores</option>
+                    <option>Proyecto Puzle Digital</option>
+                    <option>Acompañamiento a Mayores</option>
                   </select>
                 </div>
               </div>
@@ -435,7 +435,7 @@
       <div class="box mt-5">
         <h2 class="title is-4">Asignaciones Actuales</h2>
         <div class="table-container">
-          <table class="table is-fullwidth is-striped">
+          <table id="tabla-asignaciones" class="table is-fullwidth is-striped">
             <thead>
               <tr>
                 <th>Voluntario</th>
@@ -453,9 +453,6 @@
                 <td>01/09/2023</td>
                 <td>
                   <button class="button is-small is-danger btn-eliminar-asignacion" data-id="1">
-                    <span class="icon">
-                      <i class="fas fa-trash"></i>
-                    </span>
                     <span>Eliminar</span>
                   </button>
                 </td>
