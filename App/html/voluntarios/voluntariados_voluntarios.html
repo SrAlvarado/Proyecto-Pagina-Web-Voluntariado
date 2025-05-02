@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./../../css/coordinador.css">
   <link rel="stylesheet" href="./../../../bulma/css/bulma.css">
   <link rel="icon" type="image/png" href="./../../../img/logo.png">
+  <script src="./../../js/filtrosVoluntariados.js"></script>
   <script src="https://kit.fontawesome.com/dc47467364.js" crossorigin="anonymous"></script>
   <title>Voluntariados</title>
 </head>
@@ -65,7 +66,7 @@
         <div class="column is-fullwidth">
           <div class="field has-addons is-justify-content-flex-end ">
             <div class="control is-expanded">
-              <input class="input" type="text" placeholder="Buscar voluntariados">
+              <input  id="busquedaNombre" class="input" type="text" placeholder="Buscar voluntariados">
             </div>
             <div class="control">
               <button class="button is-info is-light">
@@ -237,7 +238,7 @@
     <div class="iniciativa mb-4">
       <div class="iniciativa box">
         <div class="detalles-iniciativa columns is-multiline">
-          <div class="column is-5"><strong class="nombre-proyecto negrita">Proyecto Puzle
+          <div class="column is-5"><strong class="nombre-proyecto negrita" value="nombre-proyecto">Proyecto Puzle
               Digital<br><br>Actividades</strong>
             <br>
             <p>Apoyo escolar, enseñanza de idiomas, promoción de la lectura, conservación del patrimonio cultural.</p>
