@@ -107,8 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           ${detalles}
                       </details>
                   </div>
-              </div>
-          `;
+              </div>`;
           contenedor.appendChild(card);
       }
 
@@ -144,6 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
+
 document.addEventListener("DOMContentLoaded", () => {
     const filtroTipo = document.getElementById("disponibilidad");
     const filtroFechaInicio = document.getElementById("fechaInicio");

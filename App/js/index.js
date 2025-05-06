@@ -17,39 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Aplicamos el observador a todos los elementos
     acercaDeTextos.forEach(texto => observer.observe(texto));
-    iconos.forEach(icono => observer.observe(icono));
-
-      // === CONTROL DE INTERFAZ SEGÚN TIPO DE USUARIO ===
-
-  // Cambia esto según quién esté logueado o registrado:
-  // Opciones: 'voluntario', 'organización', 'coordinador_registro', 'coordinador_login'
-  const tipoUsuario = 'coordinador_registro'; // ← cámbialo dinámicamente según quién se conecte
-
-  function toggleClases(elementos, ocultar, clase = 'is-hidden') {
-    elementos.forEach(el => {
-      el.classList.toggle(clase, ocultar);
+        iconos.forEach(icono => observer.observe(icono));
     });
-  }
 
-  function ajustarInterfazPorRol(tipo) {
-    const btnVoluntario = document.querySelectorAll('.btn-voluntario');
-    const columnasCoordinador = document.querySelectorAll('.col-coordinador');
-    const accionesCoordinador = document.querySelectorAll('.col-edicion, .btn-editar, .btn-eliminar');
-    const btnCrear = document.querySelectorAll('.btn-crear-voluntariado');
 
-    // Mostrar/ocultar botón "Crear voluntariado"
-    toggleClases(btnCrear, !(tipo === 'coordinador_registro' || tipo === 'coordinador_login'));
-
-    // Ocultar botones "apuntarme" si eres coordinador
-    toggleClases(btnVoluntario, tipo === 'coordinador_registro' || tipo === 'coordinador_login');
-
-    // Mostrar columnas y botones solo si eres coordinador *logueado*
-    toggleClases(columnasCoordinador, tipo !== 'coordinador_login', 'is-invisible');
-    toggleClases(accionesCoordinador, tipo !== 'coordinador_login', 'is-hidden');
-  }
-
-  ajustarInterfazPorRol(tipoUsuario);
-});
 //********** MODAL **********/
 // Abre el modal al hacer clic en un enlace con href="#modal"
 document.addEventListener("DOMContentLoaded", () => {
@@ -80,34 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
     checkModal();
   });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const modals = document.querySelectorAll(".modal");
-  
-  // Cierra el modal al hacer clic fuera del contenido
-  modals.forEach(modal => {
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        location.hash = ""; // cierra el modal
-      }
-    });
-  });
-  
-  // Función para añadir o quitar la clase modal-open según el hash
-  function checkModal() {
-    if (location.hash && document.querySelector(location.hash)) {
-      document.body.classList.add("modal-open");
-      document.documentElement.classList.add("modal-open");
-    } else {
-      document.body.classList.remove("modal-open");
-      document.documentElement.classList.remove("modal-open");
-    }
-  }
-  
-  // Verifica el estado cuando cambia el hash y al cargar la página
-  window.addEventListener("hashchange", checkModal);
-  checkModal();
-});
-
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.faq-question').forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -136,6 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
 // Función para redirigir usuario a sus html correspondientes según el email
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("idBotonEnviarInicioSesion").addEventListener("click", function (event) {
