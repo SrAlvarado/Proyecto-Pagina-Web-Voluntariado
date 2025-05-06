@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btn-asignar').addEventListener('click', function () {
     const voluntarioSelect = document.getElementById('select-voluntario');
     const voluntariadoSelect = document.getElementById('select-voluntariado');
-
+    
     const voluntario = voluntarioSelect.value;
     const voluntariado = voluntariadoSelect.value;
 

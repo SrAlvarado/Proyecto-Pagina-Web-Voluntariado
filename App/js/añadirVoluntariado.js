@@ -65,4 +65,132 @@ document.addEventListener('DOMContentLoaded', function() {
     odsSelect.value = '';
     metasSelect.innerHTML = '<option value="">-Meta-</option>';
   });
+});document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('#anadirVoluntariado form');
+    const voluntariadosContainer = document.querySelector('.iniciativa.mb-4');
+    const odsSeleccionadosDiv = document.getElementById('ods-seleccionados');
+
+    // Manejador del evento submit del formulario
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Obtener valores del formulario
+        const nombre = document.getElementById('nombre').value;
+        const organizacion = document.getElementById('organizadores').value;
+        const sector = document.getElementById('sectores').selectedOptions[0].parentElement.label;
+        const curso = document.getElementById('curso').value;
+        const fechaInicio = document.getElementById('fecha-inicio').value;
+        const fechaFin = document.getElementById('fecha-fin').value;
+        const diasSeleccionados = Array.from(document.querySelectorAll('input[name="dias"]:checked')).map(checkbox => checkbox.value);
+        const horaInicio = document.getElementById('hora-inicio').value;
+        const horaFin = document.getElementById('hora-fin').value;
+        const informacion = document.getElementById('informacion').value;
+
+        // Obtener ODS seleccionados correctamente
+        const odsTags = Array.from(odsSeleccionadosDiv.querySelectorAll('.tag')).map(tag => {
+            return tag.textContent.trim().split(' ')[0]; // Solo el número del ODS
+        });
+
+        // Mapeo de ODS a imágenes
+        const odsImages = {
+            '01': '01finpobreza.png',
+            '02': '02hambrecero.png',
+            '03': '03saludybienestar.png',
+            '04': '04educacion.png',
+            '05': '05igualdad.png',
+            '07': '07energia.png',
+            '08': '08trabajo.png',
+            '09': '09industria.png',
+            '10': '10reduccion.png',
+            '11': '11ciudades.png',
+            '12': '12produccion.png',
+            '13': '13accion.png',
+            '14': '14vida.png',
+            '15': '15vida.png',
+            '16': '16paz.png',
+            '17': '17alianzas.png'
+        };
+
+        // Generar HTML para los iconos de ODS
+        let odsIconsHTML = '';
+        odsTags.forEach(odsNum => {
+            if (odsImages[odsNum]) {
+                odsIconsHTML += `<img class="icono-dimension" src="./../../img/${odsImages[odsNum]}" alt="ODS${odsNum}">`;
+            }
+        });
+
+        // Crear el HTML del nuevo voluntariado
+        const nuevoVoluntariado = document.createElement('div');
+        nuevoVoluntariado.className = 'iniciativa box';
+        nuevoVoluntariado.innerHTML = `
+            <div class="detalles-iniciativa columns is-multiline">
+                <div class="column is-5"><strong class="nombre-proyecto negrita">${nombre}<br><br>Actividades</strong>
+                    <br>
+                    <p>${informacion.substring(0, 100)}${informacion.length > 100 ? '...' : ''}</p>
+                </div>
+                <div class="column is-1 dimension-social">${sector}</div>
+                <div class="column is-2">
+                    ${odsIconsHTML}
+                </div>
+                <div class="column is-1">${curso}</div>
+                <div class="column is-2">Apuntados: 0</div>
+                <div class="column is-1 has-text-centered">
+                    <i class="fa-solid fa-pen-to-square is-warning btn-editar"></i>
+                    <i class="fa-solid fa-trash is-danger btn-eliminar"></i>
+                </div>
+            </div>
+            <details>
+                <summary>Información adicional</summary>
+                <table class="table is-fullwidth">
+                    <tbody>
+                        <tr>
+                            <td class="icono-detalle has-text-centered"><i class="fa-solid fa-graduation-cap"></i></td>
+                            <td class="columna-detalle-dato">${curso}</td>
+                        </tr>
+                        <tr>
+                            <td class="icono-detalle has-text-centered"><i class="fa-solid fa-handshake"></i></td>
+                            <td class="columna-detalle-dato">${organizacion}</td>
+                        </tr>
+                        <tr>
+                            <td class="icono-detalle has-text-centered"><i class="fa-solid fa-clock"></i></td>
+                            <td class="columna-detalle-dato">${diasSeleccionados.join(', ')} de ${horaInicio} a ${horaFin}</td>
+                        </tr>
+                        <tr>
+                            <td class="icono-detalle has-text-centered"><i class="fa-solid fa-calendar-days"></i></td>
+                            <td class="columna-detalle-dato">${new Date(fechaInicio).toLocaleDateString()}</td>
+                        </tr>
+                        <tr>
+                            <td class="icono-detalle has-text-centered"><i class="fa-regular fa-calendar-check"></i></td>
+                            <td class="columna-detalle-dato">${new Date(fechaFin).toLocaleDateString()}</td>
+                        </tr>
+                        <tr>
+                            <td class="icono-detalle has-text-centered"><i class="fa-solid fa-list-check"></i></td>
+                            <td class="columna-detalle-dato">${informacion}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </details>
+        `;
+
+        // Añadir el nuevo voluntariado al contenedor
+        voluntariadosContainer.prepend(nuevoVoluntariado);
+
+        // Cerrar el modal y limpiar
+        document.querySelector('#anadirVoluntariado .close-btn').click();
+        form.reset();
+        odsSeleccionadosDiv.innerHTML = ''; // Limpiar ODS seleccionados
+    });
+
+    // Manejar selección de ODS
+    document.getElementById('ods').addEventListener('change', function() {
+        const odsSelect = this;
+        if (odsSelect.value && !document.querySelector(`#ods-seleccionados .tag[data-value="${odsSelect.value}"]`)) {
+            const odsText = odsSelect.options[odsSelect.selectedIndex].text;
+            const tag = document.createElement('span');
+            tag.className = 'tag is-info is-light';
+            tag.textContent = odsText;
+            tag.dataset.value = odsSelect.value;
+            odsSeleccionadosDiv.appendChild(tag);
+        }
+    });
 });
